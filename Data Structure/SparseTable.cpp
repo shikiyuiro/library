@@ -39,7 +39,7 @@ int main(){
     
     SparseTable STA(A, INT_MAX, [](long a, long b){return min(a, b);});
     while(Q--){
-        long v, u; cin >> u >> v;
+        long u, v; cin >> u >> v;
         cout << STA.query(u, v) << endl;
     }
 }
