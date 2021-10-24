@@ -25,7 +25,7 @@ data:
     \ table[r - (1 << b)][b]);\n    }\n};\n\nint main(){\n    long N, Q; cin >> N\
     \ >> Q;\n    vector<long> A(N);\n    for(long i = 0; i < N; i++) cin >> A[i];\n\
     \    \n    SparseTable STA(A, INT_MAX, [](long a, long b){return min(a, b);});\n\
-    \    while(Q--){\n        long v, u; cin >> u >> v;\n        cout << STA.query(u,\
+    \    while(Q--){\n        long u, v; cin >> u >> v;\n        cout << STA.query(u,\
     \ v) << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n#include<bits/stdc++.h>\n\
     using namespace std;\n\nclass SparseTable{\nprivate:\n    function<long(long,\
@@ -43,13 +43,13 @@ data:
     \ table[r - (1 << b)][b]);\n    }\n};\n\nint main(){\n    long N, Q; cin >> N\
     \ >> Q;\n    vector<long> A(N);\n    for(long i = 0; i < N; i++) cin >> A[i];\n\
     \    \n    SparseTable STA(A, INT_MAX, [](long a, long b){return min(a, b);});\n\
-    \    while(Q--){\n        long v, u; cin >> u >> v;\n        cout << STA.query(u,\
+    \    while(Q--){\n        long u, v; cin >> u >> v;\n        cout << STA.query(u,\
     \ v) << endl;\n    }\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: Data Structure/SparseTable.cpp
   requiredBy: []
-  timestamp: '2021-10-25 01:17:52+09:00'
+  timestamp: '2021-10-25 01:59:16+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Data Structure/SparseTable.cpp
