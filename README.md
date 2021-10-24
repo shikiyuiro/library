@@ -1,4 +1,4 @@
-# kyawa's Library
+# Library
 
 競技プログラミング用のライブラリです
 
