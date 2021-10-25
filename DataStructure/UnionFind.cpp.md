@@ -8,22 +8,22 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"DataStructure/UnionFind.cpp\"\n\nclass Union_find{\npublic:\n\
+  bundledCode: "#line 1 \"DataStructure/UnionFind.cpp\"\nclass Union_find{\npublic:\n\
     \    vector<long> par;\n    Union_find(long size){ par.resize(size); for(long\
     \ i = 0; i < size; i++) par[i] = i; }\n    long root(long x){ return (par[x] ==\
     \ x) ? x: par[x] = root(par[x]); }\n    void unite(long x, long y){ par[root(x)]\
     \ = root(y); }\n    bool same(long x, long y){ return root(x) == root(y); }\n\
     };\n"
-  code: "\nclass Union_find{\npublic:\n    vector<long> par;\n    Union_find(long\
-    \ size){ par.resize(size); for(long i = 0; i < size; i++) par[i] = i; }\n    long\
-    \ root(long x){ return (par[x] == x) ? x: par[x] = root(par[x]); }\n    void unite(long\
+  code: "class Union_find{\npublic:\n    vector<long> par;\n    Union_find(long size){\
+    \ par.resize(size); for(long i = 0; i < size; i++) par[i] = i; }\n    long root(long\
+    \ x){ return (par[x] == x) ? x: par[x] = root(par[x]); }\n    void unite(long\
     \ x, long y){ par[root(x)] = root(y); }\n    bool same(long x, long y){ return\
     \ root(x) == root(y); }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/UnionFind.cpp
   requiredBy: []
-  timestamp: '2021-10-25 17:19:38+09:00'
+  timestamp: '2021-10-25 17:20:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: DataStructure/UnionFind.cpp
