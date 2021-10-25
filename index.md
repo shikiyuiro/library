@@ -13,6 +13,9 @@ data:
   - name: Testcode
     pages:
     - icon: ':heavy_check_mark:'
+      path: Testcode/UnionFind.test.cpp
+      title: Testcode/UnionFind.test.cpp
+    - icon: ':heavy_check_mark:'
       path: Testcode/test.test.cpp
       title: Testcode/test.test.cpp
 layout: toppage
