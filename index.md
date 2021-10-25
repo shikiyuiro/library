@@ -12,6 +12,9 @@ data:
   - name: DataStructure
     pages:
     - icon: ':warning:'
+      path: DataStructure/SparseTable.cpp
+      title: DataStructure/SparseTable.cpp
+    - icon: ':warning:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
   verificationCategories:
