@@ -14,11 +14,11 @@ data:
     , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.0/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: shikiyuiro/Library/DataStructure/SparseTable.cpp:\
+    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../../DataStructure/SparseTable.cpp:\
     \ line -1: no such header\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n#include<bits/stdc++.h>\n\
-    using namespace std;\n\n#include \"shikiyuiro/Library/DataStructure/SparseTable.cpp\"\
-    \n\nint main(){\n    long N, Q; cin >> N >> Q;\n    vector<long> A(N);\n    for(long\
+    using namespace std;\n\n#include \"../../DataStructure/SparseTable.cpp\"\n\nint\
+    \ main(){\n    long N, Q; cin >> N >> Q;\n    vector<long> A(N);\n    for(long\
     \ i = 0; i < N; i++) cin >> A[i];\n    \n    SparseTable STA(A, INT_MAX, [](long\
     \ a, long b){return min(a, b);});\n    while(Q--){\n        long u, v; cin >>\
     \ u >> v;\n        cout << STA.query(u, v) << endl;\n    }\n}\n"

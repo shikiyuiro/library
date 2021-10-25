@@ -15,7 +15,7 @@ data:
     - icon: ':x:'
       path: Testcode/SparseTable.test.cpp
       title: Testcode/SparseTable.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Testcode/UnionFind.test.cpp
       title: Testcode/UnionFind.test.cpp
 layout: toppage
