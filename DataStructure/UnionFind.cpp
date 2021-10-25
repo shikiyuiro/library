@@ -1,4 +1,3 @@
-
 class Union_find{
 public:
     vector<long> par;
