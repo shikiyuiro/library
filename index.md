@@ -13,11 +13,11 @@ data:
   - name: Testcode
     pages:
     - icon: ':x:'
+      path: Testcode/SparseTable.test.cpp
+      title: Testcode/SparseTable.test.cpp
+    - icon: ':x:'
       path: Testcode/UnionFind.test.cpp
       title: Testcode/UnionFind.test.cpp
-    - icon: ':x:'
-      path: Testcode/test.test.cpp
-      title: Testcode/test.test.cpp
 layout: toppage
 ---
 [![kyawa](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fkyawa)](https://atcoder.jp/users/kyawa)

@@ -24,15 +24,15 @@ data:
     \ u >> v;\n        cout << STA.query(u, v) << endl;\n    }\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: Testcode/test.test.cpp
+  path: Testcode/SparseTable.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: Testcode/test.test.cpp
+documentation_of: Testcode/SparseTable.test.cpp
 layout: document
 redirect_from:
-- /verify/Testcode/test.test.cpp
-- /verify/Testcode/test.test.cpp.html
-title: Testcode/test.test.cpp
+- /verify/Testcode/SparseTable.test.cpp
+- /verify/Testcode/SparseTable.test.cpp.html
+title: Testcode/SparseTable.test.cpp
 ---
