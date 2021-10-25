@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#include "shikiyuiro/Library/DataStructure/SparseTable.cpp"
+#include "../../DataStructure/SparseTable.cpp"
 
 int main(){
     long N, Q; cin >> N >> Q;
