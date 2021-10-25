@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
-#include<bits/stdc++.h>
-using namespace std;
 
-#include "shikiyuiro/Library/DataStructure/UnionFind.cpp"
+#include "../../template/template.cpp"
+
+#include "../../DataStructure/UnionFind.cpp"
 
 int main(){
     long N, Q; cin >> N >> Q;
