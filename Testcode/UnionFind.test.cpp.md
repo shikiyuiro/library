@@ -14,12 +14,12 @@ data:
     , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.0/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../../DataStructure/UnionFind.cpp:\
+    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: shikiyuiro/Library/DataStructure/UnionFind.cpp:\
     \ line -1: no such header\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n#include<bits/stdc++.h>\n\
-    using namespace std;\n\n#include \"../../DataStructure/UnionFind.cpp\"\n\nint\
-    \ main(){\n    long N, Q; cin >> N >> Q;\n    Union_find uf(N);\n    long t, u,\
-    \ v;\n    while(Q--){\n        cin >> t >> u >> v;\n        if(t == 0) uf.unite(u,\
+    using namespace std;\n\n#include \"shikiyuiro/Library/DataStructure/UnionFind.cpp\"\
+    \n\nint main(){\n    long N, Q; cin >> N >> Q;\n    Union_find uf(N);\n    long\
+    \ t, u, v;\n    while(Q--){\n        cin >> t >> u >> v;\n        if(t == 0) uf.unite(u,\
     \ v);\n        if(t == 1) cout << (uf.same(u, v) ? 1 : 0) << endl;\n    }\n}\n"
   dependsOn: []
   isVerificationFile: true
