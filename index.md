@@ -9,6 +9,11 @@ data:
     - icon: ':warning:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
+  - name: template
+    pages:
+    - icon: ':warning:'
+      path: template/template.cpp
+      title: template/template.cpp
   verificationCategories:
   - name: Testcode
     pages:
