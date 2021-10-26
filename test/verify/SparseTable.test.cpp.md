@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: DataStructure/SparseTable.cpp
-    title: DataStructure/SparseTable.cpp
+    title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
   - icon: ':heavy_check_mark:'
     path: template/template.cpp
     title: template/template.cpp
@@ -32,11 +32,12 @@ data:
     \ i = 2; i <= isiz; i++) cf[i] = cf[i >> 1] + 1;\n    }\n    \n    long query(long\
     \ l, long r/*\u534A\u958B\u533A\u9593*/){\n        assert(l < r);\n        long\
     \ b = cf[r - l];\n        return opera(table[l][b], table[r - (1 << b)][b]);\n\
-    \    }\n};\n#line 6 \"test/verify/SparseTable.test.cpp\"\n\nint main(){\n    long\
-    \ N, Q; cin >> N >> Q;\n    vector<long> A(N);\n    for(long i = 0; i < N; i++)\
-    \ cin >> A[i];\n    \n    SparseTable STA(A, INT_MAX, [](long a, long b){return\
-    \ min(a, b);});\n    while(Q--){\n        long u, v; cin >> u >> v;\n        cout\
-    \ << STA.query(u, v) << endl;\n    }\n}\n"
+    \    }\n};\n/**\n * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB\n\
+    \ * @docs docs/DataStructure/SparseTable.md\n */\n#line 6 \"test/verify/SparseTable.test.cpp\"\
+    \n\nint main(){\n    long N, Q; cin >> N >> Q;\n    vector<long> A(N);\n    for(long\
+    \ i = 0; i < N; i++) cin >> A[i];\n    \n    SparseTable STA(A, INT_MAX, [](long\
+    \ a, long b){return min(a, b);});\n    while(Q--){\n        long u, v; cin >>\
+    \ u >> v;\n        cout << STA.query(u, v) << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include\
     \ \"../../template/template.cpp\"\n\n#include \"../../DataStructure/SparseTable.cpp\"\
     \n\nint main(){\n    long N, Q; cin >> N >> Q;\n    vector<long> A(N);\n    for(long\
@@ -49,7 +50,7 @@ data:
   isVerificationFile: true
   path: test/verify/SparseTable.test.cpp
   requiredBy: []
-  timestamp: '2021-10-26 16:15:33+09:00'
+  timestamp: '2021-10-26 18:38:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/SparseTable.test.cpp
