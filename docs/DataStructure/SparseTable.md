@@ -9,8 +9,8 @@
 
 ## 使い方
 
-- `SparseTable(long v, long e, function<long(long, long)> operation)`：配列v, 演算の単位元e, 演算operationのスパーステーブルを構築する。  
-- `long query(long l, long r)`：半開区間\[l, r)に対して l £ l+1 £ ... £ r-1 を求める。  
+- `SparseTable(vector<T> v, T e, function<T(T, T)> operation)`：配列v, 演算の単位元e, 演算operationのスパーステーブルを構築する。  
+- `T query(long l, long r)`：半開区間\[l, r)に対して l £ l+1 £ ... £ r-1 を求める。  
 
 ## 計算量
 
