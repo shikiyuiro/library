@@ -6,3 +6,7 @@ public:
     void unite(long x, long y){ par[root(x)] = root(y); }
     bool same(long x, long y){ return root(x) == root(y); }
 };
+/**
+ * @brief 素集合データ構造(Union Find)
+ * @docs docs/DataStructure/UnionFind.md
+ */
