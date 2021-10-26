@@ -6,7 +6,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: DataStructure/SparseTable.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
   - name: template
@@ -20,6 +20,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/verify/UnionFind.test.cpp
+      title: test/verify/UnionFind.test.cpp
 layout: toppage
 ---
 [![kyawa](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fkyawa)](https://atcoder.jp/users/kyawa)

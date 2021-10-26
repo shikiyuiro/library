@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/verify/UnionFind.test.cpp
+    title: test/verify/UnionFind.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -31,6 +34,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/SparseTable.test.cpp
+  - test/verify/UnionFind.test.cpp
 documentation_of: template/template.cpp
 layout: document
 redirect_from:
