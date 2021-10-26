@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
     - icon: ':heavy_check_mark:'
@@ -11,13 +11,13 @@ data:
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
   - name: template
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: template/template.cpp
       title: template/template.cpp
   verificationCategories:
   - name: test/verify
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp
     - icon: ':heavy_check_mark:'
