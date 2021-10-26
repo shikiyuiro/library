@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/verify/SparseTable.test.cpp
+    title: test/verify/SparseTable.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/SparseTable.cpp\"\nclass SparseTable{\nprivate:\n\
@@ -39,8 +42,9 @@ data:
   path: DataStructure/SparseTable.cpp
   requiredBy: []
   timestamp: '2021-10-25 17:20:25+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/verify/SparseTable.test.cpp
 documentation_of: DataStructure/SparseTable.cpp
 layout: document
 redirect_from:

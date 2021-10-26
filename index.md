@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: DataStructure/SparseTable.cpp
     - icon: ':warning:'
@@ -11,10 +11,15 @@ data:
       title: DataStructure/UnionFind.cpp
   - name: template
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: template/template.cpp
       title: template/template.cpp
-  verificationCategories: []
+  verificationCategories:
+  - name: test/verify
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/verify/SparseTable.test.cpp
+      title: test/verify/SparseTable.test.cpp
 layout: toppage
 ---
 [![kyawa](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fkyawa)](https://atcoder.jp/users/kyawa)
