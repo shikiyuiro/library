@@ -8,7 +8,7 @@ data:
       title: DataStructure/SparseTable.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
-      title: DataStructure/UnionFind.cpp
+      title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
