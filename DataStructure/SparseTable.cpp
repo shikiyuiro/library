@@ -27,3 +27,7 @@ public:
         return opera(table[l][b], table[r - (1 << b)][b]);
     }
 };
+/**
+ * @brief スパーステーブル
+ * @docs docs/DataStructure/SparseTable.md
+ */
