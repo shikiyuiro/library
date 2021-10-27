@@ -1,4 +1,4 @@
-#define PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0306
+#define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0306"
 
 #include "../../template/template.cpp"
 
