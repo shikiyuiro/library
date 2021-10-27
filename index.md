@@ -13,7 +13,7 @@ data:
     pages:
     - icon: ':warning:'
       path: NumberTheory/BaseConversion.cpp
-      title: NumberTheory/BaseConversion.cpp
+      title: "\u9032\u6570\u5909\u63DB"
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
