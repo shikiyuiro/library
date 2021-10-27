@@ -1,10 +1,13 @@
-class Union_find{
+class UnionFind{
+private:
+    vector<long> Root;
+    vector<long> Size;
 public:
-    vector<long> par;
-    Union_find(long size){ par.resize(size); for(long i = 0; i < size; i++) par[i] = i; }
-    long root(long x){ return (par[x] == x) ? x: par[x] = root(par[x]); }
-    void unite(long x, long y){ par[root(x)] = root(y); }
-    bool same(long x, long y){ return root(x) == root(y); }
+    UnionFind(long size){ Root.resize(size); iota(Root.begin(), Root.end(), 0); Size.resize(size, 1);}
+    long find(long x){ return (Root[x] == x) ? x: Root[x] = find(Root[x]); }
+    void unite(long x, long y){ if(Size[find(x)] < Size[find(y)]) swap(x, y); Root[find(y)] = find(x); Size[find(x)] += Size[find(y)];}
+    bool same(long x, long y){ return find(x) == find(y);}
+    long size(long x){ return Size[find(x)];}
 };
 /**
  * @brief 素集合データ構造(Union Find)
