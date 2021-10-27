@@ -9,6 +9,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
+  - name: NumberTheory
+    pages:
+    - icon: ':warning:'
+      path: NumberTheory/BaseConversion.cpp
+      title: NumberTheory/BaseConversion.cpp
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
