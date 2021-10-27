@@ -6,7 +6,7 @@
 
 int main(){
     long N, Q; cin >> N >> Q;
-    Unionind uf(N);
+    UnionFind uf(N);
     long t, u, v;
     while(Q--){
         cin >> t >> u >> v;
