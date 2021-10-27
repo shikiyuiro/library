@@ -19,4 +19,5 @@ int main(){
         if(S[i] == '1') cout << "0";
         if(S[i] == '0') cout << "-";
     }
+    cout << endl;
 }
