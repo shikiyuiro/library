@@ -66,10 +66,10 @@ title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
 前計算の長さは2の冪乗ずつにすると、ダブリングを利用して求めることができ、かつ上手いことどのような範囲にも対応できる。  
 セグメント木と比較するとクエリが高速だが、配列の値を更新するクエリには対応できない。  
 
-## 使い方
-
-- `SparseTable(vector<T> v, T e, function<T(T, T)> operation)`：配列v, 演算の単位元e, 演算operationのスパーステーブルを構築する。  
-- `T query(long l, long r)`：半開区間\[l, r)に対して l £ l+1 £ ... £ r-1 を求める。  
+## 使い方  
+#### $Element$には集合の要素の型を代入してください。
+- `SparseTable(vector<Element> v, Element e, function<Element(Element, Element)> operation)`：配列v, 演算の単位元e, 演算operationのスパーステーブルを構築する。  
+- `Element query(long l, long r)`：半開区間\[l, r)に対して l £ l+1 £ ... £ r-1 を求める。  
 
 ## 計算量
 
