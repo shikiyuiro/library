@@ -11,17 +11,20 @@ data:
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
   - name: NumberTheory
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: NumberTheory/BaseConversion.cpp
       title: "\u9032\u6570\u5909\u63DB"
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.cpp
       title: template/template.cpp
   verificationCategories:
   - name: test/verify
     pages:
+    - icon: ':x:'
+      path: test/verify/BaseConversion.test.cpp
+      title: test/verify/BaseConversion.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp

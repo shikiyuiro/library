@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/verify/BaseConversion.test.cpp
+    title: test/verify/BaseConversion.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     _deprecated_at_docs: docs/NumberTheory/BaseConversion.md
     document_title: "\u9032\u6570\u5909\u63DB"
@@ -38,8 +41,9 @@ data:
   path: NumberTheory/BaseConversion.cpp
   requiredBy: []
   timestamp: '2021-10-27 14:00:59+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/verify/BaseConversion.test.cpp
 documentation_of: NumberTheory/BaseConversion.cpp
 layout: document
 redirect_from:
