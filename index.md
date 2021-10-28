@@ -11,7 +11,7 @@ data:
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
   - name: Utility
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Utility/BaseConversion.cpp
       title: "\u9032\u6570\u5909\u63DB"
     - icon: ':warning:'
@@ -25,7 +25,7 @@ data:
   verificationCategories:
   - name: test/verify
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/verify/BaseConversion.test.cpp
       title: test/verify/BaseConversion.test.cpp
     - icon: ':heavy_check_mark:'
