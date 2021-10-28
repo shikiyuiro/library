@@ -9,7 +9,7 @@
 
 ## 使い方  
 #### $Element$には集合の要素の型を代入してください。
-- `SparseTable(vector<Element> v, Element e, function<Element(Element, Element)> operation)`：配列v, 演算の単位元e, 演算operationのスパーステーブルを構築する。  
+- `SparseTable(vector<Element> v, Element e, function<Element(Element, Element)> operation)`：コンストラクタ。配列v, 演算の単位元e, 演算operationのスパーステーブルを構築する。  
 - `Element query(long l, long r)`：半開区間\[l, r)に対して l £ l+1 £ ... £ r-1 を求める。  
 
 ## 計算量
