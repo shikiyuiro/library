@@ -14,7 +14,6 @@ int main(){
     }
     string S = bc.from10(w + t, 3);
     long siz = S.size();
-    long i = 0;
     bool notzerofirst = false;
     for(long i = 0; i < siz; i++){
         if(S[i] == '2') cout << "+", notzerofirst = true;
