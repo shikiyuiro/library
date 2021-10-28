@@ -4,7 +4,7 @@ private:
     long index = 0;
     vector<Element> uniq;
 public:
-    vector<Element> After;
+    vector<long> After;
     map<Element, long> BtoA;
     map<long, Element> AtoB;
     
@@ -17,7 +17,10 @@ public:
             AtoB.insert(make_pair(index, e));
             index++;
         }
-        After = Before;
-        for(auto &e : After) e = BtoA.at(e);
+        for(auto &e : Before) After.push_back(BtoA.at(e));
     }
 };
+/**
+ * @brief 座標圧縮
+ * @docs docs/Utility/CoordinateCompless.md
+ */
