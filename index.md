@@ -9,13 +9,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
-  - name: NumberTheory
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: NumberTheory/BaseConversion.cpp
-      title: "\u9032\u6570\u5909\u63DB"
   - name: Utility
     pages:
+    - icon: ':warning:'
+      path: Utility/BaseConversion.cpp
+      title: "\u9032\u6570\u5909\u63DB"
     - icon: ':warning:'
       path: Utility/CoordinateCompless.cpp
       title: Utility/CoordinateCompless.cpp
@@ -27,7 +25,7 @@ data:
   verificationCategories:
   - name: test/verify
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/verify/BaseConversion.test.cpp
       title: test/verify/BaseConversion.test.cpp
     - icon: ':heavy_check_mark:'
