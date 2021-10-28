@@ -34,26 +34,25 @@ data:
     \ */\n#line 6 \"test/verify/BaseConversion.test.cpp\"\n\nint main(){\n    BaseConversion\
     \ bc;\n    long w; cin >> w;\n    long t = 1;\n    while(w >= t){\n        t *=\
     \ 3;\n        t += 1;\n    }\n    string S = bc.from10(w + t, 3);\n    long siz\
-    \ = S.size();\n    long i = 0;\n    bool notzerofirst = false;\n    for(long i\
-    \ = 0; i < siz; i++){\n        if(S[i] == '2') cout << \"+\", notzerofirst = true;\n\
-    \        if(S[i] == '1' && notzerofirst) cout << \"0\";\n        if(S[i] == '0')\
-    \ cout << \"-\", notzerofirst = true;\n    }\n    cout << endl;\n}\n"
+    \ = S.size();\n    bool notzerofirst = false;\n    for(long i = 0; i < siz; i++){\n\
+    \        if(S[i] == '2') cout << \"+\", notzerofirst = true;\n        if(S[i]\
+    \ == '1' && notzerofirst) cout << \"0\";\n        if(S[i] == '0') cout << \"-\"\
+    , notzerofirst = true;\n    }\n    cout << endl;\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0306\"\
     \n\n#include \"../../template/template.cpp\"\n\n#include \"../../Utility/BaseConversion.cpp\"\
     \n\nint main(){\n    BaseConversion bc;\n    long w; cin >> w;\n    long t = 1;\n\
     \    while(w >= t){\n        t *= 3;\n        t += 1;\n    }\n    string S = bc.from10(w\
-    \ + t, 3);\n    long siz = S.size();\n    long i = 0;\n    bool notzerofirst =\
-    \ false;\n    for(long i = 0; i < siz; i++){\n        if(S[i] == '2') cout <<\
-    \ \"+\", notzerofirst = true;\n        if(S[i] == '1' && notzerofirst) cout <<\
-    \ \"0\";\n        if(S[i] == '0') cout << \"-\", notzerofirst = true;\n    }\n\
-    \    cout << endl;\n}\n"
+    \ + t, 3);\n    long siz = S.size();\n    bool notzerofirst = false;\n    for(long\
+    \ i = 0; i < siz; i++){\n        if(S[i] == '2') cout << \"+\", notzerofirst =\
+    \ true;\n        if(S[i] == '1' && notzerofirst) cout << \"0\";\n        if(S[i]\
+    \ == '0') cout << \"-\", notzerofirst = true;\n    }\n    cout << endl;\n}\n"
   dependsOn:
   - template/template.cpp
   - Utility/BaseConversion.cpp
   isVerificationFile: true
   path: test/verify/BaseConversion.test.cpp
   requiredBy: []
-  timestamp: '2021-10-28 18:42:08+09:00'
+  timestamp: '2021-10-28 18:43:53+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/BaseConversion.test.cpp
