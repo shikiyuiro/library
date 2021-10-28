@@ -2,7 +2,7 @@
 
 #include "../../template/template.cpp"
 
-#include "../../NumberTheory/BaseConversion.cpp"
+#include "../../Utility/BaseConversion.cpp"
 
 int main(){
     BaseConversion bc;
