@@ -14,7 +14,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Utility/BaseConversion.cpp
       title: "\u9032\u6570\u5909\u63DB"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Utility/CoordinateCompless.cpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
   - name: template
@@ -25,6 +25,9 @@ data:
   verificationCategories:
   - name: test/verify
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/verify/Atcoder.test.cpp
+      title: test/verify/Atcoder.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/verify/BaseConversion.test.cpp
       title: test/verify/BaseConversion.test.cpp

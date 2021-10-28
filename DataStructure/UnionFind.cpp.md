@@ -57,7 +57,7 @@ $Size$クエリ:与えられた頂点を含む集合の大きさを求める。
 
 ## 使い方
 
-- `UnionFind(long size)`：頂点数sizeの素集合を構築する。  
+- `UnionFind(long size)`：コンストラクタ。頂点数sizeの素集合を構築する。  
 - `long find(long x)`：頂点xの根を返す。  
 - `void unite(long x, long y)`：頂点xを含む集合と頂点yを含む集合を連結にする。  
 - `bool same(long x, long y)`：頂点xと頂点yが連結であるならば$true$、そうでなければ$false$を返す。  
