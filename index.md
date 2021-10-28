@@ -14,6 +14,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: NumberTheory/BaseConversion.cpp
       title: "\u9032\u6570\u5909\u63DB"
+  - name: Utility
+    pages:
+    - icon: ':warning:'
+      path: Utility/CoordinateCompless.cpp
+      title: Utility/CoordinateCompless.cpp
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
