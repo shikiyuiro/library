@@ -27,5 +27,5 @@ public:
 };
 /**
  * @brief 進数変換
- * @docs docs/NumberTheory/BaseConversion.md
+ * @docs docs/Utility/BaseConversion.md
  */
