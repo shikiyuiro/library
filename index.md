@@ -16,7 +16,7 @@ data:
       title: "\u9032\u6570\u5909\u63DB"
     - icon: ':warning:'
       path: Utility/CoordinateCompless.cpp
-      title: Utility/CoordinateCompless.cpp
+      title: "\u5EA7\u6A19\u5727\u7E2E"
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
