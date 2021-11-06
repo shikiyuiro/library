@@ -39,10 +39,10 @@ data:
   timestamp: '2021-10-25 18:03:27+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/verify/Atcoder.test.cpp
-  - test/verify/BaseConversion.test.cpp
   - test/verify/SparseTable.test.cpp
+  - test/verify/Atcoder.test.cpp
   - test/verify/UnionFind.test.cpp
+  - test/verify/BaseConversion.test.cpp
 documentation_of: template/template.cpp
 layout: document
 redirect_from:
