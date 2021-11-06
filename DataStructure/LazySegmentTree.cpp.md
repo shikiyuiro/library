@@ -11,7 +11,7 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/LazySegmentTree.md
-    document_title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1"
+    document_title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
     links: []
   bundledCode: "#line 1 \"DataStructure/LazySegmentTree.cpp\"\ntemplate < typename\
     \ Element = long >\nclass LazySegmentTree {\nprivate:\n    Element e;\n    long\
@@ -48,8 +48,8 @@ data:
     \ l, long r/*\u534A\u958B\u533A\u9593*/){\n        queryL = l; queryR = r;\n \
     \       return opera_rec();\n    }\n    \n    void query_update(long l, long r/*\u534A\
     \u958B\u533A\u9593*/, Element value){\n        queryL = l; queryR = r; queryV\
-    \ = value;\n        return update_rec();\n    }\n};\n/**\n * @brief \u30BB\u30B0\
-    \u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1\n * @docs docs/DataStructure/LazySegmentTree.md\n\
+    \ = value;\n        return update_rec();\n    }\n};\n/**\n * @brief \u9045\u5EF6\
+    \u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\n * @docs docs/DataStructure/LazySegmentTree.md\n\
     \ */\n"
   code: "template < typename Element = long >\nclass LazySegmentTree {\nprivate:\n\
     \    Element e;\n    long vsiz;\n    long tsiz;\n    long queryL = -1, queryR\
@@ -85,14 +85,14 @@ data:
     \ l, long r/*\u534A\u958B\u533A\u9593*/){\n        queryL = l; queryR = r;\n \
     \       return opera_rec();\n    }\n    \n    void query_update(long l, long r/*\u534A\
     \u958B\u533A\u9593*/, Element value){\n        queryL = l; queryR = r; queryV\
-    \ = value;\n        return update_rec();\n    }\n};\n/**\n * @brief \u30BB\u30B0\
-    \u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1\n * @docs docs/DataStructure/LazySegmentTree.md\n\
+    \ = value;\n        return update_rec();\n    }\n};\n/**\n * @brief \u9045\u5EF6\
+    \u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\n * @docs docs/DataStructure/LazySegmentTree.md\n\
     \ */\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/LazySegmentTree.cpp
   requiredBy: []
-  timestamp: '2021-11-06 17:55:42+09:00'
+  timestamp: '2021-11-06 17:57:49+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/Atcoder.test.cpp
@@ -101,7 +101,7 @@ layout: document
 redirect_from:
 - /library/DataStructure/LazySegmentTree.cpp
 - /library/DataStructure/LazySegmentTree.cpp.html
-title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1"
+title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
 ---
 ## きもち  
 区間演算と、区間更新を両方高速に行うことができるデータ構造。  
