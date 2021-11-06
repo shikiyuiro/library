@@ -83,6 +83,6 @@ public:
     }
 };
 /**
- * @brief セグメント木・遅延評価
+ * @brief 遅延評価セグメント木
  * @docs docs/DataStructure/LazySegmentTree.md
  */
