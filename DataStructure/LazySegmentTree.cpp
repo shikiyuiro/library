@@ -82,3 +82,6 @@ public:
         return update_rec();
     }
 };
+/**
+ * @brief セグメント木・遅延評価
+ */
