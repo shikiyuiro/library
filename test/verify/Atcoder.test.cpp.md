@@ -71,10 +71,10 @@ data:
     \    }\n    \n    void query_update(long l, long r/*\u534A\u958B\u533A\u9593*/,\
     \ Element value){\n        queryL = l; queryR = r; queryV = value;\n        return\
     \ update_rec();\n    }\n};\n/**\n * @brief \u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
-    \u30FB\u9045\u5EF6\u8A55\u4FA1\n */\n#line 10 \"test/verify/Atcoder.test.cpp\"\
-    \n//\u4EE5\u4E0B\u306E\u554F\u984C\u3067\u52D5\u4F5C\u78BA\u8A8D\u6E08\u307F\u3067\
-    \u3059\u3002\n//https://atcoder.jp/contests/typical90/submissions/27052694\n\n\
-    int main(){\n    long A, B; cin >> A >> B;\n    cout << A + B << endl;\n}\n"
+    \u30FB\u9045\u5EF6\u8A55\u4FA1\n * @docs docs/DataStructure/LazySegmentTree.md\n\
+    \ */\n#line 10 \"test/verify/Atcoder.test.cpp\"\n//\u4EE5\u4E0B\u306E\u554F\u984C\
+    \u3067\u52D5\u4F5C\u78BA\u8A8D\u6E08\u307F\u3067\u3059\u3002\n//https://atcoder.jp/contests/typical90/submissions/27052694\n\
+    \nint main(){\n    long A, B; cin >> A >> B;\n    cout << A + B << endl;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\n\n#include \"\
     ../../template/template.cpp\"\n\n#include \"../../Utility/CoordinateCompless.cpp\"\
     \n//\u4EE5\u4E0B\u306E\u554F\u984C\u3067\u52D5\u4F5C\u78BA\u8A8D\u6E08\u307F\u3067\
@@ -89,7 +89,7 @@ data:
   isVerificationFile: true
   path: test/verify/Atcoder.test.cpp
   requiredBy: []
-  timestamp: '2021-11-06 17:21:40+09:00'
+  timestamp: '2021-11-06 17:55:42+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/Atcoder.test.cpp

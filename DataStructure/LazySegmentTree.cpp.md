@@ -10,6 +10,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    _deprecated_at_docs: docs/DataStructure/LazySegmentTree.md
     document_title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1"
     links: []
   bundledCode: "#line 1 \"DataStructure/LazySegmentTree.cpp\"\ntemplate < typename\
@@ -48,7 +49,8 @@ data:
     \       return opera_rec();\n    }\n    \n    void query_update(long l, long r/*\u534A\
     \u958B\u533A\u9593*/, Element value){\n        queryL = l; queryR = r; queryV\
     \ = value;\n        return update_rec();\n    }\n};\n/**\n * @brief \u30BB\u30B0\
-    \u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1\n */\n"
+    \u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1\n * @docs docs/DataStructure/LazySegmentTree.md\n\
+    \ */\n"
   code: "template < typename Element = long >\nclass LazySegmentTree {\nprivate:\n\
     \    Element e;\n    long vsiz;\n    long tsiz;\n    long queryL = -1, queryR\
     \ = -1, queryV = -1;\n    vector<Element> Table;\n    vector<long> TableL, TableR;\n\
@@ -84,12 +86,13 @@ data:
     \       return opera_rec();\n    }\n    \n    void query_update(long l, long r/*\u534A\
     \u958B\u533A\u9593*/, Element value){\n        queryL = l; queryR = r; queryV\
     \ = value;\n        return update_rec();\n    }\n};\n/**\n * @brief \u30BB\u30B0\
-    \u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1\n */\n"
+    \u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1\n * @docs docs/DataStructure/LazySegmentTree.md\n\
+    \ */\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/LazySegmentTree.cpp
   requiredBy: []
-  timestamp: '2021-11-06 17:21:40+09:00'
+  timestamp: '2021-11-06 17:55:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/Atcoder.test.cpp
@@ -100,3 +103,20 @@ redirect_from:
 - /library/DataStructure/LazySegmentTree.cpp.html
 title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u30FB\u9045\u5EF6\u8A55\u4FA1"
 ---
+## きもち  
+区間演算と、区間更新を両方高速に行うことができるデータ構造。  
+演算£がモノイドをなし、任意の元 X に対して、Y £ Y = X なる Y(これ抽象代数で名前ついてますか?) が計算できる必要がある。
+
+## 使い方  
+#### $Element$には集合の要素の型を代入してください。
+- `LazySegmentTree(vector<Element> v, Element e, function<Element(Element, Element)> operation, 
+function<Element(Element)> lazyDeal = [](Element a){return a;})`：コンストラクタ。  
+配列v, 演算の単位元e, 演算operationの遅延評価セグメント木を構築する。  
+lazyDeal関数は演算を£として、Xが与えられた時に、Y£Y=Xを満たすようなYを返す関数。  
+- `Element query_opera(long l, long r)`：半開区間\[l, r)に対する演算結果を返す。  
+- `Element query_update(long l, long r, Element value)`：半開区間\[l, r)にvalueを代入する。一様加算もできる。
+
+## 計算量
+
+構築:$\mathrm{O}(NlogN)$  
+クエリ:$\mathrm{O}(logN)$  
