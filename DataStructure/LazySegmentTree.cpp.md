@@ -118,5 +118,5 @@ lazyDeal関数は演算を£として、Xが与えられた時に、Y£Y=Xを満
 
 ## 計算量
 
-構築:$\mathrm{O}(NlogN)$  
+構築:$\mathrm{O}(N)$  
 クエリ:$\mathrm{O}(logN)$  
