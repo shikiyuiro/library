@@ -19,7 +19,7 @@ data:
     pages:
     - icon: ':warning:'
       path: Graph/LowestCommonAncestor.cpp
-      title: Graph/LowestCommonAncestor.cpp
+      title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
     - icon: ':warning:'
       path: Graph/StronglyConnectedComponent.cpp
       title: Graph/StronglyConnectedComponent.cpp
