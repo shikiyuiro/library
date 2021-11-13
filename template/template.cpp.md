@@ -10,6 +10,9 @@ data:
     path: test/verify/BaseConversion.test.cpp
     title: test/verify/BaseConversion.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/verify/FenwickTree.test.cpp
+    title: test/verify/FenwickTree.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
   - icon: ':heavy_check_mark:'
@@ -39,6 +42,7 @@ data:
   timestamp: '2021-10-25 18:03:27+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/verify/FenwickTree.test.cpp
   - test/verify/SparseTable.test.cpp
   - test/verify/Atcoder.test.cpp
   - test/verify/UnionFind.test.cpp

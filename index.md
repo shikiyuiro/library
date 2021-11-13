@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/FenwickTree.cpp
       title: "Fenwick\u6728"
     - icon: ':heavy_check_mark:'
@@ -45,6 +45,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/BaseConversion.test.cpp
       title: test/verify/BaseConversion.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/verify/FenwickTree.test.cpp
+      title: test/verify/FenwickTree.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp

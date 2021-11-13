@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/verify/FenwickTree.test.cpp
+    title: test/verify/FenwickTree.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/FenwickTree.md
     document_title: "Fenwick\u6728"
@@ -33,8 +36,9 @@ data:
   path: DataStructure/FenwickTree.cpp
   requiredBy: []
   timestamp: '2021-11-13 19:54:22+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/verify/FenwickTree.test.cpp
 documentation_of: DataStructure/FenwickTree.cpp
 layout: document
 redirect_from:
