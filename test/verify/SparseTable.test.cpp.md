@@ -20,9 +20,9 @@ data:
   bundledCode: "#line 1 \"test/verify/SparseTable.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\
     \n\n#line 1 \"template/template.cpp\"\n#include<bits/stdc++.h>\nusing namespace\
     \ std;\n#line 4 \"test/verify/SparseTable.test.cpp\"\n\n#line 1 \"DataStructure/SparseTable.cpp\"\
-    \ntemplate < typename Element = long >\nclass SparseTable{\nprivate:\n    function<Element(Element,\
-    \ Element)> operation;\n    vector<long> cf;\npublic:\n    vector<vector<Element>>\
-    \ table;\n    \n    SparseTable(vector<Element>& v, Element e, function<Element(Element,\
+    \ntemplate < typename Element = long >\nclass SparseTable{\npublic:\n    function<Element(Element,\
+    \ Element)> operation;\n    vector<vector<Element>> table;\n    vector<long> cf;\n\
+    \    \n    SparseTable(vector<Element>& v, Element e, function<Element(Element,\
     \ Element)> operation) : operation(operation){\n        long isiz = v.size();\n\
     \        long jsiz = 0;\n        while((1 << jsiz) <= isiz) jsiz++;\n        table.resize(isiz,\
     \ vector<Element>(jsiz, e));\n        for(long i = 0; i < isiz; i++)table[i][0]\
@@ -51,7 +51,7 @@ data:
   isVerificationFile: true
   path: test/verify/SparseTable.test.cpp
   requiredBy: []
-  timestamp: '2021-11-02 18:31:14+09:00'
+  timestamp: '2021-11-13 18:07:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/SparseTable.test.cpp

@@ -13,20 +13,20 @@ data:
     _deprecated_at_docs: docs/Utility/BaseConversion.md
     document_title: "\u9032\u6570\u5909\u63DB"
     links: []
-  bundledCode: "#line 1 \"Utility/BaseConversion.cpp\"\nclass BaseConversion {\nprivate:\n\
-    \    string symbol = \"0123456789ABCDEF\";\n    long to_num[128];\npublic:\n \
-    \   BaseConversion(){\n        long basemax = symbol.length();\n        for(long\
-    \ i = 0; i < basemax; i++) to_num[(long)symbol[i]] = i;\n    }\n    \n    string\
-    \ from10(long num, long base) {\n        if(num == 0) return \"0\";\n        string\
-    \ res = \"\";\n        while(num > 0){\n            res = symbol[num % base] +\
-    \ res;\n            num /= base;\n        }\n        return res;\n    }\n    \n\
-    \    long to10(string num, long base) {\n        long res = 0;\n        long numsize\
-    \ = num.length();\n        for(long i = 0; i < numsize; ++i) res = res * base\
-    \ + to_num[(long)num[i]];\n        return res;\n    }\n};\n/**\n * @brief \u9032\
-    \u6570\u5909\u63DB\n * @docs docs/Utility/BaseConversion.md\n */\n"
-  code: "class BaseConversion {\nprivate:\n    string symbol = \"0123456789ABCDEF\"\
-    ;\n    long to_num[128];\npublic:\n    BaseConversion(){\n        long basemax\
-    \ = symbol.length();\n        for(long i = 0; i < basemax; i++) to_num[(long)symbol[i]]\
+  bundledCode: "#line 1 \"Utility/BaseConversion.cpp\"\nclass BaseConversion {\npublic:\n\
+    \    string symbol = \"0123456789ABCDEF\";\n    long to_num[128];\n    \n    BaseConversion(){\n\
+    \        long basemax = symbol.length();\n        for(long i = 0; i < basemax;\
+    \ i++) to_num[(long)symbol[i]] = i;\n    }\n    \n    string from10(long num,\
+    \ long base) {\n        if(num == 0) return \"0\";\n        string res = \"\"\
+    ;\n        while(num > 0){\n            res = symbol[num % base] + res;\n    \
+    \        num /= base;\n        }\n        return res;\n    }\n    \n    long to10(string\
+    \ num, long base) {\n        long res = 0;\n        long numsize = num.length();\n\
+    \        for(long i = 0; i < numsize; ++i) res = res * base + to_num[(long)num[i]];\n\
+    \        return res;\n    }\n};\n/**\n * @brief \u9032\u6570\u5909\u63DB\n * @docs\
+    \ docs/Utility/BaseConversion.md\n */\n"
+  code: "class BaseConversion {\npublic:\n    string symbol = \"0123456789ABCDEF\"\
+    ;\n    long to_num[128];\n    \n    BaseConversion(){\n        long basemax =\
+    \ symbol.length();\n        for(long i = 0; i < basemax; i++) to_num[(long)symbol[i]]\
     \ = i;\n    }\n    \n    string from10(long num, long base) {\n        if(num\
     \ == 0) return \"0\";\n        string res = \"\";\n        while(num > 0){\n \
     \           res = symbol[num % base] + res;\n            num /= base;\n      \
@@ -39,7 +39,7 @@ data:
   isVerificationFile: false
   path: Utility/BaseConversion.cpp
   requiredBy: []
-  timestamp: '2021-10-28 18:42:08+09:00'
+  timestamp: '2021-11-13 18:08:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/BaseConversion.test.cpp

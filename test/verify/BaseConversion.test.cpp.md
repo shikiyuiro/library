@@ -21,16 +21,16 @@ data:
     https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0306\"\n\n#line 1 \"\
     template/template.cpp\"\n#include<bits/stdc++.h>\nusing namespace std;\n#line\
     \ 4 \"test/verify/BaseConversion.test.cpp\"\n\n#line 1 \"Utility/BaseConversion.cpp\"\
-    \nclass BaseConversion {\nprivate:\n    string symbol = \"0123456789ABCDEF\";\n\
-    \    long to_num[128];\npublic:\n    BaseConversion(){\n        long basemax =\
-    \ symbol.length();\n        for(long i = 0; i < basemax; i++) to_num[(long)symbol[i]]\
-    \ = i;\n    }\n    \n    string from10(long num, long base) {\n        if(num\
-    \ == 0) return \"0\";\n        string res = \"\";\n        while(num > 0){\n \
-    \           res = symbol[num % base] + res;\n            num /= base;\n      \
-    \  }\n        return res;\n    }\n    \n    long to10(string num, long base) {\n\
-    \        long res = 0;\n        long numsize = num.length();\n        for(long\
-    \ i = 0; i < numsize; ++i) res = res * base + to_num[(long)num[i]];\n        return\
-    \ res;\n    }\n};\n/**\n * @brief \u9032\u6570\u5909\u63DB\n * @docs docs/Utility/BaseConversion.md\n\
+    \nclass BaseConversion {\npublic:\n    string symbol = \"0123456789ABCDEF\";\n\
+    \    long to_num[128];\n    \n    BaseConversion(){\n        long basemax = symbol.length();\n\
+    \        for(long i = 0; i < basemax; i++) to_num[(long)symbol[i]] = i;\n    }\n\
+    \    \n    string from10(long num, long base) {\n        if(num == 0) return \"\
+    0\";\n        string res = \"\";\n        while(num > 0){\n            res = symbol[num\
+    \ % base] + res;\n            num /= base;\n        }\n        return res;\n \
+    \   }\n    \n    long to10(string num, long base) {\n        long res = 0;\n \
+    \       long numsize = num.length();\n        for(long i = 0; i < numsize; ++i)\
+    \ res = res * base + to_num[(long)num[i]];\n        return res;\n    }\n};\n/**\n\
+    \ * @brief \u9032\u6570\u5909\u63DB\n * @docs docs/Utility/BaseConversion.md\n\
     \ */\n#line 6 \"test/verify/BaseConversion.test.cpp\"\n\nint main(){\n    BaseConversion\
     \ bc;\n    long w; cin >> w;\n    long t = 1;\n    while(w >= t){\n        t *=\
     \ 3;\n        t += 1;\n    }\n    string S = bc.from10(w + t, 3);\n    long siz\
@@ -52,7 +52,7 @@ data:
   isVerificationFile: true
   path: test/verify/BaseConversion.test.cpp
   requiredBy: []
-  timestamp: '2021-10-28 18:43:53+09:00'
+  timestamp: '2021-11-13 18:08:57+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/BaseConversion.test.cpp
