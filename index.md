@@ -48,6 +48,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/FenwickTree.test.cpp
       title: test/verify/FenwickTree.test.cpp
+    - icon: ':x:'
+      path: test/verify/LowestCommonAncestor.test.cpp
+      title: test/verify/LowestCommonAncestor.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp
