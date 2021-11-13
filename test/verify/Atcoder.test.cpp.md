@@ -9,7 +9,7 @@ data:
     title: "\u5EA7\u6A19\u5727\u7E2E"
   - icon: ':heavy_check_mark:'
     path: template/template.cpp
-    title: template/template.cpp
+    title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -24,7 +24,8 @@ data:
     - https://judge.yosupo.jp/problem/aplusb
   bundledCode: "#line 1 \"test/verify/Atcoder.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\
     \n\n#line 1 \"template/template.cpp\"\n#include<bits/stdc++.h>\nusing namespace\
-    \ std;\n#line 4 \"test/verify/Atcoder.test.cpp\"\n\n#line 1 \"Utility/CoordinateCompless.cpp\"\
+    \ std;\n/**\n * @brief \u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n\
+    \ */\n#line 4 \"test/verify/Atcoder.test.cpp\"\n\n#line 1 \"Utility/CoordinateCompless.cpp\"\
     \ntemplate < typename Element = long >\nclass CoordinateCompless{\nprivate:\n\
     \    long index = 0;\n    vector<Element> uniq;\npublic:\n    vector<long> After;\n\
     \    map<Element, long> BtoA;\n    map<long, Element> AtoB;\n    \n    CoordinateCompless(vector<Element>&\
@@ -89,7 +90,7 @@ data:
   isVerificationFile: true
   path: test/verify/Atcoder.test.cpp
   requiredBy: []
-  timestamp: '2021-11-06 17:57:49+09:00'
+  timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/Atcoder.test.cpp

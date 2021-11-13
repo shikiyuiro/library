@@ -6,7 +6,7 @@ data:
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
   - icon: ':heavy_check_mark:'
     path: template/template.cpp
-    title: template/template.cpp
+    title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,7 +19,8 @@ data:
     - https://judge.yosupo.jp/problem/staticrmq
   bundledCode: "#line 1 \"test/verify/SparseTable.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\
     \n\n#line 1 \"template/template.cpp\"\n#include<bits/stdc++.h>\nusing namespace\
-    \ std;\n#line 4 \"test/verify/SparseTable.test.cpp\"\n\n#line 1 \"DataStructure/SparseTable.cpp\"\
+    \ std;\n/**\n * @brief \u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n\
+    \ */\n#line 4 \"test/verify/SparseTable.test.cpp\"\n\n#line 1 \"DataStructure/SparseTable.cpp\"\
     \ntemplate < typename Element = long >\nclass SparseTable{\npublic:\n    function<Element(Element,\
     \ Element)> operation;\n    vector<vector<Element>> table;\n    vector<long> cf;\n\
     \    \n    SparseTable(vector<Element>& v, Element e, function<Element(Element,\
@@ -51,7 +52,7 @@ data:
   isVerificationFile: true
   path: test/verify/SparseTable.test.cpp
   requiredBy: []
-  timestamp: '2021-11-13 18:07:29+09:00'
+  timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/SparseTable.test.cpp

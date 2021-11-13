@@ -6,7 +6,7 @@ data:
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - icon: ':heavy_check_mark:'
     path: template/template.cpp
-    title: template/template.cpp
+    title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,7 +19,8 @@ data:
     - https://judge.yosupo.jp/problem/scc
   bundledCode: "#line 1 \"test/verify/StronglyConnectedComponent.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/scc\"\n\n#line 1 \"template/template.cpp\"\
-    \n#include<bits/stdc++.h>\nusing namespace std;\n#line 4 \"test/verify/StronglyConnectedComponent.test.cpp\"\
+    \n#include<bits/stdc++.h>\nusing namespace std;\n/**\n * @brief \u30C6\u30F3\u30D7\
+    \u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n */\n#line 4 \"test/verify/StronglyConnectedComponent.test.cpp\"\
     \n\n#line 1 \"Graph/StronglyConnectedComponent.cpp\"\nclass StronglyConnectedComponent{\n\
     private:\n    long Gsize;\n    vector<bool> visited;\n    vector<vector<long>>\
     \ forward;\n    vector<vector<long>> backward;\n    stack<long> bfs_seed;\n  \
@@ -62,7 +63,7 @@ data:
   isVerificationFile: true
   path: test/verify/StronglyConnectedComponent.test.cpp
   requiredBy: []
-  timestamp: '2021-11-13 20:00:54+09:00'
+  timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/StronglyConnectedComponent.test.cpp

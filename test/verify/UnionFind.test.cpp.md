@@ -6,7 +6,7 @@ data:
     title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
   - icon: ':heavy_check_mark:'
     path: template/template.cpp
-    title: template/template.cpp
+    title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,7 +19,8 @@ data:
     - https://judge.yosupo.jp/problem/unionfind
   bundledCode: "#line 1 \"test/verify/UnionFind.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\
     \n\n#line 1 \"template/template.cpp\"\n#include<bits/stdc++.h>\nusing namespace\
-    \ std;\n#line 4 \"test/verify/UnionFind.test.cpp\"\n\n#line 1 \"DataStructure/UnionFind.cpp\"\
+    \ std;\n/**\n * @brief \u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n\
+    \ */\n#line 4 \"test/verify/UnionFind.test.cpp\"\n\n#line 1 \"DataStructure/UnionFind.cpp\"\
     \nclass UnionFind{\nprivate:\n    vector<long> Root;\n    vector<long> Size;\n\
     public:\n    UnionFind(long size){ Root.resize(size); iota(Root.begin(), Root.end(),\
     \ 0); Size.resize(size, 1);}\n    long find(long x){ return (Root[x] == x) ? x:\
@@ -44,7 +45,7 @@ data:
   isVerificationFile: true
   path: test/verify/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2021-10-27 11:09:01+09:00'
+  timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/UnionFind.test.cpp

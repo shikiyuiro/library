@@ -28,24 +28,19 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    _deprecated_at_docs: docs/template/template.md
+    document_title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
     links: []
-  bundledCode: '#line 1 "template/template.cpp"
-
-    #include<bits/stdc++.h>
-
-    using namespace std;
-
-    '
-  code: '#include<bits/stdc++.h>
-
-    using namespace std;
-
-    '
+  bundledCode: "#line 1 \"template/template.cpp\"\n#include<bits/stdc++.h>\nusing\
+    \ namespace std;\n/**\n * @brief \u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\n * @docs\
+    \ docs/template/template.md\n */\n"
+  code: "#include<bits/stdc++.h>\nusing namespace std;\n/**\n * @brief \u30C6\u30F3\
+    \u30D7\u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n */\n"
   dependsOn: []
   isVerificationFile: false
   path: template/template.cpp
   requiredBy: []
-  timestamp: '2021-10-25 18:03:27+09:00'
+  timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/StronglyConnectedComponent.test.cpp
@@ -60,5 +55,19 @@ layout: document
 redirect_from:
 - /library/template/template.cpp
 - /library/template/template.cpp.html
-title: template/template.cpp
+title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
 ---
+## きもち
+
+テンプレートです。  
+マクロの類は見にくくなる気がして使ってないです。  
+使いこなせる人は使っていいんじゃないかな。  
+
+## 日記
+
+ウマ娘のアニメを見て、1e9+7回泣き、涙を998244353L流した。
+
+## 編集予定
+・全方位木DP  
+・負閉路検出  
+・二項係数  

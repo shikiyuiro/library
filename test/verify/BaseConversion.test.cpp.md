@@ -6,7 +6,7 @@ data:
     title: "\u9032\u6570\u5909\u63DB"
   - icon: ':heavy_check_mark:'
     path: template/template.cpp
-    title: template/template.cpp
+    title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,8 +19,9 @@ data:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0306
   bundledCode: "#line 1 \"test/verify/BaseConversion.test.cpp\"\n#define PROBLEM \"\
     https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0306\"\n\n#line 1 \"\
-    template/template.cpp\"\n#include<bits/stdc++.h>\nusing namespace std;\n#line\
-    \ 4 \"test/verify/BaseConversion.test.cpp\"\n\n#line 1 \"Utility/BaseConversion.cpp\"\
+    template/template.cpp\"\n#include<bits/stdc++.h>\nusing namespace std;\n/**\n\
+    \ * @brief \u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n\
+    \ */\n#line 4 \"test/verify/BaseConversion.test.cpp\"\n\n#line 1 \"Utility/BaseConversion.cpp\"\
     \nclass BaseConversion {\npublic:\n    string symbol = \"0123456789ABCDEF\";\n\
     \    long to_num[128];\n    \n    BaseConversion(){\n        long basemax = symbol.length();\n\
     \        for(long i = 0; i < basemax; i++) to_num[(long)symbol[i]] = i;\n    }\n\
@@ -52,7 +53,7 @@ data:
   isVerificationFile: true
   path: test/verify/BaseConversion.test.cpp
   requiredBy: []
-  timestamp: '2021-11-13 18:08:57+09:00'
+  timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/BaseConversion.test.cpp

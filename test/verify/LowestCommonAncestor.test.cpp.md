@@ -9,7 +9,7 @@ data:
     title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
   - icon: ':heavy_check_mark:'
     path: template/template.cpp
-    title: template/template.cpp
+    title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -22,7 +22,8 @@ data:
     - https://judge.yosupo.jp/problem/lca
   bundledCode: "#line 1 \"test/verify/LowestCommonAncestor.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/lca\"\n\n#line 1 \"template/template.cpp\"\
-    \n#include<bits/stdc++.h>\nusing namespace std;\n#line 4 \"test/verify/LowestCommonAncestor.test.cpp\"\
+    \n#include<bits/stdc++.h>\nusing namespace std;\n/**\n * @brief \u30C6\u30F3\u30D7\
+    \u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n */\n#line 4 \"test/verify/LowestCommonAncestor.test.cpp\"\
     \n\n#line 1 \"DataStructure/SparseTable.cpp\"\ntemplate < typename Element = long\
     \ >\nclass SparseTable{\npublic:\n    function<Element(Element, Element)> operation;\n\
     \    vector<vector<Element>> table;\n    vector<long> cf;\n    \n    SparseTable(vector<Element>&\
@@ -79,7 +80,7 @@ data:
   isVerificationFile: true
   path: test/verify/LowestCommonAncestor.test.cpp
   requiredBy: []
-  timestamp: '2021-11-13 20:11:04+09:00'
+  timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/LowestCommonAncestor.test.cpp

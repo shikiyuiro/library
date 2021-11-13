@@ -6,7 +6,7 @@ data:
     title: "Fenwick\u6728"
   - icon: ':heavy_check_mark:'
     path: template/template.cpp
-    title: template/template.cpp
+    title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,7 +19,8 @@ data:
     - https://judge.yosupo.jp/problem/point_add_range_sum
   bundledCode: "#line 1 \"test/verify/FenwickTree.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\
     \n\n#line 1 \"template/template.cpp\"\n#include<bits/stdc++.h>\nusing namespace\
-    \ std;\n#line 4 \"test/verify/FenwickTree.test.cpp\"\n\n#line 1 \"DataStructure/FenwickTree.cpp\"\
+    \ std;\n/**\n * @brief \u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n\
+    \ */\n#line 4 \"test/verify/FenwickTree.test.cpp\"\n\n#line 1 \"DataStructure/FenwickTree.cpp\"\
     \nclass FenwickTree{\npublic:\n    vector<long> table;\n    long siz;\n    FenwickTree(long\
     \ siz) : table(siz + 1), siz(siz) {}\n    long sum(long index){\n        long\
     \ res = 0;\n        index++;//0-indexed to 1-indexed\n        while(index > 0){\n\
@@ -48,7 +49,7 @@ data:
   isVerificationFile: true
   path: test/verify/FenwickTree.test.cpp
   requiredBy: []
-  timestamp: '2021-11-13 19:59:07+09:00'
+  timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/FenwickTree.test.cpp
