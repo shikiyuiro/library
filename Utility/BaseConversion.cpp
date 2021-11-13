@@ -1,8 +1,8 @@
 class BaseConversion {
-private:
+public:
     string symbol = "0123456789ABCDEF";
     long to_num[128];
-public:
+    
     BaseConversion(){
         long basemax = symbol.length();
         for(long i = 0; i < basemax; i++) to_num[(long)symbol[i]] = i;
