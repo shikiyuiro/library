@@ -12,6 +12,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
+  - name: Graph
+    pages:
+    - icon: ':warning:'
+      path: Graph/LowestCommonAncestor.cpp
+      title: Graph/LowestCommonAncestor.cpp
   - name: Utility
     pages:
     - icon: ':heavy_check_mark:'
