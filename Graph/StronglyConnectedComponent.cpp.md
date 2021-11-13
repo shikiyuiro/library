@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/verify/StronglyConnectedComponent.test.cpp
+    title: test/verify/StronglyConnectedComponent.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/Graph/StronglyConnectedComponent.md
     document_title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
@@ -58,8 +61,9 @@ data:
   path: Graph/StronglyConnectedComponent.cpp
   requiredBy: []
   timestamp: '2021-11-13 19:56:22+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/verify/StronglyConnectedComponent.test.cpp
 documentation_of: Graph/StronglyConnectedComponent.cpp
 layout: document
 redirect_from:

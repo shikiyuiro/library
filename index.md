@@ -20,7 +20,7 @@ data:
     - icon: ':warning:'
       path: Graph/LowestCommonAncestor.cpp
       title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Graph/StronglyConnectedComponent.cpp
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - name: Utility
@@ -51,6 +51,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/verify/StronglyConnectedComponent.test.cpp
+      title: test/verify/StronglyConnectedComponent.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/verify/UnionFind.test.cpp
       title: test/verify/UnionFind.test.cpp

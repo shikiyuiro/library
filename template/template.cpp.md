@@ -16,6 +16,9 @@ data:
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/verify/StronglyConnectedComponent.test.cpp
+    title: test/verify/StronglyConnectedComponent.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/verify/UnionFind.test.cpp
     title: test/verify/UnionFind.test.cpp
   _isVerificationFailed: false
@@ -42,6 +45,7 @@ data:
   timestamp: '2021-10-25 18:03:27+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/verify/StronglyConnectedComponent.test.cpp
   - test/verify/FenwickTree.test.cpp
   - test/verify/SparseTable.test.cpp
   - test/verify/Atcoder.test.cpp
