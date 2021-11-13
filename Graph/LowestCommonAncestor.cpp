@@ -52,3 +52,7 @@ public:
         return min(STtable[l][b], STtable[r - (1 << b)][b]) % N;
     }
 };
+/**
+ * @brief 最小共通祖先
+ * @docs docs/Graph/LowestCommonAncestor.md
+ */
