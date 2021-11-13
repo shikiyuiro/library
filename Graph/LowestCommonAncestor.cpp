@@ -1,4 +1,4 @@
-#include "../../DataStructure/SparseTable.cpp"
+#include "../DataStructure/SparseTable.cpp"
 
 class LowestCommonAncestor{
 private:
