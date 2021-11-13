@@ -3,5 +3,6 @@
 "test/verify/BaseConversion.test.cpp": "2021-11-13 18:08:57 +0900",
 "test/verify/FenwickTree.test.cpp": "2021-11-13 19:59:07 +0900",
 "test/verify/SparseTable.test.cpp": "2021-11-13 18:07:29 +0900",
+"test/verify/StronglyConnectedComponent.test.cpp": "2021-11-13 20:00:54 +0900",
 "test/verify/UnionFind.test.cpp": "2021-10-27 11:09:01 +0900"
 }
