@@ -17,7 +17,7 @@ data:
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
   - name: Graph
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Graph/LowestCommonAncestor.cpp
       title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
     - icon: ':heavy_check_mark:'
@@ -48,7 +48,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/FenwickTree.test.cpp
       title: test/verify/FenwickTree.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/verify/LowestCommonAncestor.test.cpp
       title: test/verify/LowestCommonAncestor.test.cpp
     - icon: ':heavy_check_mark:'

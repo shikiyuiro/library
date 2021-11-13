@@ -1,8 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: Graph/LowestCommonAncestor.cpp
+    title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/verify/LowestCommonAncestor.test.cpp
+    title: test/verify/LowestCommonAncestor.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
@@ -45,11 +51,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/SparseTable.cpp
-  requiredBy: []
+  requiredBy:
+  - Graph/LowestCommonAncestor.cpp
   timestamp: '2021-11-13 18:07:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/SparseTable.test.cpp
+  - test/verify/LowestCommonAncestor.test.cpp
 documentation_of: DataStructure/SparseTable.cpp
 layout: document
 redirect_from:

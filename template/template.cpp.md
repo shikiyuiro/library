@@ -13,6 +13,9 @@ data:
     path: test/verify/FenwickTree.test.cpp
     title: test/verify/FenwickTree.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/verify/LowestCommonAncestor.test.cpp
+    title: test/verify/LowestCommonAncestor.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
   - icon: ':heavy_check_mark:'
@@ -49,6 +52,7 @@ data:
   - test/verify/FenwickTree.test.cpp
   - test/verify/SparseTable.test.cpp
   - test/verify/Atcoder.test.cpp
+  - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/UnionFind.test.cpp
   - test/verify/BaseConversion.test.cpp
 documentation_of: template/template.cpp
