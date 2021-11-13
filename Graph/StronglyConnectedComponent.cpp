@@ -55,3 +55,7 @@ public:
         bfs();
     }
 };
+/**
+ * @brief 強連結成分分解
+ * @docs docs/Graph/StronglyConnectedComponent.md
+ */
