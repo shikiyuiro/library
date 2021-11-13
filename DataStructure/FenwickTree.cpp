@@ -20,3 +20,7 @@ public:
         }
     }
 };
+/**
+ * @brief Fenwick木
+ * @docs docs/DataStructure/FenwickTree.md
+ */
