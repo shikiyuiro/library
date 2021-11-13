@@ -22,7 +22,7 @@ data:
       title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
     - icon: ':warning:'
       path: Graph/StronglyConnectedComponent.cpp
-      title: Graph/StronglyConnectedComponent.cpp
+      title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - name: Utility
     pages:
     - icon: ':heavy_check_mark:'

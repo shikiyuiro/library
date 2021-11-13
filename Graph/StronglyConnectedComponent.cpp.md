@@ -7,6 +7,8 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
+    _deprecated_at_docs: docs/Graph/StronglyConnectedComponent.md
+    document_title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     links: []
   bundledCode: "#line 1 \"Graph/StronglyConnectedComponent.cpp\"\nclass StronglyConnectedComponent{\n\
     private:\n    long Gsize;\n    vector<bool> visited;\n    vector<vector<long>>\
@@ -28,7 +30,8 @@ data:
     \ &graph) : forward(graph){\n        Gsize = graph.size();\n        visited.resize(Gsize);\n\
     \        backward.resize(Gsize);\n        for(long e = 0; e < Gsize; e++) for(auto\
     \ f : graph[e]) backward[f].push_back(e);\n        dfs();\n        bfs();\n  \
-    \  }\n};\n"
+    \  }\n};\n/**\n * @brief \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\n * @docs\
+    \ docs/Graph/StronglyConnectedComponent.md\n */\n"
   code: "class StronglyConnectedComponent{\nprivate:\n    long Gsize;\n    vector<bool>\
     \ visited;\n    vector<vector<long>> forward;\n    vector<vector<long>> backward;\n\
     \    stack<long> bfs_seed;\n    \n    void dfs(){\n        fill(visited.begin(),\
@@ -48,12 +51,13 @@ data:
     \ StronglyConnectedComponent(vector<vector<long>> &graph) : forward(graph){\n\
     \        Gsize = graph.size();\n        visited.resize(Gsize);\n        backward.resize(Gsize);\n\
     \        for(long e = 0; e < Gsize; e++) for(auto f : graph[e]) backward[f].push_back(e);\n\
-    \        dfs();\n        bfs();\n    }\n};\n"
+    \        dfs();\n        bfs();\n    }\n};\n/**\n * @brief \u5F37\u9023\u7D50\u6210\
+    \u5206\u5206\u89E3\n * @docs docs/Graph/StronglyConnectedComponent.md\n */\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/StronglyConnectedComponent.cpp
   requiredBy: []
-  timestamp: '2021-11-13 18:51:21+09:00'
+  timestamp: '2021-11-13 19:56:22+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Graph/StronglyConnectedComponent.cpp
@@ -61,5 +65,16 @@ layout: document
 redirect_from:
 - /library/Graph/StronglyConnectedComponent.cpp
 - /library/Graph/StronglyConnectedComponent.cpp.html
-title: Graph/StronglyConnectedComponent.cpp
+title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
 ---
+## きもち
+
+強連結成分分解です。あとでかきます。  
+
+## 使い方  
+- `StronglyConnectedComponent(vector<vector<long>> graph)`：コンストラクタ。有向グラフを代入してください。  
+- `vector<vector<long>> result`：強連結成分がリスト化され、トポロジカルソートされた順に格納されます。  
+
+## 計算量
+
+構築:$\mathrm{O}(V + E)$
