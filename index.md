@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
+    - icon: ':warning:'
+      path: DataStructure/FenwickTree.cpp
+      title: DataStructure/FenwickTree.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
