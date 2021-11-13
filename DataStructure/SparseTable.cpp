@@ -1,10 +1,9 @@
 template < typename Element = long >
 class SparseTable{
-private:
-    function<Element(Element, Element)> operation;
-    vector<long> cf;
 public:
+    function<Element(Element, Element)> operation;
     vector<vector<Element>> table;
+    vector<long> cf;
     
     SparseTable(vector<Element>& v, Element e, function<Element(Element, Element)> operation) : operation(operation){
         long isiz = v.size();
