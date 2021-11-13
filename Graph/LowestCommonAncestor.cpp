@@ -1,3 +1,5 @@
+#include "../../DataStructure/SparseTable.cpp"
+
 class LowestCommonAncestor{
 private:
     long N;
