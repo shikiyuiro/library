@@ -17,6 +17,9 @@ data:
     - icon: ':warning:'
       path: Graph/LowestCommonAncestor.cpp
       title: Graph/LowestCommonAncestor.cpp
+    - icon: ':warning:'
+      path: Graph/StronglyConnectedComponent.cpp
+      title: Graph/StronglyConnectedComponent.cpp
   - name: Utility
     pages:
     - icon: ':heavy_check_mark:'
