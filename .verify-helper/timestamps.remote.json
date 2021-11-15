@@ -5,5 +5,5 @@
 "test/verify/LowestCommonAncestor.test.cpp": "2021-11-13 20:31:18 +0900",
 "test/verify/SparseTable.test.cpp": "2021-11-13 20:31:18 +0900",
 "test/verify/StronglyConnectedComponent.test.cpp": "2021-11-13 20:31:18 +0900",
-"test/verify/UnionFind.test.cpp": "2021-11-13 20:31:18 +0900"
+"test/verify/UnionFind.test.cpp": "2021-11-15 14:08:30 +0900"
 }
