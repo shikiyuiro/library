@@ -26,7 +26,7 @@ data:
     \ 0); Size.resize(size, 1);}\n    long find(long x){ return (Root[x] == x) ? x:\
     \ Root[x] = find(Root[x]); }\n    void unite(long x, long y){\n        if(find(x)\
     \ == find(y)) return;\n        if(Size[find(x)] < Size[find(y)]) swap(x, y);\n\
-    \        Root[find(y)] = find(x);\n        Size[find(x)] += Size[find(y)];\n \
+    \        Size[find(x)] += Size[find(y)];\n        Root[find(y)] = find(x);\n \
     \   }\n    bool same(long x, long y){ return find(x) == find(y);}\n    long size(long\
     \ x){ return Size[find(x)];}\n};\n/**\n * @brief \u7D20\u96C6\u5408\u30C7\u30FC\
     \u30BF\u69CB\u9020(Union Find)\n * @docs docs/DataStructure/UnionFind.md\n */\n\
@@ -45,7 +45,7 @@ data:
   isVerificationFile: true
   path: test/verify/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2021-11-13 20:31:18+09:00'
+  timestamp: '2021-11-15 14:08:30+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/UnionFind.test.cpp

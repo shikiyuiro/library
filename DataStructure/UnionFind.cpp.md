@@ -18,9 +18,9 @@ data:
     \ Root.resize(size); iota(Root.begin(), Root.end(), 0); Size.resize(size, 1);}\n\
     \    long find(long x){ return (Root[x] == x) ? x: Root[x] = find(Root[x]); }\n\
     \    void unite(long x, long y){\n        if(find(x) == find(y)) return;\n   \
-    \     if(Size[find(x)] < Size[find(y)]) swap(x, y);\n        Root[find(y)] = find(x);\n\
-    \        Size[find(x)] += Size[find(y)];\n    }\n    bool same(long x, long y){\
-    \ return find(x) == find(y);}\n    long size(long x){ return Size[find(x)];}\n\
+    \     if(Size[find(x)] < Size[find(y)]) swap(x, y);\n        Size[find(x)] +=\
+    \ Size[find(y)];\n        Root[find(y)] = find(x);\n    }\n    bool same(long\
+    \ x, long y){ return find(x) == find(y);}\n    long size(long x){ return Size[find(x)];}\n\
     };\n/**\n * @brief \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)\n\
     \ * @docs docs/DataStructure/UnionFind.md\n */\n"
   code: "class UnionFind{\nprivate:\n    vector<long> Root;\n    vector<long> Size;\n\
@@ -28,7 +28,7 @@ data:
     \ 0); Size.resize(size, 1);}\n    long find(long x){ return (Root[x] == x) ? x:\
     \ Root[x] = find(Root[x]); }\n    void unite(long x, long y){\n        if(find(x)\
     \ == find(y)) return;\n        if(Size[find(x)] < Size[find(y)]) swap(x, y);\n\
-    \        Root[find(y)] = find(x);\n        Size[find(x)] += Size[find(y)];\n \
+    \        Size[find(x)] += Size[find(y)];\n        Root[find(y)] = find(x);\n \
     \   }\n    bool same(long x, long y){ return find(x) == find(y);}\n    long size(long\
     \ x){ return Size[find(x)];}\n};\n/**\n * @brief \u7D20\u96C6\u5408\u30C7\u30FC\
     \u30BF\u69CB\u9020(Union Find)\n * @docs docs/DataStructure/UnionFind.md\n */\n"
@@ -36,7 +36,7 @@ data:
   isVerificationFile: false
   path: DataStructure/UnionFind.cpp
   requiredBy: []
-  timestamp: '2021-10-27 11:09:01+09:00'
+  timestamp: '2021-11-15 14:08:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/UnionFind.test.cpp
