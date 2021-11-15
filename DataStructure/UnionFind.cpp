@@ -8,8 +8,8 @@ public:
     void unite(long x, long y){
         if(find(x) == find(y)) return;
         if(Size[find(x)] < Size[find(y)]) swap(x, y);
-        Root[find(y)] = find(x);
         Size[find(x)] += Size[find(y)];
+        Root[find(y)] = find(x);
     }
     bool same(long x, long y){ return find(x) == find(y);}
     long size(long x){ return Size[find(x)];}
