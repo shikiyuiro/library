@@ -57,7 +57,7 @@ title: "Fenwick\u6728"
 
 ## 計算量
 サイズをNとして、  
-sumクエリ:$\mathrm{O}(N)$  
+sumクエリ:$\mathrm{O}(logN)$  
 addクエリ:$\mathrm{O}(logN)$  
 
 ## Tips
