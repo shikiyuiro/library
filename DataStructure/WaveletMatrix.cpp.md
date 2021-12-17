@@ -137,9 +137,9 @@ title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
 ---
 ## きもち
 
-ウェーブレット行列です。あとでかきます。  
-オンラインの平面走査などにつよいデータ構造です。  
-配列に負の数がある場合、扱うことができません。
+ウェーブレット行列だよ。  
+オンラインの区間比較クエリが得意。  
+動的配列や負の数が含まれる配列は扱うことができないよ。  
 
 ## 使い方  
 - `WaveletMatrix(vector<long> table)`：コンストラクタ。配列 $table$ をもとに、ウェーブレット行列を構築する。  
@@ -154,4 +154,5 @@ title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
 
 ## Tips
 
-静的クエリのみ可能。実装によっては、動的なものや永続なものも作れるらしいです。精進します。　　
+転倒数を平面走査により求める。(atcoder ABC231-F Jealous Two https://atcoder.jp/contests/abc231/tasks/abc231_f)  
+静的な配列の区間中央値を求める。(yukicoder no.924 紲星 https://yukicoder.me/problems/no/924)
