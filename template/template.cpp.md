@@ -24,6 +24,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/UnionFind.test.cpp
     title: test/verify/UnionFind.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/verify/WaveletMatrix.test.cpp
+    title: test/verify/WaveletMatrix.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -44,6 +47,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/SparseTable.test.cpp
+  - test/verify/WaveletMatrix.test.cpp
   - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/Atcoder.test.cpp
   - test/verify/UnionFind.test.cpp

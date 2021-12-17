@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/WaveletMatrix.cpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: Graph
@@ -63,6 +63,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/UnionFind.test.cpp
       title: test/verify/UnionFind.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/verify/WaveletMatrix.test.cpp
+      title: test/verify/WaveletMatrix.test.cpp
 layout: toppage
 ---
 [![kyawa](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fkyawa)](https://atcoder.jp/users/kyawa)
