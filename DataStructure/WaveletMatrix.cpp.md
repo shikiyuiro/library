@@ -154,5 +154,5 @@ title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
 
 ## Tips
 
-転倒数を平面走査により求める。(atcoder ABC231-F Jealous Two https://atcoder.jp/contests/abc231/tasks/abc231_f)  
-静的な配列の区間中央値を求める。(yukicoder no.924 紲星 https://yukicoder.me/problems/no/924)
+転倒数を平面走査により求める。([atcoder ABC231-F Jealous Two](https://atcoder.jp/contests/abc231/tasks/abc231_f))  
+静的な配列の区間中央値を求める。([yukicoder no.924 紲星](https://yukicoder.me/problems/no/924))
