@@ -16,6 +16,6 @@
 
 ## Tips
 
-kth_minを k = (l+r)/2, (l+r+1)/2 として区間中央値を求める。([yukicoder no.924 紲星](https://yukicoder.me/problems/no/924))  
+kth_minを k = (l+r)/2, (l+r1)/2 として区間中央値を求める。([yukicoder no.924 紲星](https://yukicoder.me/problems/no/924))  
 オイラーツアーやdfsと組み合わせると、木にも使える。([atcoder ABC202-E Count Descendants](https://atcoder.jp/contests/abc202/tasks/abc202_e))  
 転倒数を平面走査により求める。([atcoder ABC231-F Jealous Two](https://atcoder.jp/contests/abc231/tasks/abc231_f))  
