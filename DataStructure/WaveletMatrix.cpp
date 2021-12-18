@@ -1,9 +1,5 @@
 class WaveletMatrix{
 public:
-    long bitsize;
-    vector<long> table_origin;
-    vector<long> table_sorted;
-    
     WaveletMatrix(vector<long> table) : table_origin(table){
         long table_max = *max_element(table.begin(), table.end());
         tablesize = table.size();
@@ -24,23 +20,6 @@ public:
             stable_sort(table.begin(), table.end(), [&](auto a, auto b){return ((a >> (bitsize - i - 1)) & 1) < ((b >> (bitsize - i - 1)) & 1);});
         }
         table_sorted = table;
-    }
-    
-    long rank(long r, long x){
-        //count x in [0, r)
-        long L = 0; long R = r;//たぶんここLをlとして、引数にできる
-        for(long level = 0; level < bitsize; level++){
-            long same;//matrix[level][L, R)の中に、(x>>(bitsize-level-1)&1 と一致するのはいくつあるか?
-            bool x_at_level = (x >> (bitsize - level - 1) & 1);
-            if(x_at_level == 0){
-                same = zero_count[level][R] - zero_count[level][L];
-                L = zero_count[level][L]; R = L + same;
-            }else{
-                same = (R - zero_count[level][R]) - (L - zero_count[level][L]);
-                L = zero_count[level][tablesize] + (L - zero_count[level][L]); R = L + same;
-            }
-        }
-        return R - L;
     }
     
     long kth_min(long l, long r, long k/*0-indexed*/){
@@ -69,6 +48,9 @@ private:
     vector<vector<bool>> matrix;
     vector<vector<long>> zero_count;//count 0 in matrix[i][0, r)
     long tablesize;
+    long bitsize;
+    vector<long> table_origin;
+    vector<long> table_sorted;
     
     pair<long,long> counts(long l, long r, long level){
         //{0の個数, 1の個数} in matrix[level][l, r)を返す
