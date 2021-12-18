@@ -22,9 +22,8 @@ data:
     \n#include<bits/stdc++.h>\nusing namespace std;\n/**\n * @brief \u30C6\u30F3\u30D7\
     \u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n */\n#line 4 \"test/verify/WaveletMatrix.test.cpp\"\
     \n\n#line 1 \"DataStructure/WaveletMatrix.cpp\"\nclass WaveletMatrix{\npublic:\n\
-    \    long bitsize;\n    vector<long> table_origin;\n    vector<long> table_sorted;\n\
-    \    \n    WaveletMatrix(vector<long> table) : table_origin(table){\n        long\
-    \ table_max = *max_element(table.begin(), table.end());\n        tablesize = table.size();\n\
+    \    WaveletMatrix(vector<long> table) : table_origin(table){\n        long table_max\
+    \ = *max_element(table.begin(), table.end());\n        tablesize = table.size();\n\
     \        bitsize = 0;\n        while(table_max){\n            bitsize++;\n   \
     \         table_max >>= 1;\n        }\n        assert(bitsize);\n        matrix.resize(bitsize,\
     \ vector<bool>(tablesize));\n        zero_count.resize(bitsize, vector<long>(tablesize\
@@ -34,30 +33,20 @@ data:
     \                zero_count[i][j + 1] += zero_count[i][j];\n            }\n  \
     \          stable_sort(table.begin(), table.end(), [&](auto a, auto b){return\
     \ ((a >> (bitsize - i - 1)) & 1) < ((b >> (bitsize - i - 1)) & 1);});\n      \
-    \  }\n        table_sorted = table;\n    }\n    \n    long rank(long r, long x){\n\
-    \        //count x in [0, r)\n        long L = 0; long R = r;//\u305F\u3076\u3093\
-    \u3053\u3053L\u3092l\u3068\u3057\u3066\u3001\u5F15\u6570\u306B\u3067\u304D\u308B\
-    \n        for(long level = 0; level < bitsize; level++){\n            long same;//matrix[level][L,\
-    \ R)\u306E\u4E2D\u306B\u3001(x>>(bitsize-level-1)&1 \u3068\u4E00\u81F4\u3059\u308B\
-    \u306E\u306F\u3044\u304F\u3064\u3042\u308B\u304B?\n            bool x_at_level\
-    \ = (x >> (bitsize - level - 1) & 1);\n            if(x_at_level == 0){\n    \
-    \            same = zero_count[level][R] - zero_count[level][L];\n           \
-    \     L = zero_count[level][L]; R = L + same;\n            }else{\n          \
-    \      same = (R - zero_count[level][R]) - (L - zero_count[level][L]);\n     \
-    \           L = zero_count[level][tablesize] + (L - zero_count[level][L]); R =\
-    \ L + same;\n            }\n        }\n        return R - L;\n    }\n    \n  \
-    \  long kth_min(long l, long r, long k/*0-indexed*/){\n        long L = l; long\
-    \ R = r;\n        for(long level = 0; level < bitsize; level++){\n           \
-    \ auto [Lcount0, Lcount1] = counts(0, L, level);\n            auto [count0, count1]\
-    \ = counts(L, R, level);\n            if(k < count0){\n                L = Lcount0;\n\
-    \                R = L + count0;\n            }else{\n                L = zero_count[level][tablesize]\
+    \  }\n        table_sorted = table;\n    }\n    \n    long kth_min(long l, long\
+    \ r, long k/*0-indexed*/){\n        long L = l; long R = r;\n        for(long\
+    \ level = 0; level < bitsize; level++){\n            auto [Lcount0, Lcount1] =\
+    \ counts(0, L, level);\n            auto [count0, count1] = counts(L, R, level);\n\
+    \            if(k < count0){\n                L = Lcount0;\n                R\
+    \ = L + count0;\n            }else{\n                L = zero_count[level][tablesize]\
     \ + Lcount1;\n                R = L + count1;\n                k -= count0;\n\
     \            }\n        }\n        return table_sorted[L];\n    }\n    \n    long\
     \ range_freq(long l, long r, long lower, long upper){\n        //count i s.t.\
     \ l <= i < r and lower <= table[i] < upper\n        return range_freq(l, r, upper)\
     \ - range_freq(l, r, lower);\n    }\n    \nprivate:\n    vector<vector<bool>>\
     \ matrix;\n    vector<vector<long>> zero_count;//count 0 in matrix[i][0, r)\n\
-    \    long tablesize;\n    \n    pair<long,long> counts(long l, long r, long level){\n\
+    \    long tablesize;\n    long bitsize;\n    vector<long> table_origin;\n    vector<long>\
+    \ table_sorted;\n    \n    pair<long,long> counts(long l, long r, long level){\n\
     \        //{0\u306E\u500B\u6570, 1\u306E\u500B\u6570} in matrix[level][l, r)\u3092\
     \u8FD4\u3059\n        return {zero_count[level][r] - zero_count[level][l], (r\
     \ - zero_count[level][r]) - (l - zero_count[level][l])};\n    }\n    \n    long\
@@ -90,7 +79,7 @@ data:
   isVerificationFile: true
   path: test/verify/WaveletMatrix.test.cpp
   requiredBy: []
-  timestamp: '2021-12-17 15:39:38+09:00'
+  timestamp: '2021-12-18 16:53:50+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/WaveletMatrix.test.cpp
