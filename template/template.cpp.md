@@ -12,7 +12,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/FenwickTree.test.cpp
     title: test/verify/FenwickTree.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/verify/LowestCommonAncestor.test.cpp
     title: test/verify/LowestCommonAncestor.test.cpp
   - icon: ':x:'

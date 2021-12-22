@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: DataStructure/SparseTable.cpp
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/LowestCommonAncestor.cpp
     title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
   - icon: ':question:'
@@ -12,37 +12,34 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    IGNORE: ''
-    IGNORE_IF_CLANG: ''
-    IGNORE_IF_GCC: ''
+    PROBLEM: https://judge.yosupo.jp/problem/lca
     links:
     - https://judge.yosupo.jp/problem/lca
   bundledCode: "#line 1 \"test/verify/LowestCommonAncestor.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/lca\"\n\n#line 1 \"template/template.cpp\"\
     \n#include<bits/stdc++.h>\nusing namespace std;\n/**\n * @brief \u30C6\u30F3\u30D7\
     \u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n */\n#line 4 \"test/verify/LowestCommonAncestor.test.cpp\"\
-    \n\n#line 1 \"DataStructure/SparseTable.cpp\"\n#define IGNORE\ntemplate < typename\
-    \ elm >\nclass SparseTable{\npublic:\n    explicit SparseTable() = default;\n\
-    \    \n    SparseTable(vector<elm>& v, elm e, function<elm(elm, elm)> operation)\
-    \ : operation(operation){\n        long isiz = v.size();\n        long jsiz =\
-    \ 0;\n        while((1 << jsiz) <= isiz) jsiz++;\n        table.resize(isiz, vector<elm>(jsiz,\
-    \ e));\n        for(long i = 0; i < isiz; i++)table[i][0] = v[i];\n        for(long\
-    \ j = 1; j < jsiz; j++){\n            for(long i = 0; i + (1 << (j - 1)) < isiz;\
-    \ i++){\n                table[i][j] = operation(table[i][j - 1], table[i + (1\
-    \ << (j - 1))][j - 1]);\n            }\n        }\n        cf.resize(isiz + 1);\n\
-    \        for(long i = 2; i <= isiz; i++) cf[i] = cf[i >> 1] + 1;\n    }\n    \n\
-    \    elm query(long l, long r/*\u534A\u958B\u533A\u9593*/){\n        assert(l\
-    \ < r);\n        long b = cf[r - l];\n        return operation(table[l][b], table[r\
-    \ - (1 << b)][b]);\n    }\nprivate:\n    function<elm(elm, elm)> operation;\n\
-    \    vector<vector<elm>> table;\n    vector<long> cf;\n};\n/**\n * @brief \u30B9\
-    \u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB\n * @docs docs/DataStructure/SparseTable.md\n\
-    \ */\n#line 2 \"Graph/LowestCommonAncestor.cpp\"\n\nclass LowestCommonAncestor{\n\
-    public:\n    LowestCommonAncestor(vector<vector<long>> &tree, long root) : tree(tree){\n\
+    \n\n#line 1 \"DataStructure/SparseTable.cpp\"\ntemplate < typename elm >\nclass\
+    \ SparseTable{\npublic:\n    explicit SparseTable() = default;\n    \n    SparseTable(vector<elm>&\
+    \ v, elm e, function<elm(elm, elm)> op) : op(op){\n        long isiz = v.size();\n\
+    \        long jsiz = 0;\n        while((1 << jsiz) <= isiz) jsiz++;\n        table.resize(isiz,\
+    \ vector<elm>(jsiz, e));\n        for(long i = 0; i < isiz; i++)table[i][0] =\
+    \ v[i];\n        for(long j = 1; j < jsiz; j++){\n            for(long i = 0;\
+    \ i + (1 << (j - 1)) < isiz; i++){\n                table[i][j] = op(table[i][j\
+    \ - 1], table[i + (1 << (j - 1))][j - 1]);\n            }\n        }\n       \
+    \ cf.resize(isiz + 1);\n        for(long i = 2; i <= isiz; i++) cf[i] = cf[i >>\
+    \ 1] + 1;\n    }\n    \n    elm query(long L, long R/*[L, R)*/){\n        assert(L\
+    \ < R);\n        long b = cf[R - L];\n        return op(table[L][b], table[R -\
+    \ (1 << b)][b]);\n    }\nprivate:\n    function<elm(elm, elm)> op;\n    vector<vector<elm>>\
+    \ table;\n    vector<long> cf;\n};\n/**\n * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\
+    \u30FC\u30D6\u30EB\n * @docs docs/DataStructure/SparseTable.md\n */\n#line 2 \"\
+    Graph/LowestCommonAncestor.cpp\"\n\nclass LowestCommonAncestor{\npublic:\n   \
+    \ LowestCommonAncestor(vector<vector<long>> &tree, long root) : tree(tree){\n\
     \        ETpos.resize(tree.size(), -1);\n        dfs(root, 0);\n        st = SparseTable<long>(EularTour,\
     \ LONG_MAX, [](long a, long b){return min(a, b);});\n    }\n    \n    long query(long\
     \ L, long R){\n        if(ETpos[L] > ETpos[R]) swap(L, R);\n        return st.query(ETpos[L],\
@@ -73,8 +70,8 @@ data:
   isVerificationFile: true
   path: test/verify/LowestCommonAncestor.test.cpp
   requiredBy: []
-  timestamp: '2021-12-22 19:45:44+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-12-22 19:48:25+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/LowestCommonAncestor.test.cpp
 layout: document
