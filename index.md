@@ -9,7 +9,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
     - icon: ':heavy_check_mark:'
@@ -36,7 +36,7 @@ data:
       title: "\u5EA7\u6A19\u5727\u7E2E"
   - name: template
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: template/template.cpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -54,7 +54,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/LowestCommonAncestor.test.cpp
       title: test/verify/LowestCommonAncestor.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp
     - icon: ':heavy_check_mark:'
