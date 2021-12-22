@@ -32,55 +32,37 @@ data:
     \    vector<vector<elm>> table;\n    vector<long> cf;\n};\n/**\n * @brief \u30B9\
     \u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB\n * @docs docs/DataStructure/SparseTable.md\n\
     \ */\n#line 2 \"Graph/LowestCommonAncestor.cpp\"\n\nclass LowestCommonAncestor{\n\
-    private:\n    long N;\n    vector<bool> visited;\n    vector<vector<long> > Tree;\n\
-    \    vector<vector<long> > STtable;\n    vector<long> STcf;\n    \n    void make_EularTour(long\
-    \ vis){\n        EularTour.push_back(depth[vis] * N + vis);\n        visited[vis]\
-    \ = true;\n        for(auto e : Tree[vis]){\n            if(visited[e]) continue;\n\
-    \            depth[e] = depth[vis] + 1;\n            make_EularTour(e);\n    \
-    \        EularTour.push_back(depth[vis] * N + vis);\n        }\n    }\n    \n\
-    \    void make_SparseTable(){\n        SparseTable<long> st(EularTour, LONG_MAX,\
-    \ [](long a, long b){return min(a, b);});\n        STtable = st.table;\n     \
-    \   STcf = st.cf;\n    }\n    \n    void make_first(){\n        long index = 0;\n\
-    \        for(auto e : EularTour){\n            first_index[e % N] = min(first_index[e\
-    \ % N], index);\n            index++;\n        }\n    }\npublic:\n    vector<long>\
-    \ depth;\n    vector<long> EularTour;\n    vector<long> first_index;\n    \n \
-    \   LowestCommonAncestor(vector<vector<long>>& tree, long root) : Tree(tree){\n\
-    \        N = Tree.size();\n        visited.resize(N, false);\n        depth.resize(N,\
-    \ 0);\n        first_index.resize(N, INT_MAX);\n        make_EularTour(root);\n\
-    \        make_SparseTable();\n        make_first();\n    }\n    \n    long query(long\
-    \ l, long r){\n        long ltmp = l, rtmp = r;\n        l = min(first_index[ltmp],\
-    \ first_index[rtmp]); r = max(first_index[ltmp], first_index[rtmp]) + 1;\n   \
-    \     long b = STcf[r - l];\n        return min(STtable[l][b], STtable[r - (1\
-    \ << b)][b]) % N;\n    }\n};\n/**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148\
-    \n * @docs docs/Graph/LowestCommonAncestor.md\n */\n"
+    public:\n    LowestCommonAncestor(vector<vector<long>> &tree, long root) : tree(tree){\n\
+    \        ETpos.resize(tree.size(), -1);\n        dfs(root, 0);\n        st = SparseTable<long>(EularTour,\
+    \ LONG_MAX, [](long a, long b){return min(a, b);});\n    }\n    \n    long query(long\
+    \ L, long R){\n        if(ETpos[L] > ETpos[R]) swap(L, R);\n        return st.query(ETpos[L],\
+    \ ETpos[R] + 1) % tree.size();\n    }\n    \nprivate:\n    vector<vector<long>>\
+    \ tree;\n    vector<long> EularTour;\n    vector<long> ETpos;\n    long ETsize\
+    \ = 0;\n    SparseTable<long> st;\n    \n    void dfs(long vis, long depth){\n\
+    \        EularTour.push_back(depth * tree.size() + vis);\n        ETpos[vis] =\
+    \ ETsize++;\n        for(auto e : tree[vis]) if(ETpos[e] == -1) {dfs(e, depth\
+    \ + 1); EularTour.push_back(depth * tree.size() + vis); ETsize++;}\n    }\n};\n\
+    /**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor.md\n\
+    \ */\n"
   code: "#include \"../DataStructure/SparseTable.cpp\"\n\nclass LowestCommonAncestor{\n\
-    private:\n    long N;\n    vector<bool> visited;\n    vector<vector<long> > Tree;\n\
-    \    vector<vector<long> > STtable;\n    vector<long> STcf;\n    \n    void make_EularTour(long\
-    \ vis){\n        EularTour.push_back(depth[vis] * N + vis);\n        visited[vis]\
-    \ = true;\n        for(auto e : Tree[vis]){\n            if(visited[e]) continue;\n\
-    \            depth[e] = depth[vis] + 1;\n            make_EularTour(e);\n    \
-    \        EularTour.push_back(depth[vis] * N + vis);\n        }\n    }\n    \n\
-    \    void make_SparseTable(){\n        SparseTable<long> st(EularTour, LONG_MAX,\
-    \ [](long a, long b){return min(a, b);});\n        STtable = st.table;\n     \
-    \   STcf = st.cf;\n    }\n    \n    void make_first(){\n        long index = 0;\n\
-    \        for(auto e : EularTour){\n            first_index[e % N] = min(first_index[e\
-    \ % N], index);\n            index++;\n        }\n    }\npublic:\n    vector<long>\
-    \ depth;\n    vector<long> EularTour;\n    vector<long> first_index;\n    \n \
-    \   LowestCommonAncestor(vector<vector<long>>& tree, long root) : Tree(tree){\n\
-    \        N = Tree.size();\n        visited.resize(N, false);\n        depth.resize(N,\
-    \ 0);\n        first_index.resize(N, INT_MAX);\n        make_EularTour(root);\n\
-    \        make_SparseTable();\n        make_first();\n    }\n    \n    long query(long\
-    \ l, long r){\n        long ltmp = l, rtmp = r;\n        l = min(first_index[ltmp],\
-    \ first_index[rtmp]); r = max(first_index[ltmp], first_index[rtmp]) + 1;\n   \
-    \     long b = STcf[r - l];\n        return min(STtable[l][b], STtable[r - (1\
-    \ << b)][b]) % N;\n    }\n};\n/**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148\
-    \n * @docs docs/Graph/LowestCommonAncestor.md\n */\n"
+    public:\n    LowestCommonAncestor(vector<vector<long>> &tree, long root) : tree(tree){\n\
+    \        ETpos.resize(tree.size(), -1);\n        dfs(root, 0);\n        st = SparseTable<long>(EularTour,\
+    \ LONG_MAX, [](long a, long b){return min(a, b);});\n    }\n    \n    long query(long\
+    \ L, long R){\n        if(ETpos[L] > ETpos[R]) swap(L, R);\n        return st.query(ETpos[L],\
+    \ ETpos[R] + 1) % tree.size();\n    }\n    \nprivate:\n    vector<vector<long>>\
+    \ tree;\n    vector<long> EularTour;\n    vector<long> ETpos;\n    long ETsize\
+    \ = 0;\n    SparseTable<long> st;\n    \n    void dfs(long vis, long depth){\n\
+    \        EularTour.push_back(depth * tree.size() + vis);\n        ETpos[vis] =\
+    \ ETsize++;\n        for(auto e : tree[vis]) if(ETpos[e] == -1) {dfs(e, depth\
+    \ + 1); EularTour.push_back(depth * tree.size() + vis); ETsize++;}\n    }\n};\n\
+    /**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor.md\n\
+    \ */\n"
   dependsOn:
   - DataStructure/SparseTable.cpp
   isVerificationFile: false
   path: Graph/LowestCommonAncestor.cpp
   requiredBy: []
-  timestamp: '2021-12-22 19:41:26+09:00'
+  timestamp: '2021-12-22 19:45:44+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/verify/LowestCommonAncestor.test.cpp
