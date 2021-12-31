@@ -43,8 +43,8 @@ data:
     \u8FD4\u3059\n        return {zero_count[level][r] - zero_count[level][l], (r\
     \ - zero_count[level][r]) - (l - zero_count[level][l])};\n    }\n    \n    long\
     \ range_freq(long l, long r, long upper){\n        //count i s.t. l <= i < r and\
-    \ table[i] < upper\n        if(upper >= (1 << bitsize)) return r - l;\n      \
-    \  if(upper < 0) return 0;\n        long res = 0;\n        long L = l; long R\
+    \ table[i] < upper\n        if(upper >= (1L << bitsize)) return r - l;\n     \
+    \   if(upper < 0) return 0;\n        long res = 0;\n        long L = l; long R\
     \ = r;\n        for(long level = 0; level < bitsize; level++){\n            auto\
     \ [Lcount0, Lcount1] = counts(0, L, level);\n            auto [count0, count1]\
     \ = counts(L, R, level);\n            if(((upper >> (bitsize - level - 1)) & 1)\
@@ -85,8 +85,8 @@ data:
     \u8FD4\u3059\n        return {zero_count[level][r] - zero_count[level][l], (r\
     \ - zero_count[level][r]) - (l - zero_count[level][l])};\n    }\n    \n    long\
     \ range_freq(long l, long r, long upper){\n        //count i s.t. l <= i < r and\
-    \ table[i] < upper\n        if(upper >= (1 << bitsize)) return r - l;\n      \
-    \  if(upper < 0) return 0;\n        long res = 0;\n        long L = l; long R\
+    \ table[i] < upper\n        if(upper >= (1L << bitsize)) return r - l;\n     \
+    \   if(upper < 0) return 0;\n        long res = 0;\n        long L = l; long R\
     \ = r;\n        for(long level = 0; level < bitsize; level++){\n            auto\
     \ [Lcount0, Lcount1] = counts(0, L, level);\n            auto [count0, count1]\
     \ = counts(L, R, level);\n            if(((upper >> (bitsize - level - 1)) & 1)\
@@ -102,7 +102,7 @@ data:
   isVerificationFile: false
   path: DataStructure/WaveletMatrix.cpp
   requiredBy: []
-  timestamp: '2021-12-18 16:53:50+09:00'
+  timestamp: '2021-12-31 16:23:27+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/WaveletMatrix.test.cpp
