@@ -59,7 +59,7 @@ private:
     
     long range_freq(long l, long r, long upper){
         //count i s.t. l <= i < r and table[i] < upper
-        if(upper >= (1 << bitsize)) return r - l;
+        if(upper >= (1L << bitsize)) return r - l;
         if(upper < 0) return 0;
         long res = 0;
         long L = l; long R = r;
