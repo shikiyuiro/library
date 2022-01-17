@@ -3,7 +3,7 @@
 スパーステーブルだよ。  
 冪等性をもつ静的な区間クエリに構築O(NlogN), クエリO(1)で答えられるよ。  
 冪等性を仮定しないdisjointなスパーステーブルや、  
-構築O(N), クエリO(1)のスパーステーブルもあるよ。  
+[構築O(N), クエリO(1)のスパーステーブル](https://shikiyuiro.github.io/library/DataStructure/Compact_Sparse_Table.cpp)もあるよ。  
 
 ## 使い方  
 #### template<S, op, e> ここで、Sは区間の要素の型、opは区間に対する演算、eはopの単位元。 
