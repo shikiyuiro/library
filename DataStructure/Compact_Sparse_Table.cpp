@@ -1,3 +1,5 @@
+#include "../DataStructure/SparseTable.cpp"
+
 template<class S, S (*op)(S, S), S (*e)()>
 class Compact_Sparse_Table{
 public:
@@ -40,3 +42,7 @@ public:
         return res;
     }
 };
+/**
+ * @brief スパーステーブル(<O(N),O(1)>)
+ * @docs docs/DataStructure/SparseTable_compact.md
+ */
