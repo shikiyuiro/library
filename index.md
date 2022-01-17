@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
+    - icon: ':warning:'
+      path: DataStructure/Compact_Sparse_Table.cpp
+      title: DataStructure/Compact_Sparse_Table.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/FenwickTree.cpp
       title: "Fenwick\u6728"
