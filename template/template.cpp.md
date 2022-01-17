@@ -15,7 +15,7 @@ data:
   - icon: ':x:'
     path: test/verify/LowestCommonAncestor.test.cpp
     title: test/verify/LowestCommonAncestor.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
   - icon: ':heavy_check_mark:'

@@ -9,12 +9,12 @@ data:
   - icon: ':x:'
     path: test/verify/LowestCommonAncestor.test.cpp
     title: test/verify/LowestCommonAncestor.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
   _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/SparseTable.md
     document_title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
@@ -52,7 +52,7 @@ data:
   requiredBy:
   - Graph/LowestCommonAncestor.cpp
   timestamp: '2022-01-17 10:14:58+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/SparseTable.test.cpp
