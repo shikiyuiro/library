@@ -2,8 +2,6 @@
 
 #include "../../template/template.cpp"
 
-#include "../../DataStructure/SparseTable.cpp"
-
 #include "../../DataStructure/SparseTable_Compact.cpp"
 
 long op(long a, long b){ return min(a, b);}
