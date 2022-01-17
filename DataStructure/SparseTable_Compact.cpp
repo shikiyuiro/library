@@ -43,6 +43,6 @@ public:
     }
 };
 /**
- * @brief スパーステーブル(<O(N),O(1)>)
+ * @brief スパーステーブル( 構築$\mathrm{O}(N)$・クエリ$\mathrm{O}(1)$ )
  * @docs docs/DataStructure/SparseTable_compact.md
  */
