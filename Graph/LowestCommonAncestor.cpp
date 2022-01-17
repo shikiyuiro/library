@@ -2,15 +2,17 @@
 
 class LowestCommonAncestor{
 public:
+    explicit LowestCommonAncestor() = default;
+    
     LowestCommonAncestor(vector<vector<long>> &tree, long root) : tree(tree){
         ETpos.resize(tree.size(), -1);
         dfs(root, 0);
-        st = SparseTable<long>(EularTour, LONG_MAX, [](long a, long b){return min(a, b);});
+        st = SparseTable<long, op, e> (EularTour);
     }
     
-    long query(long L, long R){
-        if(ETpos[L] > ETpos[R]) swap(L, R);
-        return st.query(ETpos[L], ETpos[R] + 1) % tree.size();
+    long query(long U, long V){
+        if(ETpos[U] > ETpos[V]) swap(U, V);
+        return st.query(ETpos[U], ETpos[V] + 1) % tree.size();
     }
     
 private:
@@ -18,8 +20,10 @@ private:
     vector<long> EularTour;
     vector<long> ETpos;
     long ETsize = 0;
-    SparseTable<long> st;
+    SparseTable<long, op, e> st;
     
+    long op(long a, long b) { return min(a, b);}
+    long e() { return LONG_MAX;}
     void dfs(long vis, long depth){
         EularTour.push_back(depth * tree.size() + vis);
         ETpos[vis] = ETsize++;
