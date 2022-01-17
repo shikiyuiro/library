@@ -12,10 +12,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/FenwickTree.test.cpp
     title: test/verify/FenwickTree.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/verify/LowestCommonAncestor.test.cpp
     title: test/verify/LowestCommonAncestor.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
   - icon: ':heavy_check_mark:'
@@ -27,9 +27,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/WaveletMatrix.test.cpp
     title: test/verify/WaveletMatrix.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: docs/template/template.md
     document_title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -44,16 +44,16 @@ data:
   path: template/template.cpp
   requiredBy: []
   timestamp: '2021-11-13 20:31:18+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/verify/SparseTable.test.cpp
-  - test/verify/WaveletMatrix.test.cpp
-  - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/Atcoder.test.cpp
   - test/verify/UnionFind.test.cpp
-  - test/verify/FenwickTree.test.cpp
   - test/verify/StronglyConnectedComponent.test.cpp
+  - test/verify/LowestCommonAncestor.test.cpp
+  - test/verify/SparseTable.test.cpp
+  - test/verify/WaveletMatrix.test.cpp
   - test/verify/BaseConversion.test.cpp
+  - test/verify/FenwickTree.test.cpp
 documentation_of: template/template.cpp
 layout: document
 redirect_from:
