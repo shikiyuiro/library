@@ -20,10 +20,10 @@ private:
     vector<long> EularTour;
     vector<long> ETpos;
     long ETsize = 0;
+    static long op(long a, long b) { return min(a, b);}
+    static long e() { return LONG_MAX;}
     SparseTable<long, op, e> st;
     
-    long op(long a, long b) { return min(a, b);}
-    long e() { return LONG_MAX;}
     void dfs(long vis, long depth){
         EularTour.push_back(depth * tree.size() + vis);
         ETpos[vis] = ETsize++;
