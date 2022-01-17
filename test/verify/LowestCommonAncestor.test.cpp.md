@@ -38,18 +38,19 @@ data:
     \ return e();\n        long b = cf[r - l];\n        return op(table[l][b], table[r\
     \ - (1 << b)][b]);\n    }\n};\n/**\n * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\
     \u30D6\u30EB\n * @docs docs/DataStructure/SparseTable.md\n */\n#line 2 \"Graph/LowestCommonAncestor.cpp\"\
-    \n\nclass LowestCommonAncestor{\npublic:\n    LowestCommonAncestor(vector<vector<long>>\
-    \ &tree, long root) : tree(tree){\n        ETpos.resize(tree.size(), -1);\n  \
-    \      dfs(root, 0);\n        st = SparseTable<long>(EularTour, LONG_MAX, [](long\
-    \ a, long b){return min(a, b);});\n    }\n    \n    long query(long L, long R){\n\
-    \        if(ETpos[L] > ETpos[R]) swap(L, R);\n        return st.query(ETpos[L],\
-    \ ETpos[R] + 1) % tree.size();\n    }\n    \nprivate:\n    vector<vector<long>>\
-    \ tree;\n    vector<long> EularTour;\n    vector<long> ETpos;\n    long ETsize\
-    \ = 0;\n    SparseTable<long> st;\n    \n    void dfs(long vis, long depth){\n\
-    \        EularTour.push_back(depth * tree.size() + vis);\n        ETpos[vis] =\
-    \ ETsize++;\n        for(auto e : tree[vis]) if(ETpos[e] == -1) {dfs(e, depth\
-    \ + 1); EularTour.push_back(depth * tree.size() + vis); ETsize++;}\n    }\n};\n\
-    /**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor.md\n\
+    \n\nclass LowestCommonAncestor{\npublic:\n    explicit LowestCommonAncestor()\
+    \ = default;\n    \n    LowestCommonAncestor(vector<vector<long>> &tree, long\
+    \ root) : tree(tree){\n        ETpos.resize(tree.size(), -1);\n        dfs(root,\
+    \ 0);\n        st = SparseTable<long, op, e> (EularTour);\n    }\n    \n    long\
+    \ query(long U, long V){\n        if(ETpos[U] > ETpos[V]) swap(U, V);\n      \
+    \  return st.query(ETpos[U], ETpos[V] + 1) % tree.size();\n    }\n    \nprivate:\n\
+    \    vector<vector<long>> tree;\n    vector<long> EularTour;\n    vector<long>\
+    \ ETpos;\n    long ETsize = 0;\n    SparseTable<long, op, e> st;\n    \n    long\
+    \ op(long a, long b) { return min(a, b);}\n    long e() { return LONG_MAX;}\n\
+    \    void dfs(long vis, long depth){\n        EularTour.push_back(depth * tree.size()\
+    \ + vis);\n        ETpos[vis] = ETsize++;\n        for(auto e : tree[vis]) if(ETpos[e]\
+    \ == -1) {dfs(e, depth + 1); EularTour.push_back(depth * tree.size() + vis); ETsize++;}\n\
+    \    }\n};\n/**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor.md\n\
     \ */\n#line 6 \"test/verify/LowestCommonAncestor.test.cpp\"\n\nint main(){\n \
     \   long N, Q; cin >> N >> Q;\n    vector<vector<long>> tree(N);\n    for(long\
     \ i = 1; i <= N - 1; i++){\n        long p; cin >> p;\n        tree[i].push_back(p);\n\
@@ -70,7 +71,7 @@ data:
   isVerificationFile: true
   path: test/verify/LowestCommonAncestor.test.cpp
   requiredBy: []
-  timestamp: '2022-01-17 10:14:58+09:00'
+  timestamp: '2022-01-17 10:32:20+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/verify/LowestCommonAncestor.test.cpp
