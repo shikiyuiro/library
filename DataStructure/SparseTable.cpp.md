@@ -3,8 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: DataStructure/Compact_Sparse_Table.cpp
-    title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB(<O(N),O(1)>)"
+    path: DataStructure/SparseTable_Compact.cpp
+    title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
+      \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )"
   - icon: ':heavy_check_mark:'
     path: Graph/LowestCommonAncestor.cpp
     title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
@@ -54,7 +55,7 @@ data:
   path: DataStructure/SparseTable.cpp
   requiredBy:
   - Graph/LowestCommonAncestor.cpp
-  - DataStructure/Compact_Sparse_Table.cpp
+  - DataStructure/SparseTable_Compact.cpp
   timestamp: '2022-01-17 10:14:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

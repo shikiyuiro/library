@@ -11,7 +11,8 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/SparseTable_compact.md
-    document_title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB(<O(N),O(1)>)"
+    document_title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB( \u69CB\u7BC9\
+      $\\mathrm{O}(N)$\u30FB\u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )"
     links: []
   bundledCode: "#line 1 \"DataStructure/SparseTable.cpp\"\ntemplate<class S, S (*op)(S,\
     \ S), S (*e)()>\nclass SparseTable{\npublic:\n    vector<vector<S>> table;\n \
@@ -26,7 +27,7 @@ data:
     \    S query(long l, long r/*\u534A\u958B\u533A\u9593*/){\n        if(l == r)\
     \ return e();\n        long b = cf[r - l];\n        return op(table[l][b], table[r\
     \ - (1 << b)][b]);\n    }\n};\n/**\n * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\
-    \u30D6\u30EB\n * @docs docs/DataStructure/SparseTable.md\n */\n#line 2 \"DataStructure/Compact_Sparse_Table.cpp\"\
+    \u30D6\u30EB\n * @docs docs/DataStructure/SparseTable.md\n */\n#line 2 \"DataStructure/SparseTable_Compact.cpp\"\
     \n\ntemplate<class S, S (*op)(S, S), S (*e)()>\nclass Compact_Sparse_Table{\n\
     public:\n    long W = 8;\n    vector<S> A;\n    vector<S> Lfold, Rfold;\n    SparseTable<S,\
     \ op, e> st;\n    \n    explicit Compact_Sparse_Table() = default;\n    \n   \
@@ -46,8 +47,8 @@ data:
     \        if(rb == lb){\n            return op(Lfold[R],Rfold[L]);\n        }\n\
     \        S res = e();\n        for(long i = L; i <= R; i++) res = op(res, A[i]);\n\
     \        return res;\n    }\n};\n/**\n * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\
-    \u30FC\u30D6\u30EB(<O(N),O(1)>)\n * @docs docs/DataStructure/SparseTable_compact.md\n\
-    \ */\n"
+    \u30FC\u30D6\u30EB( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\u30A8\u30EA$\\mathrm{O}(1)$\
+    \ )\n * @docs docs/DataStructure/SparseTable_compact.md\n */\n"
   code: "#include \"../DataStructure/SparseTable.cpp\"\n\ntemplate<class S, S (*op)(S,\
     \ S), S (*e)()>\nclass Compact_Sparse_Table{\npublic:\n    long W = 8;\n    vector<S>\
     \ A;\n    vector<S> Lfold, Rfold;\n    SparseTable<S, op, e> st;\n    \n    explicit\
@@ -67,22 +68,24 @@ data:
     \ op(Lfold[R],Rfold[L]));\n        }\n        if(rb == lb){\n            return\
     \ op(Lfold[R],Rfold[L]);\n        }\n        S res = e();\n        for(long i\
     \ = L; i <= R; i++) res = op(res, A[i]);\n        return res;\n    }\n};\n/**\n\
-    \ * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB(<O(N),O(1)>)\n * @docs\
-    \ docs/DataStructure/SparseTable_compact.md\n */\n"
+    \ * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
+    \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )\n * @docs docs/DataStructure/SparseTable_compact.md\n\
+    \ */\n"
   dependsOn:
   - DataStructure/SparseTable.cpp
   isVerificationFile: false
-  path: DataStructure/Compact_Sparse_Table.cpp
+  path: DataStructure/SparseTable_Compact.cpp
   requiredBy: []
-  timestamp: '2022-01-17 10:50:47+09:00'
+  timestamp: '2022-01-17 11:06:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: DataStructure/Compact_Sparse_Table.cpp
+documentation_of: DataStructure/SparseTable_Compact.cpp
 layout: document
 redirect_from:
-- /library/DataStructure/Compact_Sparse_Table.cpp
-- /library/DataStructure/Compact_Sparse_Table.cpp.html
-title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB(<O(N),O(1)>)"
+- /library/DataStructure/SparseTable_Compact.cpp
+- /library/DataStructure/SparseTable_Compact.cpp.html
+title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
+  \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )"
 ---
 ## きもち
 

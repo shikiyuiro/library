@@ -3,9 +3,6 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
-    - icon: ':warning:'
-      path: DataStructure/Compact_Sparse_Table.cpp
-      title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB(<O(N),O(1)>)"
     - icon: ':heavy_check_mark:'
       path: DataStructure/FenwickTree.cpp
       title: "Fenwick\u6728"
@@ -15,6 +12,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
+    - icon: ':warning:'
+      path: DataStructure/SparseTable_Compact.cpp
+      title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
+        \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )"
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
