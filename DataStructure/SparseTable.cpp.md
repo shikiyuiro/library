@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: DataStructure/SparseTable_Compact.cpp
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
       \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )"
@@ -16,9 +16,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/verify/SparseTable_Compact.test.cpp
+    title: test/verify/SparseTable_Compact.test.cpp
+  - icon: ':x:'
+    path: test/verify/SparseTable_Compact.test.cpp
+    title: test/verify/SparseTable_Compact.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/SparseTable.md
     document_title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
@@ -57,8 +63,10 @@ data:
   - Graph/LowestCommonAncestor.cpp
   - DataStructure/SparseTable_Compact.cpp
   timestamp: '2022-01-17 10:14:58+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - test/verify/SparseTable_Compact.test.cpp
+  - test/verify/SparseTable_Compact.test.cpp
   - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/SparseTable.test.cpp
 documentation_of: DataStructure/SparseTable.cpp

@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: DataStructure/SparseTable.cpp
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/verify/SparseTable_Compact.test.cpp
+    title: test/verify/SparseTable_Compact.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/SparseTable_compact.md
     document_title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB( \u69CB\u7BC9\
@@ -77,8 +80,9 @@ data:
   path: DataStructure/SparseTable_Compact.cpp
   requiredBy: []
   timestamp: '2022-01-17 11:06:37+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/verify/SparseTable_Compact.test.cpp
 documentation_of: DataStructure/SparseTable_Compact.cpp
 layout: document
 redirect_from:

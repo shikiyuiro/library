@@ -9,10 +9,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: DataStructure/SparseTable.cpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: DataStructure/SparseTable_Compact.cpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
         \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )"
@@ -40,7 +40,7 @@ data:
       title: "\u5EA7\u6A19\u5727\u7E2E"
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.cpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -61,6 +61,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp
+    - icon: ':x:'
+      path: test/verify/SparseTable_Compact.test.cpp
+      title: test/verify/SparseTable_Compact.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/verify/StronglyConnectedComponent.test.cpp
       title: test/verify/StronglyConnectedComponent.test.cpp
