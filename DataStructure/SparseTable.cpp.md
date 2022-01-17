@@ -5,19 +5,19 @@ data:
   - icon: ':warning:'
     path: DataStructure/Compact_Sparse_Table.cpp
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB(<O(N),O(1)>)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/LowestCommonAncestor.cpp
     title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/verify/LowestCommonAncestor.test.cpp
     title: test/verify/LowestCommonAncestor.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/SparseTable.md
     document_title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
@@ -56,7 +56,7 @@ data:
   - Graph/LowestCommonAncestor.cpp
   - DataStructure/Compact_Sparse_Table.cpp
   timestamp: '2022-01-17 10:14:58+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/SparseTable.test.cpp

@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SparseTable.cpp
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/verify/LowestCommonAncestor.test.cpp
     title: test/verify/LowestCommonAncestor.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/Graph/LowestCommonAncestor.md
     document_title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
@@ -37,13 +37,13 @@ data:
     \ query(long U, long V){\n        if(ETpos[U] > ETpos[V]) swap(U, V);\n      \
     \  return st.query(ETpos[U], ETpos[V] + 1) % tree.size();\n    }\n    \nprivate:\n\
     \    vector<vector<long>> tree;\n    vector<long> EularTour;\n    vector<long>\
-    \ ETpos;\n    long ETsize = 0;\n    SparseTable<long, op, e> st;\n    \n    long\
-    \ op(long a, long b) { return min(a, b);}\n    long e() { return LONG_MAX;}\n\
-    \    void dfs(long vis, long depth){\n        EularTour.push_back(depth * tree.size()\
-    \ + vis);\n        ETpos[vis] = ETsize++;\n        for(auto e : tree[vis]) if(ETpos[e]\
-    \ == -1) {dfs(e, depth + 1); EularTour.push_back(depth * tree.size() + vis); ETsize++;}\n\
-    \    }\n};\n/**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor.md\n\
-    \ */\n"
+    \ ETpos;\n    long ETsize = 0;\n    static long op(long a, long b) { return min(a,\
+    \ b);}\n    static long e() { return LONG_MAX;}\n    SparseTable<long, op, e>\
+    \ st;\n    \n    void dfs(long vis, long depth){\n        EularTour.push_back(depth\
+    \ * tree.size() + vis);\n        ETpos[vis] = ETsize++;\n        for(auto e :\
+    \ tree[vis]) if(ETpos[e] == -1) {dfs(e, depth + 1); EularTour.push_back(depth\
+    \ * tree.size() + vis); ETsize++;}\n    }\n};\n/**\n * @brief \u6700\u5C0F\u5171\
+    \u901A\u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor.md\n */\n"
   code: "#include \"../DataStructure/SparseTable.cpp\"\n\nclass LowestCommonAncestor{\n\
     public:\n    explicit LowestCommonAncestor() = default;\n    \n    LowestCommonAncestor(vector<vector<long>>\
     \ &tree, long root) : tree(tree){\n        ETpos.resize(tree.size(), -1);\n  \
@@ -51,9 +51,9 @@ data:
     \ }\n    \n    long query(long U, long V){\n        if(ETpos[U] > ETpos[V]) swap(U,\
     \ V);\n        return st.query(ETpos[U], ETpos[V] + 1) % tree.size();\n    }\n\
     \    \nprivate:\n    vector<vector<long>> tree;\n    vector<long> EularTour;\n\
-    \    vector<long> ETpos;\n    long ETsize = 0;\n    SparseTable<long, op, e> st;\n\
-    \    \n    long op(long a, long b) { return min(a, b);}\n    long e() { return\
-    \ LONG_MAX;}\n    void dfs(long vis, long depth){\n        EularTour.push_back(depth\
+    \    vector<long> ETpos;\n    long ETsize = 0;\n    static long op(long a, long\
+    \ b) { return min(a, b);}\n    static long e() { return LONG_MAX;}\n    SparseTable<long,\
+    \ op, e> st;\n    \n    void dfs(long vis, long depth){\n        EularTour.push_back(depth\
     \ * tree.size() + vis);\n        ETpos[vis] = ETsize++;\n        for(auto e :\
     \ tree[vis]) if(ETpos[e] == -1) {dfs(e, depth + 1); EularTour.push_back(depth\
     \ * tree.size() + vis); ETsize++;}\n    }\n};\n/**\n * @brief \u6700\u5C0F\u5171\
@@ -63,8 +63,8 @@ data:
   isVerificationFile: false
   path: Graph/LowestCommonAncestor.cpp
   requiredBy: []
-  timestamp: '2022-01-17 10:32:20+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2022-01-17 10:57:29+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/LowestCommonAncestor.test.cpp
 documentation_of: Graph/LowestCommonAncestor.cpp

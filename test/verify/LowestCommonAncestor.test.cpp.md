@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SparseTable.cpp
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/LowestCommonAncestor.cpp
     title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.cpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/lca
@@ -45,17 +45,18 @@ data:
     \ query(long U, long V){\n        if(ETpos[U] > ETpos[V]) swap(U, V);\n      \
     \  return st.query(ETpos[U], ETpos[V] + 1) % tree.size();\n    }\n    \nprivate:\n\
     \    vector<vector<long>> tree;\n    vector<long> EularTour;\n    vector<long>\
-    \ ETpos;\n    long ETsize = 0;\n    SparseTable<long, op, e> st;\n    \n    long\
-    \ op(long a, long b) { return min(a, b);}\n    long e() { return LONG_MAX;}\n\
-    \    void dfs(long vis, long depth){\n        EularTour.push_back(depth * tree.size()\
-    \ + vis);\n        ETpos[vis] = ETsize++;\n        for(auto e : tree[vis]) if(ETpos[e]\
-    \ == -1) {dfs(e, depth + 1); EularTour.push_back(depth * tree.size() + vis); ETsize++;}\n\
-    \    }\n};\n/**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor.md\n\
-    \ */\n#line 6 \"test/verify/LowestCommonAncestor.test.cpp\"\n\nint main(){\n \
-    \   long N, Q; cin >> N >> Q;\n    vector<vector<long>> tree(N);\n    for(long\
-    \ i = 1; i <= N - 1; i++){\n        long p; cin >> p;\n        tree[i].push_back(p);\n\
-    \        tree[p].push_back(i);\n    }\n    \n    LowestCommonAncestor lca(tree,\
-    \ 0);\n    while(Q--){\n        long u, v; cin >> u >> v;\n        cout << lca.query(u,\
+    \ ETpos;\n    long ETsize = 0;\n    static long op(long a, long b) { return min(a,\
+    \ b);}\n    static long e() { return LONG_MAX;}\n    SparseTable<long, op, e>\
+    \ st;\n    \n    void dfs(long vis, long depth){\n        EularTour.push_back(depth\
+    \ * tree.size() + vis);\n        ETpos[vis] = ETsize++;\n        for(auto e :\
+    \ tree[vis]) if(ETpos[e] == -1) {dfs(e, depth + 1); EularTour.push_back(depth\
+    \ * tree.size() + vis); ETsize++;}\n    }\n};\n/**\n * @brief \u6700\u5C0F\u5171\
+    \u901A\u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor.md\n */\n#line 6\
+    \ \"test/verify/LowestCommonAncestor.test.cpp\"\n\nint main(){\n    long N, Q;\
+    \ cin >> N >> Q;\n    vector<vector<long>> tree(N);\n    for(long i = 1; i <=\
+    \ N - 1; i++){\n        long p; cin >> p;\n        tree[i].push_back(p);\n   \
+    \     tree[p].push_back(i);\n    }\n    \n    LowestCommonAncestor lca(tree, 0);\n\
+    \    while(Q--){\n        long u, v; cin >> u >> v;\n        cout << lca.query(u,\
     \ v) << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include \"../../template/template.cpp\"\
     \n\n#include \"../../Graph/LowestCommonAncestor.cpp\"\n\nint main(){\n    long\
@@ -71,8 +72,8 @@ data:
   isVerificationFile: true
   path: test/verify/LowestCommonAncestor.test.cpp
   requiredBy: []
-  timestamp: '2022-01-17 10:32:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-01-17 10:57:29+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/LowestCommonAncestor.test.cpp
 layout: document
