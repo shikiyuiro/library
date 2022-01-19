@@ -7,7 +7,8 @@
 - `SegmentTree(vector<S> &vec)`：コンストラクタ。列構造vecをもとにセグメント木を構成する。  
 - `S fold(long l, long r)`：半開区間\[l, r)に対する演算結果を返す。  
 - `void set(long p, S x)`：位置pに値xを代入する。  
-- `long partition_point(bool (*check)(S))`:関数Sが[first,mid)においてfalse,[mid,last)においてtrueとなるような位置midを返す。  
+- `long partition_point(bool (*check)(S))`:V[i] = fold(0, i+1)なる配列Vにおける、  
+std::distance(V.begin(), std::partition_point(V.begin(), V.end(), check))を返す。
 
 ## 計算量
 
