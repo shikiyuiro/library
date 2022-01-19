@@ -7,6 +7,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
+    _deprecated_at_docs: docs/Utility/modint.md
     document_title: modint
     links: []
   bundledCode: "#line 1 \"Utility/modint.cpp\"\ntemplate <uint_fast64_t Modulus> class\
@@ -35,7 +36,7 @@ data:
     \ {\n        modint res = 1, p = a;\n        if(n < 0) return modint(1) / pow(-n);\n\
     \        while (n > 0) {\n            if (n & 1) res *= p;\n            p *= p;\n\
     \            n >>= 1;\n        }\n        return res;\n    }\n};\n/**\n * @brief\
-    \ modint\n */\n"
+    \ modint\n * @docs docs/Utility/modint.md\n */\n"
   code: "template <uint_fast64_t Modulus> class modint {\n    using u64 = uint_fast64_t;\n\
     \    \npublic:\n    u64 a;\n    \n    constexpr modint(const u64 x = 0) noexcept\
     \ : a(x % Modulus) {}\n    constexpr u64 &value() noexcept { return a; }\n   \
@@ -61,12 +62,13 @@ data:
     \        return (is);\n    }\n    modint pow(long n) {\n        modint res = 1,\
     \ p = a;\n        if(n < 0) return modint(1) / pow(-n);\n        while (n > 0)\
     \ {\n            if (n & 1) res *= p;\n            p *= p;\n            n >>=\
-    \ 1;\n        }\n        return res;\n    }\n};\n/**\n * @brief modint\n */\n"
+    \ 1;\n        }\n        return res;\n    }\n};\n/**\n * @brief modint\n * @docs\
+    \ docs/Utility/modint.md\n */\n"
   dependsOn: []
   isVerificationFile: false
   path: Utility/modint.cpp
   requiredBy: []
-  timestamp: '2022-01-19 22:27:22+09:00'
+  timestamp: '2022-01-19 22:35:34+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Utility/modint.cpp
@@ -76,3 +78,6 @@ redirect_from:
 - /library/Utility/modint.cpp.html
 title: modint
 ---
+## modintです。
+[のしさんからパクりました。](https://noshi91.hatenablog.com/entry/2019/03/31/174006)   
+いずれ自分で書き直したいです。  
