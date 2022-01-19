@@ -24,6 +24,9 @@ data:
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: Graph
     pages:
+    - icon: ':warning:'
+      path: Graph/Heavy_Light_Decomposition.cpp
+      title: "HL\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: Graph/LowestCommonAncestor.cpp
       title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
