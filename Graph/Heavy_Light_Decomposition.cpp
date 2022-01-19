@@ -92,5 +92,5 @@ private:
 };
 /**
  * @brief HL分解
- * @docs docs/Graph/LowestCommonAncestor.md
+ * @docs docs/Graph/Heavy_Light_Decomposition.md
  */
