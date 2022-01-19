@@ -7,7 +7,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    _deprecated_at_docs: docs/Graph/LowestCommonAncestor.md
+    _deprecated_at_docs: docs/Graph/Heavy_Light_Decomposition.md
     document_title: "HL\u5206\u89E3"
     links: []
   bundledCode: "#line 1 \"Graph/Heavy_Light_Decomposition.cpp\"\nclass Heavy_Light_Decomposition{\n\
@@ -49,7 +49,7 @@ data:
     \         Q.push(nex);\n                terminal[nex] = {nex, t};\n          \
     \  }\n            if(heavy[t] != -1){\n                Q.push(heavy[t]);\n   \
     \             terminal[heavy[t]] = terminal[t];\n            }\n        }\n  \
-    \  }\n};\n/**\n * @brief HL\u5206\u89E3\n * @docs docs/Graph/LowestCommonAncestor.md\n\
+    \  }\n};\n/**\n * @brief HL\u5206\u89E3\n * @docs docs/Graph/Heavy_Light_Decomposition.md\n\
     \ */\n"
   code: "class Heavy_Light_Decomposition{\npublic:\n    \n    Heavy_Light_Decomposition(vector<vector<long>>\
     \ &tree, long root = 0) : tree(tree), root(root){\n        depth.resize(tree.size(),\
@@ -89,13 +89,13 @@ data:
     \         Q.push(nex);\n                terminal[nex] = {nex, t};\n          \
     \  }\n            if(heavy[t] != -1){\n                Q.push(heavy[t]);\n   \
     \             terminal[heavy[t]] = terminal[t];\n            }\n        }\n  \
-    \  }\n};\n/**\n * @brief HL\u5206\u89E3\n * @docs docs/Graph/LowestCommonAncestor.md\n\
+    \  }\n};\n/**\n * @brief HL\u5206\u89E3\n * @docs docs/Graph/Heavy_Light_Decomposition.md\n\
     \ */\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/Heavy_Light_Decomposition.cpp
   requiredBy: []
-  timestamp: '2022-01-19 21:36:56+09:00'
+  timestamp: '2022-01-19 22:18:16+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Graph/Heavy_Light_Decomposition.cpp
@@ -107,17 +107,39 @@ title: "HL\u5206\u89E3"
 ---
 ## きもち
 
-最小共通祖先です。あとでかきます。  
+HL分解だよ。重軽分解とも呼ばれているよ。  
+木構造のパスに対するクエリを列構造に対するクエリへと変換できるよ。
 
 ## 使い方  
-- `LowestCommonAncestor(vector<vector<long>>& tree, long root)`：コンストラクタ。treeに木を、rootに根の頂点番号を代入してください。  
-- `long query(long l, long r)`：頂点番号lと頂点番号rの最小共通祖先を求め、その頂点番号を返します。  
+- `Heavy_Light_Decomposition(vector<vector<long>>& tree, long root = 0)`：コンストラクタ。treeに木を、rootに根の頂点番号を代入してください。  
+- `vector<long> get_table()`：木をHL分解した列$table$を返す。  
+- `long get_pos(long p)`:番号pの頂点の$table$における位置を返す。　　
+- `vector<pair<long,long>> path_decomp(long u, long v, bool edge_is_weighted = false)`:与えられた木上のパスを$table$上の閉区間の集合に対応させ、列挙する。  
+- `pair<long,long> subtree_decomp`:与えられた頂点を根とする部分木を$table$上の閉区間に対応させ、返す。  
 
 ## 計算量
 
-構築:$\mathrm{O}(NlogN)$  
-クエリ:$\mathrm{O}(1)$  
+構築:$\mathrm{O}(N)$  
+path_decompクエリ:$\mathrm{O}(logN)$  
+subtree_decompクエリ:$\mathrm{O}(1)$  
+
+## 補足
+
+上記では説明が不十分なのでここで補足します。  
+ユーザーの基本的な利用方法としては、  
+①木を与え、get_table()によりHL分解した列を取得する(この時点では列構造は重みではなく頂点番号を持っている。)  
+②①で取得した列に重みを持たせる(上書きして良い)  
+③データ構造(セグメント木など)に②の列を持たせる。  
+④path_decompによりパスに対するクエリを列に対するクエリに変換し、③のデータ構造で解く。  
+⑤HAPPY  
+以上です。  
 
 ## Tips
 
-構築$\mathrm{O}(N)$,クエリ$\mathrm{O}(1)$のアルゴリズムがあるらしいです。精進します。  
+・全体的な計算量は列に対するクエリにかかる時間に$\mathrm{O}(logN)$がかかったものになるよ。  
+・部分木に対するクエリ(「部分木の全ての頂点に対し加算せよ」など)も処理できるよ。この場合計算量は列に対するクエリと変わらないよ。  
+・辺に重みがついている場合は端点のうち深い方の頂点の重みとすれば、頂点重みの問題に帰着できるよ。  
+・可換性を仮定せずに実装したので、閉区間[L, R]において、L > R となることがあるよ。これは、  
+　・演算が可換なときは取得した閉区間を適宜swapする。  
+　・演算が非可換なときはあらかじめreverseした列に対するデータ構造も持っておき、[N - L - 1, N - R - 1]として解く。  
+ ことで解決できるよ。
