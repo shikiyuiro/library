@@ -8,6 +8,8 @@
 
 #include "../../Graph/Heavy_Light_Decomposition.cpp"
 
+using mint = modint<998244353>;
+
 pair<mint,mint> op(pair<mint,mint> a, pair<mint,mint> b){
     return {b.first * a.first, b.first * a.second + b.second};
 }
