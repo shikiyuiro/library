@@ -70,4 +70,5 @@ public:
 };
 /**
  * @brief modint
+ * @docs docs/Utility/modint.md
  */
