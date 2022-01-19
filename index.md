@@ -41,6 +41,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Utility/CoordinateCompless.cpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
+    - icon: ':warning:'
+      path: Utility/modint.cpp
+      title: modint
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
