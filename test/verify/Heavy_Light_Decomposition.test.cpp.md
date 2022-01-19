@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SegmentTree.cpp
     title: DataStructure/SegmentTree.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/Heavy_Light_Decomposition.cpp
     title: "HL\u5206\u89E3"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Utility/modint.cpp
     title: modint
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.cpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/vertex_set_path_composite
@@ -107,20 +107,21 @@ data:
     \  }\n            if(heavy[t] != -1){\n                Q.push(heavy[t]);\n   \
     \             terminal[heavy[t]] = terminal[t];\n            }\n        }\n  \
     \  }\n};\n/**\n * @brief HL\u5206\u89E3\n * @docs docs/Graph/Heavy_Light_Decomposition.md\n\
-    \ */\n#line 10 \"test/verify/Heavy_Light_Decomposition.test.cpp\"\n\npair<mint,mint>\
-    \ op(pair<mint,mint> a, pair<mint,mint> b){\n    return {b.first * a.first, b.first\
-    \ * a.second + b.second};\n}\npair<mint,mint> e(){\n    return {1, 0};\n}\n\n\
-    int main(){\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    long\
-    \ N, Q; cin >> N >> Q;\n    vector<pair<mint,mint>> A(N);\n    for(long i = 0;\
-    \ i < N; i++) cin >> A[i].first >> A[i].second;\n    vector<vector<long>> tree(N);\n\
-    \    for(long i = 0; i < N - 1; i++){\n        long u, v; cin >> u >> v;\n   \
-    \     tree[u].push_back(v);\n        tree[v].push_back(u);\n    }\n    Heavy_Light_Decomposition\
-    \ HLD(tree);\n    auto tbl = HLD.get_table();\n    vector<pair<mint,mint>> tbl_w(tbl.size());\n\
-    \    for(long i = 0; i < tbl.size(); i++) tbl_w[i] = A[tbl[i]];\n    SegmentTree<pair<mint,mint>,\
-    \ op, e> seg(tbl_w);\n    reverse(tbl_w.begin(), tbl_w.end());\n    SegmentTree<pair<mint,mint>,\
-    \ op, e> ges(tbl_w);\n    while(Q--){\n        long q, a, b, c; cin >> q >> a\
-    \ >> b >> c;\n        if(q == 0){\n            seg.set(HLD.get_pos(a), {b, c});\n\
-    \            ges.set(tree.size() - HLD.get_pos(a) - 1, {b, c});\n        }else{\n\
+    \ */\n#line 10 \"test/verify/Heavy_Light_Decomposition.test.cpp\"\n\nusing mint\
+    \ = modint<998244353>;\n\npair<mint,mint> op(pair<mint,mint> a, pair<mint,mint>\
+    \ b){\n    return {b.first * a.first, b.first * a.second + b.second};\n}\npair<mint,mint>\
+    \ e(){\n    return {1, 0};\n}\n\nint main(){\n    ios::sync_with_stdio(false);\n\
+    \    cin.tie(nullptr);\n    long N, Q; cin >> N >> Q;\n    vector<pair<mint,mint>>\
+    \ A(N);\n    for(long i = 0; i < N; i++) cin >> A[i].first >> A[i].second;\n \
+    \   vector<vector<long>> tree(N);\n    for(long i = 0; i < N - 1; i++){\n    \
+    \    long u, v; cin >> u >> v;\n        tree[u].push_back(v);\n        tree[v].push_back(u);\n\
+    \    }\n    Heavy_Light_Decomposition HLD(tree);\n    auto tbl = HLD.get_table();\n\
+    \    vector<pair<mint,mint>> tbl_w(tbl.size());\n    for(long i = 0; i < tbl.size();\
+    \ i++) tbl_w[i] = A[tbl[i]];\n    SegmentTree<pair<mint,mint>, op, e> seg(tbl_w);\n\
+    \    reverse(tbl_w.begin(), tbl_w.end());\n    SegmentTree<pair<mint,mint>, op,\
+    \ e> ges(tbl_w);\n    while(Q--){\n        long q, a, b, c; cin >> q >> a >> b\
+    \ >> c;\n        if(q == 0){\n            seg.set(HLD.get_pos(a), {b, c});\n \
+    \           ges.set(tree.size() - HLD.get_pos(a) - 1, {b, c});\n        }else{\n\
     \            pair<mint,mint> res = {1, 0};\n            auto v = HLD.path_decomp(a,\
     \ b);\n            for(auto [x, y] : v){\n                if(x < y) res = op(res,\
     \ seg.fold(x, y+1));\n                else res = op(res, ges.fold(tree.size()\
@@ -129,15 +130,15 @@ data:
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/vertex_set_path_composite\"\
     \n\n#include \"../../template/template.cpp\"\n\n#include \"../../Utility/modint.cpp\"\
     \n\n#include \"../../DataStructure/SegmentTree.cpp\"\n\n#include \"../../Graph/Heavy_Light_Decomposition.cpp\"\
-    \n\npair<mint,mint> op(pair<mint,mint> a, pair<mint,mint> b){\n    return {b.first\
-    \ * a.first, b.first * a.second + b.second};\n}\npair<mint,mint> e(){\n    return\
-    \ {1, 0};\n}\n\nint main(){\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\
-    \    long N, Q; cin >> N >> Q;\n    vector<pair<mint,mint>> A(N);\n    for(long\
-    \ i = 0; i < N; i++) cin >> A[i].first >> A[i].second;\n    vector<vector<long>>\
-    \ tree(N);\n    for(long i = 0; i < N - 1; i++){\n        long u, v; cin >> u\
-    \ >> v;\n        tree[u].push_back(v);\n        tree[v].push_back(u);\n    }\n\
-    \    Heavy_Light_Decomposition HLD(tree);\n    auto tbl = HLD.get_table();\n \
-    \   vector<pair<mint,mint>> tbl_w(tbl.size());\n    for(long i = 0; i < tbl.size();\
+    \n\nusing mint = modint<998244353>;\n\npair<mint,mint> op(pair<mint,mint> a, pair<mint,mint>\
+    \ b){\n    return {b.first * a.first, b.first * a.second + b.second};\n}\npair<mint,mint>\
+    \ e(){\n    return {1, 0};\n}\n\nint main(){\n    ios::sync_with_stdio(false);\n\
+    \    cin.tie(nullptr);\n    long N, Q; cin >> N >> Q;\n    vector<pair<mint,mint>>\
+    \ A(N);\n    for(long i = 0; i < N; i++) cin >> A[i].first >> A[i].second;\n \
+    \   vector<vector<long>> tree(N);\n    for(long i = 0; i < N - 1; i++){\n    \
+    \    long u, v; cin >> u >> v;\n        tree[u].push_back(v);\n        tree[v].push_back(u);\n\
+    \    }\n    Heavy_Light_Decomposition HLD(tree);\n    auto tbl = HLD.get_table();\n\
+    \    vector<pair<mint,mint>> tbl_w(tbl.size());\n    for(long i = 0; i < tbl.size();\
     \ i++) tbl_w[i] = A[tbl[i]];\n    SegmentTree<pair<mint,mint>, op, e> seg(tbl_w);\n\
     \    reverse(tbl_w.begin(), tbl_w.end());\n    SegmentTree<pair<mint,mint>, op,\
     \ e> ges(tbl_w);\n    while(Q--){\n        long q, a, b, c; cin >> q >> a >> b\
@@ -156,8 +157,8 @@ data:
   isVerificationFile: true
   path: test/verify/Heavy_Light_Decomposition.test.cpp
   requiredBy: []
-  timestamp: '2022-01-19 22:42:13+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-01-19 22:47:24+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/Heavy_Light_Decomposition.test.cpp
 layout: document
