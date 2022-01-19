@@ -26,4 +26,23 @@ public:
         table[p] = x;
         while(p >>= 1) table[p] = op(table[p<<1|0],table[p<<1|1]);
     }
+    long partition_point(bool (*check)(S)){
+        //i番目の要素がfold(0, i+1)である配列Vについて、std::distance(V.begin(), std::partition_point(V.begin(), V.end(), check))を返す
+        if(check(table[1])) return table[0];
+        long vis = 1;
+        S acc = e();
+        while(vis < table.size()){
+            vis <<= 1;
+            S tmp = op(acc, table[vis]);
+            if(check[tmp]){
+                acc = tmp;
+                vis++;
+            }
+        }
+        return vis - size;
+    }
 };
+/**
+ * @brief セグメント木
+ * @docs docs/DataStructure/SegmentTree.md
+ */
