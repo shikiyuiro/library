@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/verify/Heavy_Light_Decomposition.test.cpp
+    title: test/verify/Heavy_Light_Decomposition.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/SegmentTree.cpp\"\ntemplate<class S, S (*op)(S,\
@@ -37,8 +40,9 @@ data:
   path: DataStructure/SegmentTree.cpp
   requiredBy: []
   timestamp: '2022-01-19 22:38:33+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/verify/Heavy_Light_Decomposition.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:

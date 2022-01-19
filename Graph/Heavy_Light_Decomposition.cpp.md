@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/verify/Heavy_Light_Decomposition.test.cpp
+    title: test/verify/Heavy_Light_Decomposition.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     _deprecated_at_docs: docs/Graph/Heavy_Light_Decomposition.md
     document_title: "HL\u5206\u89E3"
@@ -96,8 +99,9 @@ data:
   path: Graph/Heavy_Light_Decomposition.cpp
   requiredBy: []
   timestamp: '2022-01-19 22:18:16+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/verify/Heavy_Light_Decomposition.test.cpp
 documentation_of: Graph/Heavy_Light_Decomposition.cpp
 layout: document
 redirect_from:

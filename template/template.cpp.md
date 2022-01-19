@@ -12,6 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/FenwickTree.test.cpp
     title: test/verify/FenwickTree.test.cpp
+  - icon: ':x:'
+    path: test/verify/Heavy_Light_Decomposition.test.cpp
+    title: test/verify/Heavy_Light_Decomposition.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/verify/LowestCommonAncestor.test.cpp
     title: test/verify/LowestCommonAncestor.test.cpp
@@ -30,9 +33,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/WaveletMatrix.test.cpp
     title: test/verify/WaveletMatrix.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: docs/template/template.md
     document_title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -47,7 +50,7 @@ data:
   path: template/template.cpp
   requiredBy: []
   timestamp: '2021-11-13 20:31:18+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/verify/SparseTable_Compact.test.cpp
   - test/verify/Atcoder.test.cpp
@@ -55,6 +58,7 @@ data:
   - test/verify/StronglyConnectedComponent.test.cpp
   - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/SparseTable.test.cpp
+  - test/verify/Heavy_Light_Decomposition.test.cpp
   - test/verify/WaveletMatrix.test.cpp
   - test/verify/BaseConversion.test.cpp
   - test/verify/FenwickTree.test.cpp
