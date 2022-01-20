@@ -14,9 +14,6 @@ public:
     vector<long> get_table(){
         return table;
     }
-    long get_pos(long p){
-        return table_index[p];
-    }
     
     vector<pair<long,long>> path_decomp(long u, long v, bool edge_is_weighted = false){
         vector<pair<long,long>> res;
@@ -33,7 +30,13 @@ public:
             }
         }
         if(edge_is_weighted){
-            if(u == v) return res;
+            if(u == v){
+                while(not ser.empty()){
+                    auto p = ser.top(); ser.pop();
+                    res.push_back(p);
+                }
+                return res;
+            }
             if(table_index[u] < table_index[v]) res.push_back({table_index[heavy[u]], table_index[v]});
             else res.push_back({table_index[u], table_index[heavy[v]]});
         }else{
@@ -50,10 +53,10 @@ public:
         return {table_index[v], table_index[v] + subtree_size[v] - 1};
     }
     
-private:
-    long root = 0;
-    vector<vector<long>> &tree;
     vector<long> depth;
+private:
+    long root;
+    vector<vector<long>> &tree;
     vector<long> heavy;
     vector<long> subtree_size;
     vector<long> table;
@@ -89,6 +92,7 @@ private:
             }
         }
     }
+    
 };
 /**
  * @brief HL分解
