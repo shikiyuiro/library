@@ -11,9 +11,9 @@ public:
         tour();
     }
     
-    vector<long> get_table(){
-        return table;
-    }
+    vector<long> get_table(){ return table;}
+    long get_pos(long v){ return table_index[v];}
+    long get_depth(long v){ return depth[v];}
     
     vector<pair<long,long>> path_decomp(long u, long v, bool edge_is_weighted = false){
         vector<pair<long,long>> res;
@@ -53,10 +53,10 @@ public:
         return {table_index[v], table_index[v] + subtree_size[v] - 1};
     }
     
-    vector<long> depth;
 private:
     long root;
     vector<vector<long>> &tree;
+    vector<long> depth;
     vector<long> heavy;
     vector<long> subtree_size;
     vector<long> table;
