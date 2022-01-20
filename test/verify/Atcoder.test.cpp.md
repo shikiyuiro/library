@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Utility/CoordinateCompless.cpp
     title: "\u5EA7\u6A19\u5727\u7E2E"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.cpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

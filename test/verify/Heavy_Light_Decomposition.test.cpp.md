@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SegmentTree.cpp
     title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/Heavy_Light_Decomposition.cpp
     title: "HL\u5206\u89E3"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Utility/modint.cpp
     title: modint
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.cpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/vertex_set_path_composite
@@ -82,8 +82,9 @@ data:
     \        heavy.resize(tree.size(), -1);\n        subtree_size.resize(tree.size(),\
     \ 1);\n        calc_depth(root, -1);\n        table_index.resize(tree.size(),\
     \ -1);\n        terminal.resize(tree.size(), {root, -1});\n        tour();\n \
-    \   }\n    \n    vector<long> get_table(){\n        return table;\n    }\n   \
-    \ \n    vector<pair<long,long>> path_decomp(long u, long v, bool edge_is_weighted\
+    \   }\n    \n    vector<long> get_table(){ return table;}\n    long get_pos(long\
+    \ v){ return table_index[v];}\n    long get_depth(long v){ return depth[v];}\n\
+    \    \n    vector<pair<long,long>> path_decomp(long u, long v, bool edge_is_weighted\
     \ = false){\n        vector<pair<long,long>> res;\n        stack<pair<long,long>>\
     \ ser;\n        while(terminal[u].first != terminal[v].first){\n            auto\
     \ [TermiU, TransU] = terminal[u];\n            auto [TermiV, TransV] = terminal[v];\n\
@@ -100,8 +101,8 @@ data:
     \        }\n        while(not ser.empty()){\n            auto p = ser.top(); ser.pop();\n\
     \            res.push_back(p);\n        }\n        return res;\n    }\n    \n\
     \    pair<long,long> subtree_decomp(long v){\n        return {table_index[v],\
-    \ table_index[v] + subtree_size[v] - 1};\n    }\n    \n    vector<long> depth;\n\
-    private:\n    long root;\n    vector<vector<long>> &tree;\n    vector<long> heavy;\n\
+    \ table_index[v] + subtree_size[v] - 1};\n    }\n    \nprivate:\n    long root;\n\
+    \    vector<vector<long>> &tree;\n    vector<long> depth;\n    vector<long> heavy;\n\
     \    vector<long> subtree_size;\n    vector<long> table;\n    vector<long> table_index;\n\
     \    vector<pair<long,long>> terminal;\n    void calc_depth(long vis, long prev){\n\
     \        if(prev != -1) depth[vis] = depth[prev] + 1;\n        long max_subtree_size\
@@ -167,8 +168,8 @@ data:
   isVerificationFile: true
   path: test/verify/Heavy_Light_Decomposition.test.cpp
   requiredBy: []
-  timestamp: '2022-01-20 23:21:08+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-01-21 08:57:53+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/Heavy_Light_Decomposition.test.cpp
 layout: document

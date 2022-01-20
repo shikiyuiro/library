@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/verify/Heavy_Light_Decomposition.test.cpp
     title: test/verify/Heavy_Light_Decomposition.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/SegmentTree.md
     document_title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
@@ -59,7 +59,7 @@ data:
   path: DataStructure/SegmentTree.cpp
   requiredBy: []
   timestamp: '2022-01-19 22:58:07+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/Heavy_Light_Decomposition.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
