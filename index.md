@@ -9,7 +9,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: DataStructure/SegmentTree.cpp
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
     - icon: ':heavy_check_mark:'
@@ -27,7 +27,7 @@ data:
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: Graph
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Graph/Heavy_Light_Decomposition.cpp
       title: "HL\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -44,12 +44,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: Utility/CoordinateCompless.cpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Utility/modint.cpp
       title: modint
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.cpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -64,7 +64,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/FenwickTree.test.cpp
       title: test/verify/FenwickTree.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/verify/Heavy_Light_Decomposition.test.cpp
       title: test/verify/Heavy_Light_Decomposition.test.cpp
     - icon: ':heavy_check_mark:'
