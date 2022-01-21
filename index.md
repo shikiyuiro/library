@@ -25,7 +25,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/WaveletMatrix.cpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/WaveletMatrix_Weighted.cpp
       title: "\u91CD\u307F\u4ED8\u304D\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\
         \u5217"
