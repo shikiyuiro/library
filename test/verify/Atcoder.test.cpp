@@ -10,6 +10,10 @@
 //以下の問題で動作確認済みです。
 //https://atcoder.jp/contests/typical90/submissions/27052694
 
+#include "../../DataStructure/WaveletMatrix_Weighted.cpp"
+//以下の問題で動作確認済みです。
+//https://atcoder.jp/contests/abc133/submissions/28651189
+
 int main(){
     long A, B; cin >> A >> B;
     cout << A + B << endl;
