@@ -12,7 +12,7 @@ data:
   bundledCode: "#line 1 \"DataStructure/UnionFind_PartiallyPersistent.cpp\"\nclass\
     \ PPUF{\npublic:\n    PPUF(long size){\n        Parent.resize(size); iota(Parent.begin(),\
     \ Parent.end(), 0);\n        Size.resize(size, 1);\n        history.resize(size);\
-    \ for(auto s : history) s.push_back({LONG_MIN, 1});\n        United.resize(size,\
+    \ for(auto &s : history) s.push_back({LONG_MIN, 1});\n        United.resize(size,\
     \ LONG_MAX);\n    }\n    long find(long u, long t){ return (United[u] > t) ? u:\
     \ find(Parent[u], t); }//\u6642\u523Bt\u76F4\u5F8C\u306Eu\u306E\u6839\u3092\u6C42\
     \u3081\u308B\u3002\n    bool unite(long u, long v, long t){\n        //t\u306F\
@@ -40,7 +40,7 @@ data:
     \ */\n"
   code: "class PPUF{\npublic:\n    PPUF(long size){\n        Parent.resize(size);\
     \ iota(Parent.begin(), Parent.end(), 0);\n        Size.resize(size, 1);\n    \
-    \    history.resize(size); for(auto s : history) s.push_back({LONG_MIN, 1});\n\
+    \    history.resize(size); for(auto &s : history) s.push_back({LONG_MIN, 1});\n\
     \        United.resize(size, LONG_MAX);\n    }\n    long find(long u, long t){\
     \ return (United[u] > t) ? u: find(Parent[u], t); }//\u6642\u523Bt\u76F4\u5F8C\
     \u306Eu\u306E\u6839\u3092\u6C42\u3081\u308B\u3002\n    bool unite(long u, long\
@@ -70,7 +70,7 @@ data:
   isVerificationFile: false
   path: DataStructure/UnionFind_PartiallyPersistent.cpp
   requiredBy: []
-  timestamp: '2022-01-27 16:23:53+09:00'
+  timestamp: '2022-01-27 19:22:59+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: DataStructure/UnionFind_PartiallyPersistent.cpp
