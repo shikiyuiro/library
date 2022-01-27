@@ -3,7 +3,7 @@ public:
     PPUF(long size){
         Parent.resize(size); iota(Parent.begin(), Parent.end(), 0);
         Size.resize(size, 1);
-        history.resize(size); for(auto s : history) s.push_back({LONG_MIN, 1});
+        history.resize(size); for(auto &s : history) s.push_back({LONG_MIN, 1});
         United.resize(size, LONG_MAX);
     }
     long find(long u, long t){ return (United[u] > t) ? u: find(Parent[u], t); }//時刻t直後のuの根を求める。
