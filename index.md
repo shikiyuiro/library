@@ -22,6 +22,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
+    - icon: ':warning:'
+      path: DataStructure/UnionFind_PartiallyPersistent.cpp
+      title: "\u90E8\u5206\u6C38\u7D9AUnionFind"
     - icon: ':heavy_check_mark:'
       path: DataStructure/WaveletMatrix.cpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
