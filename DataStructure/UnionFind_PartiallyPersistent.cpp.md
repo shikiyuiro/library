@@ -29,16 +29,17 @@ data:
     \  long size(long u, long t){//\u6642\u523Bt\u76F4\u5F8C\u306Eu\u306E\u9023\u7D50\
     \u6210\u5206\u306E\u500B\u6570\u3092\u53D6\u5F97\u3059\u308B\u3002\n        long\
     \ fu = find(u, t);\n        return prev(upper_bound(history[fu].begin(), history[fu].end(),\
-    \ pair<long,long>({t, LONG_MAX})))->second;\n    }\nprivate:\n    vector<long>\
-    \ Parent;\n    vector<long> Size;\n    vector<vector<pair<long,long>>> history;//unite\u76F4\
-    \u5F8C\u306E\u9023\u7D50\u6210\u5206\u306E\u30B5\u30A4\u30BA\u3092\u4FDD\u5B58\
-    \u3059\u308B\n    vector<long> United;//\u4F55\u56DE\u76EE\u306E\u7D50\u5408\u3067\
-    \u6839\u3067\u306F\u306A\u304F\u306A\u308B\u304B\u3000\u30FC\uFF1E \u305D\u306E\
-    \u5024\u4EE5\u4E0B\u306E\u6642\u523B\u3067\u3042\u308C\u3070\u305D\u306E\u9802\
-    \u70B9\u306F\u6839\u3001\u305D\u3046\u3067\u306A\u304B\u3063\u305F\u3089Parent\u3092\
-    \u305F\u3069\u308C\u3070\u3088\u3044\u3002\n    long find(long u){ return (Parent[u]\
-    \ == u) ? u: find(Parent[u]); }\n};\n/**\n * @brief \u90E8\u5206\u6C38\u7D9AUnionFind\n\
-    \ * @docs docs/DataStructure/UnionFind_PartiallyPersistent.md\n */\n"
+    \ pair<long,long>({t, LONG_MAX})))->second;\n    }\n    explicit PPUF() = default;\n\
+    private:\n    vector<long> Parent;\n    vector<long> Size;\n    vector<vector<pair<long,long>>>\
+    \ history;//unite\u76F4\u5F8C\u306E\u9023\u7D50\u6210\u5206\u306E\u30B5\u30A4\u30BA\
+    \u3092\u4FDD\u5B58\u3059\u308B\n    vector<long> United;//\u4F55\u56DE\u76EE\u306E\
+    \u7D50\u5408\u3067\u6839\u3067\u306F\u306A\u304F\u306A\u308B\u304B\u3000\u30FC\
+    \uFF1E \u305D\u306E\u5024\u4EE5\u4E0B\u306E\u6642\u523B\u3067\u3042\u308C\u3070\
+    \u305D\u306E\u9802\u70B9\u306F\u6839\u3001\u305D\u3046\u3067\u306A\u304B\u3063\
+    \u305F\u3089Parent\u3092\u305F\u3069\u308C\u3070\u3088\u3044\u3002\n    long find(long\
+    \ u){ return (Parent[u] == u) ? u: find(Parent[u]); }\n};\n/**\n * @brief \u90E8\
+    \u5206\u6C38\u7D9AUnionFind\n * @docs docs/DataStructure/UnionFind_PartiallyPersistent.md\n\
+    \ */\n"
   code: "class PPUF{\npublic:\n    PPUF(long size){\n        Parent.resize(size);\
     \ iota(Parent.begin(), Parent.end(), 0);\n        Size.resize(size, 1);\n    \
     \    history.resize(size); for(auto &s : history) s.push_back({LONG_MIN, 1});\n\
@@ -57,22 +58,22 @@ data:
     \ find(u, t) == find(v, t);\n    }\n    long size(long u, long t){//\u6642\u523B\
     t\u76F4\u5F8C\u306Eu\u306E\u9023\u7D50\u6210\u5206\u306E\u500B\u6570\u3092\u53D6\
     \u5F97\u3059\u308B\u3002\n        long fu = find(u, t);\n        return prev(upper_bound(history[fu].begin(),\
-    \ history[fu].end(), pair<long,long>({t, LONG_MAX})))->second;\n    }\nprivate:\n\
-    \    vector<long> Parent;\n    vector<long> Size;\n    vector<vector<pair<long,long>>>\
-    \ history;//unite\u76F4\u5F8C\u306E\u9023\u7D50\u6210\u5206\u306E\u30B5\u30A4\u30BA\
-    \u3092\u4FDD\u5B58\u3059\u308B\n    vector<long> United;//\u4F55\u56DE\u76EE\u306E\
-    \u7D50\u5408\u3067\u6839\u3067\u306F\u306A\u304F\u306A\u308B\u304B\u3000\u30FC\
-    \uFF1E \u305D\u306E\u5024\u4EE5\u4E0B\u306E\u6642\u523B\u3067\u3042\u308C\u3070\
-    \u305D\u306E\u9802\u70B9\u306F\u6839\u3001\u305D\u3046\u3067\u306A\u304B\u3063\
-    \u305F\u3089Parent\u3092\u305F\u3069\u308C\u3070\u3088\u3044\u3002\n    long find(long\
-    \ u){ return (Parent[u] == u) ? u: find(Parent[u]); }\n};\n/**\n * @brief \u90E8\
-    \u5206\u6C38\u7D9AUnionFind\n * @docs docs/DataStructure/UnionFind_PartiallyPersistent.md\n\
+    \ history[fu].end(), pair<long,long>({t, LONG_MAX})))->second;\n    }\n    explicit\
+    \ PPUF() = default;\nprivate:\n    vector<long> Parent;\n    vector<long> Size;\n\
+    \    vector<vector<pair<long,long>>> history;//unite\u76F4\u5F8C\u306E\u9023\u7D50\
+    \u6210\u5206\u306E\u30B5\u30A4\u30BA\u3092\u4FDD\u5B58\u3059\u308B\n    vector<long>\
+    \ United;//\u4F55\u56DE\u76EE\u306E\u7D50\u5408\u3067\u6839\u3067\u306F\u306A\u304F\
+    \u306A\u308B\u304B\u3000\u30FC\uFF1E \u305D\u306E\u5024\u4EE5\u4E0B\u306E\u6642\
+    \u523B\u3067\u3042\u308C\u3070\u305D\u306E\u9802\u70B9\u306F\u6839\u3001\u305D\
+    \u3046\u3067\u306A\u304B\u3063\u305F\u3089Parent\u3092\u305F\u3069\u308C\u3070\
+    \u3088\u3044\u3002\n    long find(long u){ return (Parent[u] == u) ? u: find(Parent[u]);\
+    \ }\n};\n/**\n * @brief \u90E8\u5206\u6C38\u7D9AUnionFind\n * @docs docs/DataStructure/UnionFind_PartiallyPersistent.md\n\
     \ */\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/UnionFind_PartiallyPersistent.cpp
   requiredBy: []
-  timestamp: '2022-01-28 15:03:13+09:00'
+  timestamp: '2022-01-28 15:05:48+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: DataStructure/UnionFind_PartiallyPersistent.cpp
