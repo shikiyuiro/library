@@ -1,9 +1,9 @@
 #include "../DataStructure/UnionFind_PartiallyPersistent.cpp"
 
 class MergeTree{
-    //Union-Findのマージ過程を表す木。  
+    //UnionFindのマージ過程を表す木(のオイラーツアー)。  
     //「時刻tにおける要素uの連結成分」に対するクエリを列クエリに帰着できる。  
-    //発想はHL分解の部分木に対するクエリに近い。
+    //追加する辺とその時刻が先読み可能である必要がある。
 public:
     MergeTree(long siz, vector<tuple<long,long,long>> merge){
         uni = PPUF(siz);
@@ -42,3 +42,6 @@ private:
     vector<long> pos;
     PPUF uni;
 };
+/**
+ * @brief マージ過程を表す木
+ */
