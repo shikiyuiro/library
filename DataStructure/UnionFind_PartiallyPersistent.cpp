@@ -25,6 +25,7 @@ public:
         long fu = find(u, t);
         return prev(upper_bound(history[fu].begin(), history[fu].end(), pair<long,long>({t, LONG_MAX})))->second;
     }
+    explicit PPUF() = default;
 private:
     vector<long> Parent;
     vector<long> Size;
