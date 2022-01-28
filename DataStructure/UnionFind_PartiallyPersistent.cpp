@@ -34,4 +34,5 @@ private:
 };
 /**
  * @brief 部分永続UnionFind
+ * @docs docs/DataStructure/UnionFind_PartiallyPersistent.md
  */
