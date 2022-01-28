@@ -9,6 +9,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
+    - icon: ':warning:'
+      path: DataStructure/MergeTree.cpp
+      title: DataStructure/MergeTree.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"

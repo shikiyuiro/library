@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: DataStructure/MergeTree.cpp
+    title: DataStructure/MergeTree.cpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
@@ -72,7 +75,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/UnionFind_PartiallyPersistent.cpp
-  requiredBy: []
+  requiredBy:
+  - DataStructure/MergeTree.cpp
   timestamp: '2022-01-28 15:05:48+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
