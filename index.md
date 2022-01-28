@@ -11,7 +11,7 @@ data:
       title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
     - icon: ':warning:'
       path: DataStructure/MergeTree.cpp
-      title: DataStructure/MergeTree.cpp
+      title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u6728"
     - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"

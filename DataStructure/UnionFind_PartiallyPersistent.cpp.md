@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: DataStructure/MergeTree.cpp
-    title: DataStructure/MergeTree.cpp
+    title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u6728"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
