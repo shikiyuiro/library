@@ -43,7 +43,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/LowestCommonAncestor.cpp
       title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Graph/LowestCommonAncestor_Offline.cpp
       title: "\u30AA\u30D5\u30E9\u30A4\u30F3\u6700\u5C0F\u5171\u901A\u7956\u5148"
     - icon: ':heavy_check_mark:'
@@ -83,6 +83,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/LowestCommonAncestor.test.cpp
       title: test/verify/LowestCommonAncestor.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/verify/LowestCommonAncestor_Offline.test.cpp
+      title: test/verify/LowestCommonAncestor_Offline.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp

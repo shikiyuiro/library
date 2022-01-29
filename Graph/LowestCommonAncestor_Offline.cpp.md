@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/verify/LowestCommonAncestor_Offline.test.cpp
+    title: test/verify/LowestCommonAncestor_Offline.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/Graph/LowestCommonAncestor_Offline.md
     document_title: "\u30AA\u30D5\u30E9\u30A4\u30F3\u6700\u5C0F\u5171\u901A\u7956\u5148"
@@ -59,8 +62,9 @@ data:
   path: Graph/LowestCommonAncestor_Offline.cpp
   requiredBy: []
   timestamp: '2022-01-29 15:03:16+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/verify/LowestCommonAncestor_Offline.test.cpp
 documentation_of: Graph/LowestCommonAncestor_Offline.cpp
 layout: document
 redirect_from:

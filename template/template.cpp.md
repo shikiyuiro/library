@@ -19,6 +19,9 @@ data:
     path: test/verify/LowestCommonAncestor.test.cpp
     title: test/verify/LowestCommonAncestor.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/verify/LowestCommonAncestor_Offline.test.cpp
+    title: test/verify/LowestCommonAncestor_Offline.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
   - icon: ':heavy_check_mark:'
@@ -59,6 +62,7 @@ data:
   - test/verify/UnionFind.test.cpp
   - test/verify/Heavy_Light_Decomposition.test.cpp
   - test/verify/WaveletMatrix.test.cpp
+  - test/verify/LowestCommonAncestor_Offline.test.cpp
   - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/Atcoder.test.cpp
   - test/verify/SparseTable.test.cpp
