@@ -14,6 +14,10 @@
 //以下の問題で動作確認済みです。
 //https://atcoder.jp/contests/abc133/submissions/28651189
 
+#include "../../DataStructure/MergeTree.cpp"
+//以下の問題で動作確認済みです。
+//https://atcoder.jp/contests/abc183/submissions/28824947
+
 int main(){
     long A, B; cin >> A >> B;
     cout << A + B << endl;
