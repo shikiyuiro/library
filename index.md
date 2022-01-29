@@ -9,7 +9,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/MergeTree.cpp
       title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u6728"
     - icon: ':heavy_check_mark:'
@@ -25,7 +25,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind_PartiallyPersistent.cpp
       title: "\u90E8\u5206\u6C38\u7D9AUnionFind"
     - icon: ':heavy_check_mark:'
