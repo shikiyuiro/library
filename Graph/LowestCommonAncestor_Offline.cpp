@@ -39,6 +39,6 @@ private:
     };
 };
 /**
- * @brief オフライン最小共通祖先
+ * @brief 最小共通祖先( オフライン )
  * @docs docs/Graph/LowestCommonAncestor_Offline.md
  */
