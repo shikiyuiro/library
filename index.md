@@ -43,6 +43,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/LowestCommonAncestor.cpp
       title: "\u6700\u5C0F\u5171\u901A\u7956\u5148"
+    - icon: ':warning:'
+      path: Graph/LowestCommonAncestor_Offline.cpp
+      title: "\u30AA\u30D5\u30E9\u30A4\u30F3\u6700\u5C0F\u5171\u901A\u7956\u5148"
     - icon: ':heavy_check_mark:'
       path: Graph/StronglyConnectedComponent.cpp
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
