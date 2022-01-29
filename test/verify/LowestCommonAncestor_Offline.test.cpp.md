@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: Graph/LowestCommonAncestor_Offline.cpp
-    title: "\u30AA\u30D5\u30E9\u30A4\u30F3\u6700\u5C0F\u5171\u901A\u7956\u5148"
+    title: "\u6700\u5C0F\u5171\u901A\u7956\u5148( \u30AA\u30D5\u30E9\u30A4\u30F3 )"
   - icon: ':heavy_check_mark:'
     path: template/template.cpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -41,11 +41,11 @@ data:
     \ < Size[find(y)]) swap(x, y);\n            Size[find(x)] += Size[find(y)];\n\
     \            Root[find(y)] = find(x);\n        }\n        bool same(long x, long\
     \ y){ return find(x) == find(y);}\n        long size(long x){ return Size[find(x)];}\n\
-    \    };\n};\n/**\n * @brief \u30AA\u30D5\u30E9\u30A4\u30F3\u6700\u5C0F\u5171\u901A\
-    \u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor_Offline.md\n */\n#line\
-    \ 6 \"test/verify/LowestCommonAncestor_Offline.test.cpp\"\n\nint main(){\n   \
-    \ ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    long N, Q; cin >> N\
-    \ >> Q;\n    vector<vector<long>> tree(N);\n    for(long i = 1; i < N; i++){\n\
+    \    };\n};\n/**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148( \u30AA\u30D5\
+    \u30E9\u30A4\u30F3 )\n * @docs docs/Graph/LowestCommonAncestor_Offline.md\n */\n\
+    #line 6 \"test/verify/LowestCommonAncestor_Offline.test.cpp\"\n\nint main(){\n\
+    \    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    long N, Q; cin >>\
+    \ N >> Q;\n    vector<vector<long>> tree(N);\n    for(long i = 1; i < N; i++){\n\
     \        long p; cin >> p;\n        tree[p].push_back(i);\n    }\n    vector<tuple<long,long,long>>\
     \ query;\n    while(Q--){\n        long u, v; cin >> u >> v;\n        query.push_back({u,\
     \ v, 0});\n    }\n    OffLCA olca(tree, 0, query);\n    for(auto [f, s, t] : query)\
@@ -64,7 +64,7 @@ data:
   isVerificationFile: true
   path: test/verify/LowestCommonAncestor_Offline.test.cpp
   requiredBy: []
-  timestamp: '2022-01-29 15:14:08+09:00'
+  timestamp: '2022-01-29 15:15:41+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/LowestCommonAncestor_Offline.test.cpp

@@ -11,7 +11,8 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/Graph/LowestCommonAncestor_Offline.md
-    document_title: "\u30AA\u30D5\u30E9\u30A4\u30F3\u6700\u5C0F\u5171\u901A\u7956\u5148"
+    document_title: "\u6700\u5C0F\u5171\u901A\u7956\u5148( \u30AA\u30D5\u30E9\u30A4\
+      \u30F3 )"
     links: []
   bundledCode: "#line 1 \"Graph/LowestCommonAncestor_Offline.cpp\"\nclass OffLCA{\n\
     public:\n    OffLCA(vector<vector<long>> &tree, long root, vector<tuple<long,long,long>>\
@@ -33,8 +34,8 @@ data:
     \ < Size[find(y)]) swap(x, y);\n            Size[find(x)] += Size[find(y)];\n\
     \            Root[find(y)] = find(x);\n        }\n        bool same(long x, long\
     \ y){ return find(x) == find(y);}\n        long size(long x){ return Size[find(x)];}\n\
-    \    };\n};\n/**\n * @brief \u30AA\u30D5\u30E9\u30A4\u30F3\u6700\u5C0F\u5171\u901A\
-    \u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor_Offline.md\n */\n"
+    \    };\n};\n/**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148( \u30AA\u30D5\
+    \u30E9\u30A4\u30F3 )\n * @docs docs/Graph/LowestCommonAncestor_Offline.md\n */\n"
   code: "class OffLCA{\npublic:\n    OffLCA(vector<vector<long>> &tree, long root,\
     \ vector<tuple<long,long,long>> &query){\n        vector<vector<pair<long,long*>>>\
     \ fellow(tree.size());\n        for(auto& [f, s, t] : query){\n            fellow[f].push_back({s,\
@@ -54,14 +55,14 @@ data:
     \            if(Size[find(x)] < Size[find(y)]) swap(x, y);\n            Size[find(x)]\
     \ += Size[find(y)];\n            Root[find(y)] = find(x);\n        }\n       \
     \ bool same(long x, long y){ return find(x) == find(y);}\n        long size(long\
-    \ x){ return Size[find(x)];}\n    };\n};\n/**\n * @brief \u30AA\u30D5\u30E9\u30A4\
-    \u30F3\u6700\u5C0F\u5171\u901A\u7956\u5148\n * @docs docs/Graph/LowestCommonAncestor_Offline.md\n\
+    \ x){ return Size[find(x)];}\n    };\n};\n/**\n * @brief \u6700\u5C0F\u5171\u901A\
+    \u7956\u5148( \u30AA\u30D5\u30E9\u30A4\u30F3 )\n * @docs docs/Graph/LowestCommonAncestor_Offline.md\n\
     \ */\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/LowestCommonAncestor_Offline.cpp
   requiredBy: []
-  timestamp: '2022-01-29 15:03:16+09:00'
+  timestamp: '2022-01-29 15:15:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/LowestCommonAncestor_Offline.test.cpp
@@ -70,7 +71,7 @@ layout: document
 redirect_from:
 - /library/Graph/LowestCommonAncestor_Offline.cpp
 - /library/Graph/LowestCommonAncestor_Offline.cpp.html
-title: "\u30AA\u30D5\u30E9\u30A4\u30F3\u6700\u5C0F\u5171\u901A\u7956\u5148"
+title: "\u6700\u5C0F\u5171\u901A\u7956\u5148( \u30AA\u30D5\u30E9\u30A4\u30F3 )"
 ---
 ## きもち
 
