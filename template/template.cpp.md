@@ -55,17 +55,17 @@ data:
   timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/verify/SparseTable_Compact.test.cpp
-  - test/verify/BaseConversion.test.cpp
   - test/verify/FenwickTree.test.cpp
+  - test/verify/SparseTable.test.cpp
+  - test/verify/Heavy_Light_Decomposition.test.cpp
+  - test/verify/LowestCommonAncestor_Offline.test.cpp
+  - test/verify/Atcoder.test.cpp
+  - test/verify/WaveletMatrix.test.cpp
+  - test/verify/SparseTable_Compact.test.cpp
+  - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/StronglyConnectedComponent.test.cpp
   - test/verify/UnionFind.test.cpp
-  - test/verify/Heavy_Light_Decomposition.test.cpp
-  - test/verify/WaveletMatrix.test.cpp
-  - test/verify/LowestCommonAncestor_Offline.test.cpp
-  - test/verify/LowestCommonAncestor.test.cpp
-  - test/verify/Atcoder.test.cpp
-  - test/verify/SparseTable.test.cpp
+  - test/verify/BaseConversion.test.cpp
 documentation_of: template/template.cpp
 layout: document
 redirect_from:

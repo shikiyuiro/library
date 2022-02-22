@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: Combinatorics
+    pages:
+    - icon: ':warning:'
+      path: Combinatorics/binomial.cpp
+      title: "\u4E8C\u9805\u4FC2\u6570"
   - name: DataStructure
     pages:
     - icon: ':heavy_check_mark:'

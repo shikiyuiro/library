@@ -62,9 +62,9 @@ data:
   timestamp: '2022-01-17 10:14:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/verify/SparseTable.test.cpp
   - test/verify/SparseTable_Compact.test.cpp
   - test/verify/LowestCommonAncestor.test.cpp
-  - test/verify/SparseTable.test.cpp
 documentation_of: DataStructure/SparseTable.cpp
 layout: document
 redirect_from:
