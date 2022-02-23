@@ -144,7 +144,6 @@ title: "\u91CD\u307F\u4ED8\u304D\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C
 ・重みの変更クエリがある場合はセグメント木を載せれば解決できる。  
 ・元の配列の値に対して変更クエリが入る場合は平衡二分探索木で解決できるらしいけど、重そ〜  
 ・重み付きウェーブレット行列にウェーブレット行列をのせると三次元のクエリがこなせるよ。  
-・その上にさらにウェーブレット行列を載せると・・・　笑  
 
 ## 使い方  
 - `WeightedWaveletMatrix(vector<pair<long,long>> table)`：コンストラクタ。firstに値、secondに重みをもつ配列 $table$ をもとに、重み付きウェーブレット行列を構築する。  
@@ -157,5 +156,4 @@ title: "\u91CD\u307F\u4ED8\u304D\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C
 クエリ:$\mathrm{O}(logmaxV)$  
 
 ## Tips
-ネタバレになるので一つだけ。たとえば↓これが思考停止で解ける(HLDして、これをはる。)  
-([atcoder ABC133-F Colorful Tree](https://atcoder.jp/contests/abc133/tasks/abc133_f))  
+[atcoder ABC133-F Colorful Tree](https://atcoder.jp/contests/abc133/tasks/abc133_f)  
