@@ -9,6 +9,9 @@ data:
     - icon: ':warning:'
       path: Combinatorics/binomial_Lucas.cpp
       title: "\u4E8C\u9805\u4FC2\u6570( Lucas )"
+    - icon: ':warning:'
+      path: Combinatorics/binomial_arbitrary_mod.cpp
+      title: "\u4E8C\u9805\u4FC2\u6570( \u4EFB\u610Fmod )"
   - name: DataStructure
     pages:
     - icon: ':heavy_check_mark:'
