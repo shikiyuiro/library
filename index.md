@@ -17,10 +17,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/FenwickTree.cpp
       title: "Fenwick\u6728"
-    - icon: ':heavy_check_mark:'
-      path: DataStructure/LazySegmentTree.cpp
-      title: "\u9045\u5EF6\u8A55\u4FA1\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: DataStructure/MergeTree.cpp
       title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u6728"
     - icon: ':heavy_check_mark:'
@@ -32,13 +29,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: DataStructure/UnionFind_PartiallyPersistent.cpp
       title: "\u90E8\u5206\u6C38\u7D9AUnionFind"
     - icon: ':heavy_check_mark:'
       path: DataStructure/WaveletMatrix.cpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: DataStructure/WaveletMatrix_Weighted.cpp
       title: "\u91CD\u307F\u4ED8\u304D\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\
         \u5217"
@@ -62,7 +59,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Utility/BaseConversion.cpp
       title: "\u9032\u6570\u5909\u63DB"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: Utility/CoordinateCompless.cpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
     - icon: ':heavy_check_mark:'
@@ -81,7 +78,7 @@ data:
   verificationCategories:
   - name: test/verify
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/verify/Atcoder.test.cpp
       title: test/verify/Atcoder.test.cpp
     - icon: ':heavy_check_mark:'

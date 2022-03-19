@@ -1,17 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':warning:'
     path: DataStructure/UnionFind_PartiallyPersistent.cpp
     title: "\u90E8\u5206\u6C38\u7D9AUnionFind"
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/verify/Atcoder.test.cpp
-    title: test/verify/Atcoder.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     document_title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u6728"
     links: []
@@ -96,9 +93,8 @@ data:
   path: DataStructure/MergeTree.cpp
   requiredBy: []
   timestamp: '2022-01-28 15:10:39+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/verify/Atcoder.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: DataStructure/MergeTree.cpp
 layout: document
 redirect_from:
