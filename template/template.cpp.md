@@ -25,9 +25,6 @@ data:
     path: test/verify/SparseTable.test.cpp
     title: test/verify/SparseTable.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/verify/SparseTable_Compact.test.cpp
-    title: test/verify/SparseTable_Compact.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/verify/StronglyConnectedComponent.test.cpp
     title: test/verify/StronglyConnectedComponent.test.cpp
   - icon: ':heavy_check_mark:'
@@ -61,7 +58,6 @@ data:
   - test/verify/LowestCommonAncestor_Offline.test.cpp
   - test/verify/Atcoder.test.cpp
   - test/verify/WaveletMatrix.test.cpp
-  - test/verify/SparseTable_Compact.test.cpp
   - test/verify/LowestCommonAncestor.test.cpp
   - test/verify/StronglyConnectedComponent.test.cpp
   - test/verify/UnionFind.test.cpp

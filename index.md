@@ -30,10 +30,6 @@ data:
       path: DataStructure/SparseTable.cpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
     - icon: ':heavy_check_mark:'
-      path: DataStructure/SparseTable_Compact.cpp
-      title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
-        \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )"
-    - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: "\u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020(Union Find)"
     - icon: ':heavy_check_mark:'
@@ -106,7 +102,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/verify/SparseTable_Compact.test.cpp
       title: test/verify/SparseTable_Compact.test.cpp
     - icon: ':heavy_check_mark:'
