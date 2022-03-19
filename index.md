@@ -99,9 +99,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/SparseTable.test.cpp
       title: test/verify/SparseTable.test.cpp
-    - icon: ':x:'
-      path: test/verify/SparseTable_Compact.test.cpp
-      title: test/verify/SparseTable_Compact.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/verify/StronglyConnectedComponent.test.cpp
       title: test/verify/StronglyConnectedComponent.test.cpp
