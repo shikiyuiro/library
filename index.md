@@ -6,11 +6,6 @@ data:
     - icon: ':warning:'
       path: template/template.cpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-  - name: zzz_junkyard
-    pages:
-    - icon: ':warning:'
-      path: zzz_junkyard/nCk_mod_mini.cpp
-      title: nCk (mod2/mod3)
   verificationCategories: []
 layout: toppage
 ---
