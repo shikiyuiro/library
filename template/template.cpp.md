@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/SparseTable.test.cpp
     title: verify/SparseTable.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: verify/WaveletMatrix.test.cpp
+    title: verify/WaveletMatrix.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -26,6 +29,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/SparseTable.test.cpp
+  - verify/WaveletMatrix.test.cpp
 documentation_of: template/template.cpp
 layout: document
 redirect_from:
