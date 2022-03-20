@@ -2,12 +2,14 @@ class WaveletMatrix{
     using i64 = int64_t;
 public:
     explicit WaveletMatrix() = default;
-    WaveletMatrix(vector<i64> &_v){__WaveletMatrix(_v);};
+    WaveletMatrix(vector<i64> &_v){ __WaveletMatrix(_v);};
     i64 range_freq(i64 L, i64 R, i64 lower, i64 upper){ return __range_freq(L, R, upper) - __range_freq(L, R, lower);}
-    i64 range_Kth_max(i64 L, i64 R, i64 K){ return range_Kth_min(L, R, R - L - K - 1);}
     i64 range_Kth_min(i64 L, i64 R, i64 K){ return __range_Kth_min(L, R, K);}
+    i64 range_Kth_max(i64 L, i64 R, i64 K){ return __range_Kth_min(L, R, R - L - K - 1);}
     i64 range_successor(i64 L, i64 R, i64 value){ i64 C = __range_freq(L, R, value + 1); return C == R - L ? -1 : __range_Kth_min(L, R, C);}
     i64 range_predecessor(i64 L, i64 R, i64 value){ i64 C = __range_freq(L, R, value); return C == 0 ? -1 : __range_Kth_min(L, R, C - 1);}
+    i64 range_min_assignXOR(i64 L, i64 R, i64 value){ return __range_min_assignXOR(L, R, value) xor value;}
+    i64 range_max_assignXOR(i64 L, i64 R, i64 value){ return __range_min_assignXOR(L, R, ~value) xor value;}
 private:
     vector<i64> Matrix;
     i64 bitsize;
@@ -46,6 +48,28 @@ private:
             if(K >= R0 - L0){
                 res |= (i64)1 << h;
                 K -= R0 - L0;
+                tie(L, R) = {L1, R1};
+            }else{
+                tie(L, R) = {L0, R0};
+            }
+        }
+        return res;
+    }
+    i64 __range_min_assignXOR(i64 L, i64 R, i64 value){
+        i64 res = 0;
+        for(i64 h = bitsize - 1; h >= 0; h--){
+            auto [L0, R0, L1, R1] = decomp(L, R, h);
+            if(R0 - L0 == 0){
+                res |= (i64)1 << h;
+                tie(L, R) = {L1, R1};
+                continue;
+            }
+            if(R1 - L1 == 0){
+                tie(L, R) = {L0, R0};
+                continue;
+            }
+            if(value & (1 << h)){
+                res |= (i64)1 << h;
                 tie(L, R) = {L1, R1};
             }else{
                 tie(L, R) = {L0, R0};
