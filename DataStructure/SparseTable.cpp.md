@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/SparseTable.test.cpp
+    title: verify/SparseTable.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/SparseTable.md
     document_title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
@@ -41,8 +44,9 @@ data:
   path: DataStructure/SparseTable.cpp
   requiredBy: []
   timestamp: '2022-03-20 10:39:08+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/SparseTable.test.cpp
 documentation_of: DataStructure/SparseTable.cpp
 layout: document
 redirect_from:
