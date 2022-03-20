@@ -60,4 +60,4 @@ title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
 - `S fold(int64_t L, int64_t R)`：半開区間\[L, R)に対して演算結果を返す。  
 
 ## 使用例
-<a href="https://judge.yosupo.jp/submission/82979" target="_blank">yosupo judge - StaticRMQ</a>
+<a href="https://judge.yosupo.jp/submission/82979" target="_blank">yosupo judge - Static RMQ</a>
