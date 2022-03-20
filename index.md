@@ -11,7 +11,12 @@ data:
     - icon: ':warning:'
       path: template/template.cpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-  verificationCategories: []
+  verificationCategories:
+  - name: verify
+    pages:
+    - icon: ':x:'
+      path: verify/SparseTable.test.cpp
+      title: verify/SparseTable.test.cpp
 layout: toppage
 ---
 [![kyawa](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fkyawa)](https://atcoder.jp/users/kyawa)
