@@ -6,6 +6,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
+    - icon: ':warning:'
+      path: DataStructure/WaveletMatrix.cpp
+      title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
