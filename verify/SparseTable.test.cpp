@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/staticrmq"
 
-#include "../../template/template.cpp"
-#include "../../DataStructure/SparseTable.cpp"
+#include "../template/template.cpp"
+#include "../DataStructure/SparseTable.cpp"
 
 int64_t op(int64_t a, int64_t b){
     return min(a, b);
