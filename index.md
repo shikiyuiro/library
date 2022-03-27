@@ -6,6 +6,9 @@ data:
     - icon: ':warning:'
       path: Classic/Inversion.cpp
       title: "\u8EE2\u5012\u6570"
+    - icon: ':warning:'
+      path: Classic/LIS.cpp
+      title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217"
   - name: DataStructure
     pages:
     - icon: ':heavy_check_mark:'
