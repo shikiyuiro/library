@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: verify/Inversion.test.cpp
+    title: verify/Inversion.test.cpp
+  - icon: ':heavy_check_mark:'
     path: verify/LIS.test.cpp
     title: verify/LIS.test.cpp
   - icon: ':heavy_check_mark:'
@@ -32,6 +35,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/SparseTable.test.cpp
+  - verify/Inversion.test.cpp
   - verify/WaveletMatrix.test.cpp
   - verify/LIS.test.cpp
 documentation_of: template/template.cpp

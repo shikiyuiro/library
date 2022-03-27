@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: Classic
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Classic/Inversion.cpp
       title: "\u8EE2\u5012\u6570"
     - icon: ':heavy_check_mark:'
@@ -25,6 +25,9 @@ data:
   verificationCategories:
   - name: verify
     pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/Inversion.test.cpp
+      title: verify/Inversion.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/LIS.test.cpp
       title: verify/LIS.test.cpp
