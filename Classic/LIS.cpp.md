@@ -7,7 +7,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    _deprecated_at_docs: docs/template/template.md
+    _deprecated_at_docs: docs/Classic/LIS.md
     document_title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217"
     links: []
   bundledCode: "#line 1 \"Classic/LIS.cpp\"\nvector<int64_t> LIS(vector<int64_t>&\
@@ -23,7 +23,7 @@ data:
     \    reverse(res.begin(), res.end());\n    if(decrease) for(auto& e : v) e = (e\
     \ == INT64_MIN ? INT64_MAX : -e-1);\n    if(decrease) for(auto& e : res) e = (e\
     \ == INT64_MIN ? INT64_MAX : -e-1);\n    return res;\n}\n/**\n * @brief \u6700\
-    \u9577\u5897\u52A0\u90E8\u5206\u5217\n * @docs docs/template/template.md\n */\n"
+    \u9577\u5897\u52A0\u90E8\u5206\u5217\n * @docs docs/Classic/LIS.md\n */\n"
   code: "vector<int64_t> LIS(vector<int64_t>& v, bool non_strict = false, bool decrease\
     \ = false){\n    if(decrease) for(auto& e : v) e = (e == INT64_MIN ? INT64_MAX\
     \ : -e-1);\n    vector<int64_t> res;\n    vector<int64_t> DP;\n    vector<int64_t>\
@@ -36,13 +36,13 @@ data:
     \ res.push_back(v[vis]);\n    reverse(res.begin(), res.end());\n    if(decrease)\
     \ for(auto& e : v) e = (e == INT64_MIN ? INT64_MAX : -e-1);\n    if(decrease)\
     \ for(auto& e : res) e = (e == INT64_MIN ? INT64_MAX : -e-1);\n    return res;\n\
-    }\n/**\n * @brief \u6700\u9577\u5897\u52A0\u90E8\u5206\u5217\n * @docs docs/template/template.md\n\
+    }\n/**\n * @brief \u6700\u9577\u5897\u52A0\u90E8\u5206\u5217\n * @docs docs/Classic/LIS.md\n\
     \ */\n"
   dependsOn: []
   isVerificationFile: false
   path: Classic/LIS.cpp
   requiredBy: []
-  timestamp: '2022-03-27 19:47:24+09:00'
+  timestamp: '2022-03-27 20:02:16+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Classic/LIS.cpp
@@ -52,6 +52,8 @@ redirect_from:
 - /library/Classic/LIS.cpp.html
 title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217"
 ---
-## きもち
+## 使い方  
+- `vector<int64_t> LIS(vector<int64_t>& v, bool non_strict = false, bool decrease = false)`：配列vの最長増加部分列を返す。ただし、non_strict = trueのとき単調性が広義に、decrease = trueのとき最長減少部分列になる。  
 
-テンプレートです。マクロの類は使っていません。オーガニックですね（？）
+## 使用例
+<a href="https://atcoder.jp/contests/chokudai_S001/submissions/30497502" target="_blank">AtCoder Chokudai SpeedRun 001 H - LIS</a>
