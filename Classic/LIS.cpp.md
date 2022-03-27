@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/LIS.test.cpp
     title: verify/LIS.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/Classic/LIS.md
     document_title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217"
@@ -46,7 +46,7 @@ data:
   path: Classic/LIS.cpp
   requiredBy: []
   timestamp: '2022-03-27 20:02:16+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/LIS.test.cpp
 documentation_of: Classic/LIS.cpp
