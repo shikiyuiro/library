@@ -1,4 +1,4 @@
-int64_t inversion(vector<int64_t> v){
+int64_t inversion(vector<int64_t> &v){
     vector<int64_t> st = v;
     sort(st.begin(), st.end());
     st.erase(unique(st.begin(), st.end()), st.end());
@@ -12,5 +12,5 @@ int64_t inversion(vector<int64_t> v){
 }
 /**
  * @brief 転倒数
- * @docs docs/template/template.md
+ * @docs docs/Classic/Inversion.md
  */
