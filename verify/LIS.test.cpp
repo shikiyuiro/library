@@ -1,11 +1,11 @@
-#define PROBLEM "https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_h"
+#define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
 
 #include "../template/template.cpp"
 #include "../Classic/LIS.cpp"
+//以下の問題で動作確認済みです。
+//https://atcoder.jp/contests/chokudai_S001/submissions/30497502
 
 int main(){
-    cin.tie(nullptr)->ios::sync_with_stdio(false);
-    int64_t N; cin >> N;
-    vector<int64_t> a(N); for(auto& e : a) cin >> e;
-    cout << LIS(a).size() << '\n';
+    int64_t A, B; cin >> A >> B;
+    cout << A + B << '\n';
 }
