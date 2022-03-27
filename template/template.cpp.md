@@ -3,15 +3,18 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: verify/LIS.test.cpp
+    title: verify/LIS.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/SparseTable.test.cpp
     title: verify/SparseTable.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/WaveletMatrix.test.cpp
     title: verify/WaveletMatrix.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: docs/template/template.md
     document_title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -26,10 +29,11 @@ data:
   path: template/template.cpp
   requiredBy: []
   timestamp: '2021-11-13 20:31:18+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - verify/SparseTable.test.cpp
   - verify/WaveletMatrix.test.cpp
+  - verify/LIS.test.cpp
 documentation_of: template/template.cpp
 layout: document
 redirect_from:
