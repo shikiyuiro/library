@@ -18,5 +18,5 @@ vector<int64_t> LIS(vector<int64_t>& v, bool non_strict = false, bool decrease =
 }
 /**
  * @brief 最長増加部分列
- * @docs docs/template/template.md
+ * @docs docs/Classic/LIS.md
  */
