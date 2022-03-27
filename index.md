@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: Classic
+    pages:
+    - icon: ':warning:'
+      path: Classic/Inversion.cpp
+      title: "\u8EE2\u5012\u6570"
   - name: DataStructure
     pages:
     - icon: ':heavy_check_mark:'
