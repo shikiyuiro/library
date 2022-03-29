@@ -1,7 +1,7 @@
 template<class S, S (*op)(S, S), S (*e)()>
 class RMQ_ON_O1{
-    const int32_t Bsiz = 5;
-    const int32_t Bcmpl = 31;
+    int32_t Bsiz = 5;
+    int32_t Bcmpl = 31;
 public:
     explicit RMQ_ON_O1() = default;
     RMQ_ON_O1(vector<S> &_v) : v(_v){
