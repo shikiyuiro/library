@@ -40,7 +40,7 @@ private:
     S fold_mini(int32_t L, int32_t R){
         if(L == R) return e();
         int32_t masked = (b[R-1] >> (L & Bcmpl)) << (L & Bcmpl);
-        int32_t lsb = __builtin_ctzll(masked);
+        int32_t lsb = __builtin_ctz(masked);
         if(masked == 0) return v[R-1];
         else return v[lsb + (L & ~Bcmpl)];
     }
