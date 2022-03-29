@@ -46,6 +46,6 @@ private:
     }
 };
 /**
- * @brief ( 構築$\mathrm{O}(N)$・クエリ$\mathrm{O}(1)$ )
+ * @brief 区間最小値( 構築$\mathrm{O}(N)$・クエリ$\mathrm{O}(1)$ )
  * @docs docs/DataStructure/RMQ_ON_O1.md
  */
