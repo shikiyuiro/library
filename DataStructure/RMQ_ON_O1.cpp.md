@@ -32,7 +32,7 @@ data:
     \    }\nprivate:\n    vector<S> v;\n    vector<S> v_mini;\n    vector<int32_t>\
     \ b;\n    SparseTable<S,op,e> sp;\n    S fold_mini(int32_t L, int32_t R){\n  \
     \      if(L == R) return e();\n        int32_t masked = (b[R-1] >> (L & Bcmpl))\
-    \ << (L & Bcmpl);\n        int32_t lsb = __builtin_ctzll(masked);\n        if(masked\
+    \ << (L & Bcmpl);\n        int32_t lsb = __builtin_ctz(masked);\n        if(masked\
     \ == 0) return v[R-1];\n        else return v[lsb + (L & ~Bcmpl)];\n    }\n};\n\
     /**\n * @brief \u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
     \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )\n * @docs docs/DataStructure/RMQ_ON_O1.md\n\
@@ -54,7 +54,7 @@ data:
     \    }\nprivate:\n    vector<S> v;\n    vector<S> v_mini;\n    vector<int32_t>\
     \ b;\n    SparseTable<S,op,e> sp;\n    S fold_mini(int32_t L, int32_t R){\n  \
     \      if(L == R) return e();\n        int32_t masked = (b[R-1] >> (L & Bcmpl))\
-    \ << (L & Bcmpl);\n        int32_t lsb = __builtin_ctzll(masked);\n        if(masked\
+    \ << (L & Bcmpl);\n        int32_t lsb = __builtin_ctz(masked);\n        if(masked\
     \ == 0) return v[R-1];\n        else return v[lsb + (L & ~Bcmpl)];\n    }\n};\n\
     /**\n * @brief \u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
     \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )\n * @docs docs/DataStructure/RMQ_ON_O1.md\n\
@@ -63,7 +63,7 @@ data:
   isVerificationFile: false
   path: DataStructure/RMQ_ON_O1.cpp
   requiredBy: []
-  timestamp: '2022-03-29 17:06:49+09:00'
+  timestamp: '2022-03-29 17:15:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/RMQ_ON_O1.test.cpp
