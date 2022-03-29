@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/RMQ_ON_O1.test.cpp
+    title: verify/RMQ_ON_O1.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/RMQ_ON_O1.md
     document_title: "( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\u30A8\u30EA$\\mathrm{O}(1)$\
@@ -59,8 +62,9 @@ data:
   path: DataStructure/RMQ_ON_O1.cpp
   requiredBy: []
   timestamp: '2022-03-29 16:57:51+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/RMQ_ON_O1.test.cpp
 documentation_of: DataStructure/RMQ_ON_O1.cpp
 layout: document
 redirect_from:

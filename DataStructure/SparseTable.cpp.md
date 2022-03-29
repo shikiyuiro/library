@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: verify/RMQ_ON_O1.test.cpp
+    title: verify/RMQ_ON_O1.test.cpp
+  - icon: ':heavy_check_mark:'
     path: verify/SparseTable.test.cpp
     title: verify/SparseTable.test.cpp
   _isVerificationFailed: false
@@ -47,6 +50,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/SparseTable.test.cpp
+  - verify/RMQ_ON_O1.test.cpp
 documentation_of: DataStructure/SparseTable.cpp
 layout: document
 redirect_from:

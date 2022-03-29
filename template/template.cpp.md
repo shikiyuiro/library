@@ -10,6 +10,9 @@ data:
     path: verify/LIS.test.cpp
     title: verify/LIS.test.cpp
   - icon: ':heavy_check_mark:'
+    path: verify/RMQ_ON_O1.test.cpp
+    title: verify/RMQ_ON_O1.test.cpp
+  - icon: ':heavy_check_mark:'
     path: verify/SparseTable.test.cpp
     title: verify/SparseTable.test.cpp
   - icon: ':heavy_check_mark:'
@@ -37,6 +40,7 @@ data:
   - verify/SparseTable.test.cpp
   - verify/Inversion.test.cpp
   - verify/WaveletMatrix.test.cpp
+  - verify/RMQ_ON_O1.test.cpp
   - verify/LIS.test.cpp
 documentation_of: template/template.cpp
 layout: document
