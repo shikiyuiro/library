@@ -3,8 +3,8 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: DataStructure/RMQ_ON_O1.cpp
-    title: "( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\u30A8\u30EA$\\mathrm{O}(1)$\
-      \ )"
+    title: "\u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\
+      \u30A8\u30EA$\\mathrm{O}(1)$ )"
   - icon: ':heavy_check_mark:'
     path: DataStructure/SparseTable.cpp
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
@@ -56,13 +56,14 @@ data:
     \      if(L == R) return e();\n        int32_t masked = (b[R-1] >> (L & Bcmpl))\
     \ << (L & Bcmpl);\n        int32_t lsb = __builtin_ctzll(masked);\n        if(masked\
     \ == 0) return v[R-1];\n        else return v[lsb + (L & ~Bcmpl)];\n    }\n};\n\
-    /**\n * @brief ( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\u30A8\u30EA$\\mathrm{O}(1)$\
-    \ )\n * @docs docs/DataStructure/RMQ_ON_O1.md\n */\n#line 6 \"verify/RMQ_ON_O1.test.cpp\"\
-    \n\nint32_t op(int32_t a, int32_t b){\n    return min(a, b);\n}\n\nint32_t e(){\n\
-    \    return INT32_MAX;\n}\n\nint main(){\n    cin.tie(nullptr)->ios::sync_with_stdio(false);\n\
-    \    int32_t N, Q; cin >> N >> Q;\n    vector<int32_t> A(N); for(auto& e : A)\
-    \ cin >> e;\n    RMQ_ON_O1<int32_t,op,e> sp(A);\n    while(Q--){\n        int32_t\
-    \ l, r; cin >> l >> r;\n        cout << sp.fold(l, r) << '\\n';\n    }\n}\n"
+    /**\n * @brief \u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
+    \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )\n * @docs docs/DataStructure/RMQ_ON_O1.md\n\
+    \ */\n#line 6 \"verify/RMQ_ON_O1.test.cpp\"\n\nint32_t op(int32_t a, int32_t b){\n\
+    \    return min(a, b);\n}\n\nint32_t e(){\n    return INT32_MAX;\n}\n\nint main(){\n\
+    \    cin.tie(nullptr)->ios::sync_with_stdio(false);\n    int32_t N, Q; cin >>\
+    \ N >> Q;\n    vector<int32_t> A(N); for(auto& e : A) cin >> e;\n    RMQ_ON_O1<int32_t,op,e>\
+    \ sp(A);\n    while(Q--){\n        int32_t l, r; cin >> l >> r;\n        cout\
+    \ << sp.fold(l, r) << '\\n';\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include\
     \ \"../template/template.cpp\"\n#include \"../DataStructure/SparseTable.cpp\"\n\
     #include \"../DataStructure/RMQ_ON_O1.cpp\"\n\nint32_t op(int32_t a, int32_t b){\n\
@@ -78,7 +79,7 @@ data:
   isVerificationFile: true
   path: verify/RMQ_ON_O1.test.cpp
   requiredBy: []
-  timestamp: '2022-03-29 17:04:29+09:00'
+  timestamp: '2022-03-29 17:06:49+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/RMQ_ON_O1.test.cpp

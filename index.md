@@ -13,8 +13,8 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: DataStructure/RMQ_ON_O1.cpp
-      title: "( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\u30A8\u30EA$\\mathrm{O}(1)$\
-        \ )"
+      title: "\u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\
+        \u30A8\u30EA$\\mathrm{O}(1)$ )"
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
