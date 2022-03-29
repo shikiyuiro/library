@@ -37,9 +37,9 @@ data:
     \ * b]);\n    }\nprivate:\n    vector<S> table;\n    int32_t isiz;\n    int32_t\
     \ jsiz;\n};\n/**\n * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB\n\
     \ * @docs docs/DataStructure/SparseTable.md\n */\n#line 1 \"DataStructure/RMQ_ON_O1.cpp\"\
-    \ntemplate<class S, S (*op)(S, S), S (*e)()>\nclass RMQ_ON_O1{\n    const int32_t\
-    \ Bsiz = 5;\n    const int32_t Bcmpl = 31;\npublic:\n    explicit RMQ_ON_O1()\
-    \ = default;\n    RMQ_ON_O1(vector<S> &_v) : v(_v){\n        v.resize(((v.size()>>Bsiz)+1)<<Bsiz,\
+    \ntemplate<class S, S (*op)(S, S), S (*e)()>\nclass RMQ_ON_O1{\n    int32_t Bsiz\
+    \ = 5;\n    int32_t Bcmpl = 31;\npublic:\n    explicit RMQ_ON_O1() = default;\n\
+    \    RMQ_ON_O1(vector<S> &_v) : v(_v){\n        v.resize(((v.size()>>Bsiz)+1)<<Bsiz,\
     \ e());\n        b.resize(v.size());\n        for(int32_t i = 0; i < (int32_t)v.size();\
     \ i++){\n            stack<S> st;\n            while(true){\n                while(not\
     \ st.empty()){\n                    if(op(v[i], v[st.top()]) != v[i]) break;\n\
@@ -79,7 +79,7 @@ data:
   isVerificationFile: true
   path: verify/RMQ_ON_O1.test.cpp
   requiredBy: []
-  timestamp: '2022-03-29 17:15:42+09:00'
+  timestamp: '2022-03-29 17:31:52+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/RMQ_ON_O1.test.cpp
