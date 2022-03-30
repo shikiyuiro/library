@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../DataStructure/SparseTable.cpp"
 
 template<class S, S (*op)(S, S), S (*e)()>
