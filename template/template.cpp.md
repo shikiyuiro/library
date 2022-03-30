@@ -9,7 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/LIS.test.cpp
     title: verify/LIS.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/RMQ_ON_O1.test.cpp
     title: verify/RMQ_ON_O1.test.cpp
   - icon: ':heavy_check_mark:'
@@ -18,9 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/WaveletMatrix.test.cpp
     title: verify/WaveletMatrix.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/template/template.md
     document_title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -35,7 +35,7 @@ data:
   path: template/template.cpp
   requiredBy: []
   timestamp: '2021-11-13 20:31:18+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/SparseTable.test.cpp
   - verify/Inversion.test.cpp

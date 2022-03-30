@@ -1,26 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SparseTable.cpp
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/RMQ_ON_O1.test.cpp
     title: verify/RMQ_ON_O1.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/RMQ_ON_O1.md
     document_title: "\u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
       \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )"
     links: []
-  bundledCode: "#line 2 \"DataStructure/RMQ_ON_O1.cpp\"\n\n#line 1 \"DataStructure/SparseTable.cpp\"\
-    \ntemplate<class S, S (*op)(S, S), S (*e)()>\nclass SparseTable{\npublic:\n  \
-    \  explicit SparseTable() = default;\n    SparseTable(vector<S>& v){\n       \
-    \ isiz = v.size();\n        jsiz = 32 - __builtin_clz(isiz);\n        table.resize(isiz\
+  bundledCode: "#line 2 \"DataStructure/RMQ_ON_O1.cpp\"\n\n#line 2 \"DataStructure/SparseTable.cpp\"\
+    \n\ntemplate<class S, S (*op)(S, S), S (*e)()>\nclass SparseTable{\npublic:\n\
+    \    explicit SparseTable() = default;\n    SparseTable(vector<S>& v){\n     \
+    \   isiz = v.size();\n        jsiz = 32 - __builtin_clz(isiz);\n        table.resize(isiz\
     \ * jsiz, e());\n        for(int32_t i = 0; i < isiz; i++) table[i] = v[i];\n\
     \        for(int32_t j = 1; j < jsiz; j++){\n            for(int32_t i = 0; i\
     \ + (1 << (j - 1)) < isiz; i++){\n                table[i + isiz * j] = op(table[i\
@@ -81,8 +81,8 @@ data:
   isVerificationFile: false
   path: DataStructure/RMQ_ON_O1.cpp
   requiredBy: []
-  timestamp: '2022-03-30 09:52:56+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2022-03-30 09:59:14+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/RMQ_ON_O1.test.cpp
 documentation_of: DataStructure/RMQ_ON_O1.cpp

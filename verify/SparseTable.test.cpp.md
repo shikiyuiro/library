@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SparseTable.cpp
     title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.cpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -20,7 +20,7 @@ data:
   bundledCode: "#line 1 \"verify/SparseTable.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\
     \n\n#line 1 \"template/template.cpp\"\n#include<bits/stdc++.h>\nusing namespace\
     \ std;\n/**\n * @brief \u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\n * @docs docs/template/template.md\n\
-    \ */\n#line 1 \"DataStructure/SparseTable.cpp\"\ntemplate<class S, S (*op)(S,\
+    \ */\n#line 2 \"DataStructure/SparseTable.cpp\"\n\ntemplate<class S, S (*op)(S,\
     \ S), S (*e)()>\nclass SparseTable{\npublic:\n    explicit SparseTable() = default;\n\
     \    SparseTable(vector<S>& v){\n        isiz = v.size();\n        jsiz = 32 -\
     \ __builtin_clz(isiz);\n        table.resize(isiz * jsiz, e());\n        for(int32_t\
@@ -53,7 +53,7 @@ data:
   isVerificationFile: true
   path: verify/SparseTable.test.cpp
   requiredBy: []
-  timestamp: '2022-03-29 17:04:29+09:00'
+  timestamp: '2022-03-30 09:59:14+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/SparseTable.test.cpp

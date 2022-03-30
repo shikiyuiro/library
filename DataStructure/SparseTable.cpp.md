@@ -2,28 +2,25 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/RMQ_ON_O1.cpp
     title: "\u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\
       \u30A8\u30EA$\\mathrm{O}(1)$ )"
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: verify/RMQ_ON_O1.test.cpp
-    title: verify/RMQ_ON_O1.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/RMQ_ON_O1.test.cpp
     title: verify/RMQ_ON_O1.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/SparseTable.test.cpp
     title: verify/SparseTable.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/SparseTable.md
     document_title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
     links: []
-  bundledCode: "#line 1 \"DataStructure/SparseTable.cpp\"\ntemplate<class S, S (*op)(S,\
+  bundledCode: "#line 2 \"DataStructure/SparseTable.cpp\"\n\ntemplate<class S, S (*op)(S,\
     \ S), S (*e)()>\nclass SparseTable{\npublic:\n    explicit SparseTable() = default;\n\
     \    SparseTable(vector<S>& v){\n        isiz = v.size();\n        jsiz = 32 -\
     \ __builtin_clz(isiz);\n        table.resize(isiz * jsiz, e());\n        for(int32_t\
@@ -36,9 +33,9 @@ data:
     \ * b]);\n    }\nprivate:\n    vector<S> table;\n    int32_t isiz;\n    int32_t\
     \ jsiz;\n};\n/**\n * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB\n\
     \ * @docs docs/DataStructure/SparseTable.md\n */\n"
-  code: "template<class S, S (*op)(S, S), S (*e)()>\nclass SparseTable{\npublic:\n\
-    \    explicit SparseTable() = default;\n    SparseTable(vector<S>& v){\n     \
-    \   isiz = v.size();\n        jsiz = 32 - __builtin_clz(isiz);\n        table.resize(isiz\
+  code: "#pragma once\n\ntemplate<class S, S (*op)(S, S), S (*e)()>\nclass SparseTable{\n\
+    public:\n    explicit SparseTable() = default;\n    SparseTable(vector<S>& v){\n\
+    \        isiz = v.size();\n        jsiz = 32 - __builtin_clz(isiz);\n        table.resize(isiz\
     \ * jsiz, e());\n        for(int32_t i = 0; i < isiz; i++) table[i] = v[i];\n\
     \        for(int32_t j = 1; j < jsiz; j++){\n            for(int32_t i = 0; i\
     \ + (1 << (j - 1)) < isiz; i++){\n                table[i + isiz * j] = op(table[i\
@@ -54,11 +51,10 @@ data:
   path: DataStructure/SparseTable.cpp
   requiredBy:
   - DataStructure/RMQ_ON_O1.cpp
-  timestamp: '2022-03-29 17:04:29+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2022-03-30 09:59:14+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/SparseTable.test.cpp
-  - verify/RMQ_ON_O1.test.cpp
   - verify/RMQ_ON_O1.test.cpp
 documentation_of: DataStructure/SparseTable.cpp
 layout: document
