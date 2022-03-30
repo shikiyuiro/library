@@ -5,16 +5,16 @@ class RMQ_ON_O1{
 public:
     explicit RMQ_ON_O1() = default;
     RMQ_ON_O1(vector<S> &_v) : v(_v){
-        v.resize(((v.size()>>Bsiz)+1)<<Bsiz, e());
+        v.resize((v.size() | Bcmpl) + 1, e());
         b.resize(v.size());
         for(int32_t i = 0; i < (int32_t)v.size(); i++){
-            stack<S> st;
+            stack<int32_t> st;
             while(true){
                 while(not st.empty()){
                     if(op(v[i], v[st.top()]) != v[i]) break;
                     st.pop();
                 }
-                b[i] = st.empty() ? 0 : b[st.top()] | (1 << st.top());
+                b[i] = st.empty() ? 0 : b[st.top()] | (1 << (st.top() & Bcmpl));
                 if((i & Bcmpl) == Bcmpl) break;
                 st.push(i++);
             }
@@ -23,7 +23,7 @@ public:
         sp = SparseTable<S,op,e>(v_mini);
     }
     S fold(int32_t L, int32_t R){
-        int32_t Lu = (L & ~Bcmpl) + Bcmpl + 1;
+        int32_t Lu = (L | Bcmpl) + 1;
         int32_t Rd = (R & ~Bcmpl);
         if(Lu > Rd) return fold_mini(L, R);
         S res = e();
