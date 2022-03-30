@@ -1,3 +1,5 @@
+#include "../DataStructure/SparseTable.cpp"
+
 template<class S, S (*op)(S, S), S (*e)()>
 class RMQ_ON_O1{
     int32_t Bsiz = 5;
