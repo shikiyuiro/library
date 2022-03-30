@@ -1,17 +1,24 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':x:'
+    path: DataStructure/RMQ_ON_O1.cpp
+    title: "\u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\
+      \u30A8\u30EA$\\mathrm{O}(1)$ )"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
+    path: verify/RMQ_ON_O1.test.cpp
+    title: verify/RMQ_ON_O1.test.cpp
+  - icon: ':x:'
     path: verify/RMQ_ON_O1.test.cpp
     title: verify/RMQ_ON_O1.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify/SparseTable.test.cpp
     title: verify/SparseTable.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/SparseTable.md
     document_title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
@@ -45,11 +52,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/SparseTable.cpp
-  requiredBy: []
+  requiredBy:
+  - DataStructure/RMQ_ON_O1.cpp
   timestamp: '2022-03-29 17:04:29+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - verify/SparseTable.test.cpp
+  - verify/RMQ_ON_O1.test.cpp
   - verify/RMQ_ON_O1.test.cpp
 documentation_of: DataStructure/SparseTable.cpp
 layout: document

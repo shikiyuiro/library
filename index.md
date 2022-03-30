@@ -11,11 +11,11 @@ data:
       title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217"
   - name: DataStructure
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: DataStructure/RMQ_ON_O1.cpp
       title: "\u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\
         \u30A8\u30EA$\\mathrm{O}(1)$ )"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: DataStructure/SparseTable.cpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
     - icon: ':heavy_check_mark:'
@@ -23,7 +23,7 @@ data:
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.cpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -35,7 +35,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/LIS.test.cpp
       title: verify/LIS.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: verify/RMQ_ON_O1.test.cpp
       title: verify/RMQ_ON_O1.test.cpp
     - icon: ':heavy_check_mark:'
