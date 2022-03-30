@@ -39,31 +39,31 @@ data:
     \ * @docs docs/DataStructure/SparseTable.md\n */\n#line 1 \"DataStructure/RMQ_ON_O1.cpp\"\
     \ntemplate<class S, S (*op)(S, S), S (*e)()>\nclass RMQ_ON_O1{\n    int32_t Bsiz\
     \ = 5;\n    int32_t Bcmpl = 31;\npublic:\n    explicit RMQ_ON_O1() = default;\n\
-    \    RMQ_ON_O1(vector<S> &_v) : v(_v){\n        v.resize(((v.size()>>Bsiz)+1)<<Bsiz,\
-    \ e());\n        b.resize(v.size());\n        for(int32_t i = 0; i < (int32_t)v.size();\
-    \ i++){\n            stack<S> st;\n            while(true){\n                while(not\
-    \ st.empty()){\n                    if(op(v[i], v[st.top()]) != v[i]) break;\n\
-    \                    st.pop();\n                }\n                b[i] = st.empty()\
-    \ ? 0 : b[st.top()] | (1 << st.top());\n                if((i & Bcmpl) == Bcmpl)\
-    \ break;\n                st.push(i++);\n            }\n            v_mini.push_back(fold_mini(i-Bcmpl,i+1));\n\
-    \        }\n        sp = SparseTable<S,op,e>(v_mini);\n    }\n    S fold(int32_t\
-    \ L, int32_t R){\n        int32_t Lu = (L & ~Bcmpl) + Bcmpl + 1;\n        int32_t\
-    \ Rd = (R & ~Bcmpl);\n        if(Lu > Rd) return fold_mini(L, R);\n        S res\
-    \ = e();\n        res = op(res, fold_mini(L, Lu));\n        res = op(res, sp.fold(Lu>>Bsiz,\
-    \ Rd>>Bsiz));\n        res = op(res, fold_mini(Rd, R));\n        return res;\n\
-    \    }\nprivate:\n    vector<S> v;\n    vector<S> v_mini;\n    vector<int32_t>\
-    \ b;\n    SparseTable<S,op,e> sp;\n    S fold_mini(int32_t L, int32_t R){\n  \
-    \      if(L == R) return e();\n        int32_t masked = (b[R-1] >> (L & Bcmpl))\
-    \ << (L & Bcmpl);\n        int32_t lsb = __builtin_ctz(masked);\n        if(masked\
-    \ == 0) return v[R-1];\n        else return v[lsb + (L & ~Bcmpl)];\n    }\n};\n\
-    /**\n * @brief \u533A\u9593\u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\
-    \u30AF\u30A8\u30EA$\\mathrm{O}(1)$ )\n * @docs docs/DataStructure/RMQ_ON_O1.md\n\
-    \ */\n#line 6 \"verify/RMQ_ON_O1.test.cpp\"\n\nint32_t op(int32_t a, int32_t b){\n\
-    \    return min(a, b);\n}\n\nint32_t e(){\n    return INT32_MAX;\n}\n\nint main(){\n\
-    \    cin.tie(nullptr)->ios::sync_with_stdio(false);\n    int32_t N, Q; cin >>\
-    \ N >> Q;\n    vector<int32_t> A(N); for(auto& e : A) cin >> e;\n    RMQ_ON_O1<int32_t,op,e>\
-    \ sp(A);\n    while(Q--){\n        int32_t l, r; cin >> l >> r;\n        cout\
-    \ << sp.fold(l, r) << '\\n';\n    }\n}\n"
+    \    RMQ_ON_O1(vector<S> &_v) : v(_v){\n        v.resize((v.size() | Bcmpl) +\
+    \ 1, e());\n        b.resize(v.size());\n        for(int32_t i = 0; i < (int32_t)v.size();\
+    \ i++){\n            stack<int32_t> st;\n            while(true){\n          \
+    \      while(not st.empty()){\n                    if(op(v[i], v[st.top()]) !=\
+    \ v[i]) break;\n                    st.pop();\n                }\n           \
+    \     b[i] = st.empty() ? 0 : b[st.top()] | (1 << (st.top() & Bcmpl));\n     \
+    \           if((i & Bcmpl) == Bcmpl) break;\n                st.push(i++);\n \
+    \           }\n            v_mini.push_back(fold_mini(i-Bcmpl,i+1));\n       \
+    \ }\n        sp = SparseTable<S,op,e>(v_mini);\n    }\n    S fold(int32_t L, int32_t\
+    \ R){\n        int32_t Lu = (L | Bcmpl) + 1;\n        int32_t Rd = (R & ~Bcmpl);\n\
+    \        if(Lu > Rd) return fold_mini(L, R);\n        S res = e();\n        res\
+    \ = op(res, fold_mini(L, Lu));\n        res = op(res, sp.fold(Lu>>Bsiz, Rd>>Bsiz));\n\
+    \        res = op(res, fold_mini(Rd, R));\n        return res;\n    }\nprivate:\n\
+    \    vector<S> v;\n    vector<S> v_mini;\n    vector<int32_t> b;\n    SparseTable<S,op,e>\
+    \ sp;\n    S fold_mini(int32_t L, int32_t R){\n        if(L == R) return e();\n\
+    \        int32_t masked = (b[R-1] >> (L & Bcmpl)) << (L & Bcmpl);\n        int32_t\
+    \ lsb = __builtin_ctz(masked);\n        if(masked == 0) return v[R-1];\n     \
+    \   else return v[lsb + (L & ~Bcmpl)];\n    }\n};\n/**\n * @brief \u533A\u9593\
+    \u6700\u5C0F\u5024( \u69CB\u7BC9$\\mathrm{O}(N)$\u30FB\u30AF\u30A8\u30EA$\\mathrm{O}(1)$\
+    \ )\n * @docs docs/DataStructure/RMQ_ON_O1.md\n */\n#line 6 \"verify/RMQ_ON_O1.test.cpp\"\
+    \n\nint32_t op(int32_t a, int32_t b){\n    return min(a, b);\n}\n\nint32_t e(){\n\
+    \    return INT32_MAX;\n}\n\nint main(){\n    cin.tie(nullptr)->ios::sync_with_stdio(false);\n\
+    \    int32_t N, Q; cin >> N >> Q;\n    vector<int32_t> A(N); for(auto& e : A)\
+    \ cin >> e;\n    RMQ_ON_O1<int32_t,op,e> sp(A);\n    while(Q--){\n        int32_t\
+    \ l, r; cin >> l >> r;\n        cout << sp.fold(l, r) << '\\n';\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include\
     \ \"../template/template.cpp\"\n#include \"../DataStructure/SparseTable.cpp\"\n\
     #include \"../DataStructure/RMQ_ON_O1.cpp\"\n\nint32_t op(int32_t a, int32_t b){\n\
@@ -79,7 +79,7 @@ data:
   isVerificationFile: true
   path: verify/RMQ_ON_O1.test.cpp
   requiredBy: []
-  timestamp: '2022-03-29 17:31:52+09:00'
+  timestamp: '2022-03-30 09:34:38+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/RMQ_ON_O1.test.cpp
