@@ -37,10 +37,10 @@ data:
   timestamp: '2021-11-13 20:31:18+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/SparseTable.test.cpp
-  - verify/Inversion.test.cpp
   - verify/WaveletMatrix.test.cpp
+  - verify/SparseTable.test.cpp
   - verify/RMQ_ON_O1.test.cpp
+  - verify/Inversion.test.cpp
   - verify/LIS.test.cpp
 documentation_of: template/template.cpp
 layout: document
