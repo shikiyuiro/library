@@ -10,6 +10,9 @@ data:
     path: verify/LIS.test.cpp
     title: verify/LIS.test.cpp
   - icon: ':heavy_check_mark:'
+    path: verify/LevelAncestor.test.cpp
+    title: verify/LevelAncestor.test.cpp
+  - icon: ':heavy_check_mark:'
     path: verify/RMQ_ON_O1.test.cpp
     title: verify/RMQ_ON_O1.test.cpp
   - icon: ':heavy_check_mark:'
@@ -38,6 +41,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/WaveletMatrix.test.cpp
+  - verify/LevelAncestor.test.cpp
   - verify/SparseTable.test.cpp
   - verify/RMQ_ON_O1.test.cpp
   - verify/Inversion.test.cpp

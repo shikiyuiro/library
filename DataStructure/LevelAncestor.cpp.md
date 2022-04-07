@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/LevelAncestor.test.cpp
+    title: verify/LevelAncestor.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/DataStructure/LevelAncestor.md
     document_title: "Level Ancestor( \u69CB\u7BC9$\\mathrm{O}(NlogN)$\u30FB\u30AF\u30A8\
@@ -77,8 +80,9 @@ data:
   path: DataStructure/LevelAncestor.cpp
   requiredBy: []
   timestamp: '2022-04-07 12:47:57+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/LevelAncestor.test.cpp
 documentation_of: DataStructure/LevelAncestor.cpp
 layout: document
 redirect_from:

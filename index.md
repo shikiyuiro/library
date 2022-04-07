@@ -11,7 +11,7 @@ data:
       title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217"
   - name: DataStructure
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/LevelAncestor.cpp
       title: "Level Ancestor( \u69CB\u7BC9$\\mathrm{O}(NlogN)$\u30FB\u30AF\u30A8\u30EA\
         $\\mathrm{O}(1)$ )"
@@ -39,6 +39,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/LIS.test.cpp
       title: verify/LIS.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: verify/LevelAncestor.test.cpp
+      title: verify/LevelAncestor.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify/RMQ_ON_O1.test.cpp
       title: verify/RMQ_ON_O1.test.cpp
